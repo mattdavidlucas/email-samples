@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<title>LendingTree</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+<!--<![endif]-->
+
+<style type="text/css">
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+table td { border-collapse: collapse; }
+
+a { text-decoration: none; }
+
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important; }
+
+u + .body #new-gmail-hack {
+  display: block !important; }
+
+.autolink_footer a,
+.autolink_footer span {
+  color: #FFFFFF !important;
+  text-decoration: none !important; }
+
+.cta-blue-ghost:hover { 
+  border-color: #2187c1 !important;
+  color: #ffffff !important; 
+}
+
+.cta-es:hover { 
+  background-color: #eb5843 !important;
+}
+
+.cta-blue-ghost:hover,
+.cta-blue:hover { 
+  background-color: #2187c1 !important; 
+}
+
+.cta-green:hover { 
+  background-color: #069059 !important; 
+}
+
+.underline:hover { text-decoration: underline !important; }
+.no-underline:hover { text-decoration: none !important; }
+
+@media screen and (max-width: 620px) {
+  .lt-logo {
+    height: auto !important;
+    width: 120px !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    min-width: 92% !important;
+    width: 92% !important;
+  }
+  
+  .header { padding-bottom: 15px !important; }
+
+  .footer {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+  }
+
+  .img-icon-footer { width: 30px !important; }
+  
+  .container-cta {
+    width: 267px !important;
+  }
+
+  .container-cta a {
+    font-size: 15px !important;
+    padding: 10px !important;
+  }
+  
+  .lt-p.last { margin-bottom: 0 !important; }
+
+  .lt-p-footer { margin-bottom: 10px !important; }
+  
+  .img-hero {
+    width: 200px !important;
+  }
+  
+  .img-mortgage {
+    width: 150px !important;
+  }
+
+  .img-mortgage-text {
+    width: 160px !important;
+  }
+  
+  .img-nine {
+    width: 30px !important;
+  }
+
+  .img-million {
+    width: 65px !important;
+  }
+
+  .img-chart {
+    width: 130px !important;
+  }
+
+  .img-fifty {
+    width: 90px !important;
+  }
+
+  .img-points {
+    width: 60px !important;
+  }
+
+  .img-six-months {
+    width: 130px !important;
+  }
+
+  .img-calendars {
+    width: 260px !important;
+  }
+
+  .border-r-none { border-right: none !important; }
+
+  .border-b-add { border-bottom: 1px solid #f5f5f5; }
+
+  /* Util CSS */
+  .full-width {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .lt-p {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .block-elem {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .height-auto {
+    height: auto !important;
+  }
+
+  .center-elem {
+    margin: 0 auto;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .mt-10 {
+    margin-top: 10px !important;
+  }
+
+  .mt-30 {
+    margin-top: 30px !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 8px !important;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .pt-0 {
+    padding-top: 0px !important;
+  }
+
+  .pt-10 {
+    padding-top: 10px !important;
+  }
+
+  .pt-20 {
+    padding-top: 20px !important;
+  }
+
+  .pt-30 {
+    padding-top: 30px !important;
+  }
+
+  .pt-40 {
+    padding-top: 40px !important;
+  }
+
+  .pb-0 {
+    padding-bottom: 0px !important;
+  }
+
+  .pb-10 {
+    padding-bottom: 10px !important;
+  }
+
+  .pb-40 {
+    padding-bottom: 40px !important;
+  }
+
+  .pad-0 {
+    padding: 0px !important;
+  }
+
+  .font-15 {
+    font-size: 15px !important;
+  }
+
+  .font-18 {
+    font-size: 18px !important;
+  }
+
+  .font-20 {
+    font-size: 20px !important;
+  }
+
+  .font-40 {
+    font-size: 40px !important;
+  }
+
+  .font-50 {
+    font-size: 50px !important;
+  }
+
+  .lh-24 {
+    line-height: 24px !important;
+  }
+
+  .lh-32 {
+    line-height: 32px !important;
+  }
+
+  .lh-50 {
+    line-height: 50px !important;
+  }
+}
+
+@media screen yahoo {
+  .y_container {
+    table-layout: fixed !important;
+  }
+}
+</style>
+
+<!--[if mso]>
+<style type="text/css">
+.mso-container-cta { height: 50px !important; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #101f30;">
+
+<!-- Preheader Text -->
+<div style="display: none; font-size: 1px; color: #F5F5F5; line-height: 1px; font-family: Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">We helped people save in 2019. Could you be saving too?</div>
+<!-- End Preheader Text -->
+
+<div style="display: none; width: 0px; height: 0px; max-height: 0px; overflow: hidden;">
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+
+<!-- Table Background -->
+<table role="presentation" class="y_container" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #101f30; border-collapse: collapse;">
+  <tr>
+    <td class="pad-0" width="100%" style="padding: 0 20px; vertical-align: top;">
+
+      <!-- Start Container / Width: 620px -->
+      <table role="presentation" class="container" align="center" width="620" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; min-width: 620px; width: 620px;">
+        <!-- Logo -->
+        <tr>
+          <td align="center" class="header" style="padding: 20px 0;">
+            <a style="color: #00aeef; text-decoration: underline;" href="https://www.lendingtree.com/?ccreative=logo&template_section=logo" target="_blank"><img class="lt-logo" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/logos/lt5_es/lt5-logo-650x196-trans-knockout-gradient.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="140" height="42" alt="LendingTree" border="0"></a>
+          </td>
+        </tr>
+        <!-- End Logo -->
+        
+        <!-- Start Intro -->
+        <tr>
+          <td align="center" style="color: #FFFFFF;">
+            <table role="presentation" class="full-width" align="center" width="496" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 496px;">
+              <tr>
+                <td>
+                  <div><img class="img-hero height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-hero.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; margin: 0 auto; outline: none;" width="496" height="181" alt="2019" border="0" /></div>
+
+                  <h1 class="font-18 mt-10 mb-20" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 24px; font-weight: bold; mso-line-height-rule: exactly; letter-spacing: 2.13px; line-height: 34px; margin: 30px 0 40px 0; padding: 0; text-align: center; text-transform: uppercase;">Year In Review</h1>
+
+                  <h2 class="font-15 lh-24" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; mso-line-height-rule: exactly; line-height: 28px; margin: 0 0 10px 0; padding: 0; text-align: center;">LendingTree customers saved big this&nbsp;year</h2>
+
+                  <p class="lt-p" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px 0; padding: 0; text-align: left;">From boosting savings to reducing debt, customers like you won big this year. Here&rsquo;s how customers used our marketplace to their advantage in 2019, by the numbers: </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Intro -->
+
+        <!-- Start Modules -->
+        <tr>
+          <td>
+            <!-- Module: Refi/Purchase -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td class="pt-0" style="border-bottom: 1px solid #f5f5f5; padding: 30px 0;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <!-- Refi -->
+                      <th align="center" class="block-elem border-b-add border-r-none" style="border-right: 1px solid #f5f5f5; padding: 20px 0; width: 296px;">
+                        <div><img class="img-mortgage height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-refi.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="200" height="139" alt="" border="0" /></div>
+
+                        <p class="font-40 lh-50 mb-8" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 60px; font-weight: bold; mso-line-height-rule: exactly; line-height: 70px; margin: 0 0 8px 0; padding: 0; text-align: center;">$23,000</p>
+
+                        <p class="lt-p" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; mso-line-height-rule: exactly; line-height: 22px; margin: 0; padding: 0; text-align: center; text-transform: uppercase;">Average amount saved by refinancing home&nbsp;loans </p>
+                      </th>
+                      
+                      <!-- Purchase -->
+                      <th align="center" class="block-elem pb-0" style="padding: 20px 0; width: 330px;">
+                        <p class="font-50 lh-50" style="color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif; font-size: 70px; font-weight: normal; mso-line-height-rule: exactly; line-height: 100px; margin: 0 0 8px 0; padding: 0; text-align: center;">66,110</p>
+
+                        <p style="margin-bottom: 10px;"><img class="img-mortgage-text height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-mortgage-text.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="225" height="34" alt="Mortgages closed" border="0" /></p>
+
+                        <div><img class="img-mortgage height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-mortgage-doormat.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="190" height="131" alt="" border="0" /></div>
+                      </th>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module: Refi/Purchase -->
+
+            <!-- Module: Insurance/CC -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td class="pt-10" style="border-bottom: 1px solid #f5f5f5; padding: 30px 0;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <!-- Insurance -->
+                      <th align="center" class="block-elem border-b-add border-r-none" style="border-right: 1px solid #f5f5f5; padding: 20px 0; vertical-align: top; width: 156px;">
+                        <div><img class="img-nine height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-9-number.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="55" height="83" alt="9" border="0" /></div>
+
+                        <p style="margin-bottom: 10px;"><img class="img-million height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-insurance-text.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="86" height="29" alt="Million" border="0" /></p>
+
+                        <p class="lt-p" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; mso-line-height-rule: exactly; line-height: 22px; margin: 0; padding: 0; text-align: center; text-transform: uppercase;">Customers<br class="hide-on-mobile" /> compared<br class="hide-on-mobile" /> insurance</p>
+                      </th>
+                      
+                      <!-- CC -->
+                      <th align="center" class="block-elem pt-30 pb-10" style="padding: 20px 0; width: 463px;">
+                        <table role="presentation" class="full-width" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 370px;">
+                          <tr>
+                            <th class="block-elem" style="padding-right: 10px;"><img class="center-elem mb-8" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-cc.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="110" height="80" alt="" border="0" /></th>
+
+                            <th class="block-elem">
+                              <p class="font-15 lh-24 mb-8 text-center" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; mso-line-height-rule: exactly; line-height: 22px; margin: 0; padding: 0; text-align: left;">Customers who consolidated debt or refinanced credit cards with a personal&nbsp;loan</p>
+                            </th>
+                          </tr>
+                        </table>
+
+                        <p class="font-50 lh-50" style="color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif; font-size: 90px; font-weight: normal; mso-line-height-rule: exactly; line-height: 100px; margin: 0; padding: 0; text-align: center;">200,000</p>
+                      </th>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module: Insurance/CC -->
+
+            <!-- Module: 50 Score -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td class="pt-20" style="border-bottom: 1px solid #f5f5f5; padding: 30px 0;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <!-- Donut Chart -->
+                      <th align="center" class="block-elem border-b-add border-r-none" style="border-right: 1px solid #f5f5f5; padding: 20px 0; vertical-align: top; width: 394px;">
+                        <table role="presentation" class="full-width" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 370px;">
+                          <tr>
+                            <th class="block-elem" style="padding-right: 15px;"><img class="img-chart height-auto center-elem mb-20" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-doughnut-chart.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="190" height="189" alt="50%" border="0" /></th>
+
+                            <th class="block-elem">
+                              <p class="lt-p text-center" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; mso-line-height-rule: exactly; line-height: 22px; margin: 0; padding: 0; text-align: left;">My LendingTree users who improved their credit&nbsp;scores</p>
+                            </th>
+                          </tr>
+                        </table>
+                      </th>
+                      
+                      <!-- 50+ -->
+                      <th align="center" class="block-elem pt-40 pb-10" style="padding: 20px 0; width: 225px;">
+                        <div><img class="img-fifty height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-50-number.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="176" height="90" alt="+50" border="0" /></div>
+
+                        <p style="margin-bottom: 10px;"><img class="img-points height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-score-increase-text.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="80" height="28" alt="Points" border="0" /></p>
+
+                        <p class="font-15 lh-24" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; mso-line-height-rule: exactly; line-height: 22px; margin: 0; padding: 0; text-align: center; text-transform: uppercase;">Average credit<br class="hide-on-mobile" /> 
+                        score increase by<br class="hide-on-mobile" /> 
+                        My LendingTree&nbsp;users</p>
+                      </th>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module: 50 Score -->
+
+            <!-- Module: 6 months Score -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td align="center" class="pt-30 pb-40" style="border-bottom: 1px solid #f5f5f5; padding: 40px 0 60px 0;">
+                  <div><img class="img-six-months height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-6months-number.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="279" height="92" alt="6 months" border="0" /></div>
+                  
+                  <p class="lt-p" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: normal; mso-line-height-rule: exactly; line-height: 25px; margin: 20px 0 15px 0; padding: 0; text-align: center;">The amount of time it took for 50% 0f MyLendingTree customers to improve their credit&nbsp;scores</p>
+
+                  <div><img class="img-calendars height-auto" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2019/lt-12202019-mylt-review-calendars.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="550" height="60" alt="" border="0" /></div>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module: 6 months Score -->
+
+          </td>
+        </tr>
+        <!-- End Modules -->
+
+        <!-- Start Outro -->
+        <tr>
+          <td class="pb-40" style="border-bottom: 1px solid #f5f5f5; padding-bottom: 60px;">
+            <table role="presentation" class="full-width" align="center" width="484" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 484px;">
+              <tr>
+                <td>
+                  <h3 class="font-20 lh-32 mt-30 mb-10" style="color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif; font-size: 40px; font-weight: normal; mso-line-height-rule: exactly; line-height: 50px; margin: 40px 0 20px 0; padding: 0; text-align: center;">You can win like this, too</h3>
+
+                  <p class="lt-p" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; mso-line-height-rule: exactly; line-height: 28px; margin: 0 0 20px 0; padding: 0; text-align: center;">Shop and compare loans, boost your credit and see how much you can save with&nbsp;LendingTree.</p>
+
+                  <!-- Blue CTA -->
+                  <table class="container-cta" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 275px;">
+                    <tr>
+                      <td class="mso-container-cta" style="background-color: #00aeef; border-radius: 4px; color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; text-align: center;">
+                        <a class="cta-blue" style="border-radius: 4px; color: #FFFFFF; display: block; padding: 15px 0; text-decoration: none;" href="https://my.lendingtree.com/dashboard?ccreative=cta-button&template_section=cta-button" target="_blank">Go To LendingTree</a>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- End Blue CTA -->
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Outro -->
+
+        <!-- Footer -->
+        <tr>
+          <td class="footer" style="padding: 30px 0;">
+            <!-- App / Social -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <!-- LT App -->
+                <th style="padding-bottom: 30px; width: 50%;">
+                  <table align="left" role="presentation" width="165" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 165px;">
+                    <tr>
+                      <td>
+                        <p style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; mso-line-height-rule: exactly; line-height: 22px; margin: 0 0 10px 0; padding: 0; text-align: left;">Download Our App</p>
+                        
+                        <table align="left" role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <!-- Apple -->
+                            <td style="font-family: Helvetica, Arial, sans-serif; padding-right: 5px;"><a href="https://app.adjust.com/4unpqeh?campaign=email_footer&adgroup=promo-mylt-2019-review-ctl&creative=promo-mylt-2019-review-ctl&fallback=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fmy-lendingtree%2Fid957868548%3Fmt%3D8" style="color: #31353b; text-decoration: none;" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2018/LT_110217_LTApp_app-store-v2.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="80" height="25" alt="Apple App Store Icon" border="0" /></a></td>
+                            
+                            <!-- Google -->
+                            <td style="font-family: Helvetica, Arial, sans-serif;"><a href="https://app.adjust.com/4unpqeh?campaign=email_footer&adgroup=promo-mylt-2019-review-ctl&creative=promo-mylt-2019-review-ctl&fallback=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.ltmoneycenter_android.PROD%26hl%3Den" style="color: #31353b; text-decoration: none;" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/images/2018/LT_110217_LTApp_google-play-v2.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="80" height="25" alt="Google Play Icon" border="0" /></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+                
+                <!-- Social -->
+                <th style="padding-bottom: 30px; width: 50%;">
+                  <table align="right" role="presentation" width="112" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 112px;">
+                    <tr>
+                      <td>
+                        <p style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; mso-line-height-rule: exactly; line-height: 22px; margin: 0 0 10px 0; padding: 0; text-align: right;">Follow Us</p>
+                        
+                        <table align="right" role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td style="padding: 0 5px;"><a style="color: #00aeef; text-decoration: underline;" href="https://www.facebook.com/LendingTree/?mtaid=C7A2A&esourceid=6389546&cchannel=offline&cproduct=brand&csource=email" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/white-icons/lt5-icon-white-no-ring-Facebook.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="Facebook icon" border="0" /></a></td>
+                        
+                            <td style="padding: 0 5px;"><a style="color: #00aeef; text-decoration: underline;" href="https://twitter.com/LendingTree/?mtaid=C7A2A&esourceid=6389546&cchannel=offline&cproduct=brand&csource=email" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/white-icons/lt5-icon-white-no-ring-Twitter.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="Twitter icon" border="0" /></a></td>
+                        
+                            <td style="padding: 0 5px;"><a style="color: #00aeef; text-decoration: underline;" href="https://www.instagram.com/lendingtree/?mtaid=C7A2A&esourceid=6389546&cchannel=offline&cproduct=brand&csource=email" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/white-icons/lt5-icon-white-no-ring-Instagram.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="Instagram icon" border="0" /></a></td>
+                        
+                            <td style="padding-left: 5px;"><a style="color: #00aeef; text-decoration: underline;" href="https://www.lendingtree.com/blog/?mtaid=07D78&esourceid=6387246&cchannel=offline&cproduct=brand&csource=email" target="_blank"><img src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/white-icons/lt5-icon-white-no-ring-Document.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="LendingTree Blog icon" border="0" /></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+            </table>
+            
+            <!-- Legal -->
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #FFFFFF; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is a Marketing Lead Generator and is a Duly Licensed Mortgage Broker, as required by law, with its main office located at <span class="autolink_footer">11115 Rushmore Dr., Charlotte, NC 28277</span>. NMLS Unique Identifier #1136.</p>
+
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #FFFFFF; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is known as LT Technologies in lieu of true name LendingTree, LLC in NY. For a current list of applicable state licensing &amp; disclosures, see the LendingTree website or contact us for details. This is a commercial email from LendingTree and may be recurring.</p>
+
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #FFFFFF; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC: <a href="http://www.lendingtree.com/publications/?email=&ccreative=footer-unsub" target="_blank" style="color: #FFFFFF; text-decoration: none;">Unsubscribe</a> | <a href="https://www.lendingtree.com/legal/privacy-policy?ccreative=footer-legal-pp" target="_blank" style="color: #FFFFFF; text-decoration: none;">Privacy Policy</a> | <a href="https://www.lendingtree.com/legal/terms-of-use?ccreative=footer-legal-tou" target="_blank" style="color: #FFFFFF; text-decoration: none;">Terms of Use</a> | <a href="https://www.lendingtree.com/legal/licenses-and-disclosures?ccreative=footer-legal-lnd" target="_blank" style="color: #FFFFFF; text-decoration: none;">Disclosures and Licenses</a> | <a href="https://www.lendingtree.com/about/contact-us/" target="_blank" style="color: #FFFFFF; text-decoration: none;">Contact Us</a></p>
+          </td>
+        </tr>
+        <!-- End Footer -->
+      </table>
+      <!-- End Container -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Table Background -->
+
+<div id="new-gmail-hack" style="white-space: nowrap; font: 15px courier; line-height: 0; display: none;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+</body>
+</html>
