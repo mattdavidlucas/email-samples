@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]-->
+
+<title>%%subject%%</title>
+
+<style type="text/css">
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+table td { border-collapse: collapse; }
+
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+a.cta-primary:hover { background-color: #047594 !important;}
+a.cta-secondary:hover { background-color: #4ed1f3 !important;}
+a.cta-tertiary:hover { background-color: #f2323b !important;}
+
+u + #new-gmail-hack {
+  display: block !important;
+}
+
+div, button {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.fade:hover img { opacity: 0.75; }
+
+@media only screen and (max-width: 620px) {
+  .body {
+    min-width: 100vw;
+  }
+
+  .full-width {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hide-on-mobile { display: none !important; }
+  
+  .block-element {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+  
+  .center { margin: 0 auto; }
+
+  .center-text { text-align: center !important; }
+
+  .padding-inner-container { padding: 10% 8% !important; }
+
+  .padding-fluid-lr {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+
+  .no-padding { padding: 0 !important; }
+
+  .logo-pn {
+    height: auto !important;
+    max-width: 100px !important;
+  }
+  
+  .promo-social-icon-fb,
+  .promo-social-icon-tw {
+    height: auto !important;
+  }
+
+  .promo-social-icon-fb {
+    max-width: 15px !important;
+  }
+
+  .promo-social-icon-tw {
+    max-width: 30px !important;
+  }
+
+  .main-hero { background-size: cover !important; }
+
+  .main-hero-globe { background-size: 200% !important; }
+
+  .fluid-img {
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+</style>
+
+<!-- Custom CSS here -->
+<style>
+  .cta-ghost:hover {
+    background-color: #FFFFFF;
+    color: #18BC9C !important;
+  }
+  .cta-navy:hover {
+    background-color: #18BC9C !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .text-center { text-align: center !important; }
+    
+    .pb-0 { padding-bottom: 0 !important; }
+
+    .rltm-headline {
+      font-size: 26px !important;
+      line-height: 30px !important;
+    }
+
+    .rltm-subhead { padding-bottom: 30px !important; }
+
+    .rltm-cross-img { max-width: 140px !important; }
+  }
+</style>
+
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #F4F4F4;">
+
+<!-- Preheader Text -->
+<div style="display: none; font-size: 1px; color: #F4F4F4; line-height: 1px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">rltm.js is a universal API for realtime messaging, allowing you to easily swap between Socket.IO and PubNub for bidirectional event-based communication.</div>
+<!-- End Preheader Text -->
+
+<div style="display: none; width: 0px; height: 0px; max-height: 0px; overflow: hidden;">
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+<!-- Table Background -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #F4F4F4; border-collapse: collapse;">
+  <tr>
+    <td width="100%" style="padding: 0 0 40px 0; vertical-align: top;">
+      <!-- Full Width Hero -->
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+        <tr>
+          <td>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td bgcolor="#18BC9C" style="background-color: #18BC9C; border-top: 20px solid #2C3E50; padding: 43px 0 40px 0;">
+                  <table width="85%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                    <!-- Logo -->
+                    <tr>
+                      <td align="center" style="padding-bottom: 30px;">
+                        <a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js" style="color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; text-decoration: none;" target="_blank"><img src="http://storage.pardot.com/28622/115585/rltm_js_logo_white.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="177" height="50" alt="rltm.js" border="0" /></a>
+                      </td>
+                    </tr>
+
+                    <!-- Headline -->
+                    <tr>
+                      <td class="rltm-headline" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 32px; font-weight: bold; mso-line-height-rule: exactly; line-height: 38px; padding-bottom: 10px; text-align: center;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js" style="color: #ffffff; text-decoration: none;" target="_blank">Universal API for Realtime</a></td>
+                    </tr>
+
+                    <!-- Subhead -->
+                    <tr>
+                      <td class="rltm-subhead" style="color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 18px; mso-line-height-rule: exactly; line-height: normal; padding-bottom: 40px; text-align: center;">A single code base to connect to multiple realtime services.</td>
+                    </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                      <td>
+                        <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                          <tr>
+                            <td>
+                              <a class="cta-ghost" href="https://www.pubnub.com/blog/announcing-rltm-js-a-universal-api-for-realtime-messaging/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js" style="border: 2px solid #FFFFFF; border-radius: 4px; color: #ffffff; display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; padding: 10px 30px; text-align: center; text-decoration: none;" target="_blank"><!--[if gte mso 9]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Learn More<!--[if gte mso 9]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- End CTA -->
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- End Full Width Hero -->
+
+      <!-- Start Container / Width: 600px -->
+      <!--[if (gte mso 9)|(IE)]>
+      <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 600px;">
+        <tr>
+          <td style="vertical-align: top;">
+      <![endif]-->
+      <table class="full-width" align="center" width="95%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; max-width: 600px;">
+        <tr>
+          <td>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <!-- Start Intro -->
+              <tr>
+                <td bgcolor="#FFFFFF" style="background-color: #FFFFFF; border-bottom: 4px solid #DDD;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td class="padding-inner-container" style="padding: 40px 30px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td style="color: #444444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; padding-bottom: 20px; text-align: left;">Most developers began by implementing an open source realtime solution themselves. As they grow, they realize how difficult and costly it is to scale and support their own realtime network. This is where <a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js" target="_blank" style="color: #18BC9C;">rltm.js</a> comes in.</td>
+                          </tr>
+
+                          <tr>
+                            <td style="color: #444444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; text-align: left;">rltm.js allows you to build realtime apps with one codebase and easily switch between realtime messaging backends. Think of rltm.js as a realtime protocol adapter that ensures communication between clients and realtime messaging APIs and services.</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Intro -->
+
+              <!-- Spacer -->
+              <tr>
+                <td align="left" valign="top" width="100%" height="10" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 10px;"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+              </tr>
+              <!-- End Spacer -->
+              
+              <!-- Start Key Features -->
+              <tr>
+                <td bgcolor="#FFFFFF" style="background-color: #FFFFFF; border-top: 4px solid #2C3E50;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 40px 0 0 0; text-align: center; text-transform: uppercase;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#docs" style="color: #2C3E50; text-decoration: none;" target="_blank">Key Features</a></td>
+                    </tr>
+                    
+                    <!-- Divider -->
+                    <tr>
+                      <td align="center" style="padding: 10px 0;">
+                        <img src="http://storage.pardot.com/28622/115587/rltm_js_star_divider_navy.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="220" alt="" border="0" />
+                      </td>
+                    </tr>
+
+                    <!-- 2 Columns / RTL Pattern -->
+                    <!-- Row 1 = Room -->
+                    <tr>
+                      <td dir="rtl" align="center" style="padding: 20px 15px 20px 15px; vertical-align: top;">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table dir="rtl" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td style="padding: 15px;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <tr>
+                                    <td align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#rooms" style="color: #2C3E50; text-decoration: none;" target="_blank"><img class="rltm-cross-img" src="http://rltmjs.com/assets/room.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; width: 100%; max-width: 190px; outline: none;" width="190" alt="Room" border="0" /></a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                        <![endif]-->
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                            <td width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td class="pb-0" style="padding: 15px;">
+                                <table dir="ltr" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <!-- Headline -->
+                                  <tr>
+                                    <td class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 0 0 15px 0; text-align: left;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#rooms" style="color: #2C3E50; text-decoration: none;" target="_blank">Rooms</a></td>
+                                  </tr>
+                                  <!-- End Headline -->
+                                  
+                                  <!-- Copy -->
+                                  <tr>
+                                    <td class="text-center" style="color: #444444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; padding-bottom: 0;">Realtime communication happens over <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span>s. <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span>s are like chat rooms, everybody in a <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span> receives events sent by every other <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">user</span>.</td>
+                                  </tr>
+                                  <!-- End Copy -->
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+                    <!-- End Row 1 -->
+
+                    <!-- Row 2 = Message -->
+                    <tr>
+                      <td align="center" style="padding: 20px 15px; vertical-align: top;">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td style="padding: 15px;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <tr>
+                                    <td align="center" style="color: #2C3E50; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                      <a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#message" style="color: #2C3E50; text-decoration: none;" target="_blank"><img class="rltm-cross-img" src="http://rltmjs.com/assets/publish.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; width: 100%; max-width: 190px; outline: none;" width="190" alt="Message" border="0" /></a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                        <![endif]-->
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                            <td align="left" width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td class="pb-0" style="padding: 15px;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <!-- Headline -->
+                                  <tr>
+                                    <td class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 0 0 15px 0; text-align: left;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#message" style="color: #2C3E50; text-decoration: none;" target="_blank">Message</a></td>
+                                  </tr>
+                                  <!-- End Headline -->
+                                  
+                                  <!-- Copy -->
+                                  <tr>
+                                    <td class="text-center" style="color: #444444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; padding-bottom: 0; text-align: left;">To send a message to the entire room, use the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">message()</span> method. When another <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">user</span> sends a message to the room, it will trigger the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">message</span> event. The <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span> can subscribe to that event with the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">on()</span> method.</td>
+                                  </tr>
+                                  <!-- End Copy -->
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+                    <!-- End Row 2 -->
+
+                    <!-- Row 3 = Here -->
+                    <tr>
+                      <td dir="rtl" align="center" style="padding: 20px 15px; vertical-align: top;">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table dir="rtl" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td style="padding: 15px;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <tr>
+                                    <td align="center" style="color: #2C3E50; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#here" style="color: #2C3E50; text-decoration: none;" target="_blank"><img src="http://rltmjs.com/assets/herenow.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; width: 100%; max-width: 251px; outline: none;" width="251" alt="Here" border="0" /></a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                        <![endif]-->
+                        
+                        <!--[if (gte mso 9)|(IE)]>
+                            <td width="281" style="vertical-align: top; width: 281px;">
+                        <![endif]-->
+                        <div class="full-width" style="display: inline-block !important; width: 100%; max-width: 281px; vertical-align: top;">
+                          <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                            <tr>
+                              <td class="pb-0" style="padding: 15px;">
+                                <table dir="ltr" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                                  <!-- Headline -->
+                                  <tr>
+                                    <td class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 0 0 15px 0; text-align: left;"><a href="http://rltmjs.com/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js#here" style="color: #2C3E50; text-decoration: none;" target="_blank">Here</a></td>
+                                  </tr>
+                                  <!-- End Headline -->
+                                  
+                                  <!-- Copy -->
+                                  <tr>
+                                    <td class="text-center" style="color: #444444; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; padding-bottom: 20px; ">A <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span> can get a list of other <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">user</span>s who are in the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span> by using the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">here()</span> method. Successful responses will return a object of <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">user</span>s who are currently connected to the <span style="background-color: #f9f2f4; color: #c7254e; font-family: courier, monospace, serif;">room</span>.</td>
+                                  </tr>
+                                  <!-- End Copy -->
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+                    <!-- End Row 3 -->
+                    <!-- End 2 Columns / RTL Pattern -->
+                  </table>
+                </td>
+              </tr>
+              <!-- End Key Features -->
+
+              <!-- Easy Setup Section -->
+              <tr>
+                <td bgcolor="#18BC9C" style="background-color: #18BC9C; padding: 10px 30px 40px 30px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 30px 0 0 0; text-align: center; text-transform: uppercase;"><a href="https://github.com/pubnub/rltm.js#setup" style="color: #FFFFFF; text-decoration: none;" target="_blank">Easy Setup</a></td>
+                    </tr>
+                    
+                    <!-- Divider -->
+                    <tr>
+                      <td align="center" style="padding: 10px 0 30px;">
+                        <img src="http://storage.pardot.com/28622/115589/rltm_js_star_divider_white.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="220" alt="" border="0" />
+                      </td>
+                    </tr>
+
+                    <!-- Code Sample -->
+                    <tr>
+                      <td style="padding-bottom: 20px;">
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="center" width="446" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 446px;">
+                          <tr>
+                            <td style="vertical-align: top;">
+                        <![endif]-->
+                        <table bgcolor="#FFFFFF" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #FFFFFF; border-radius: 4px; border-collapse: collapse; margin: 0 auto; width: 100%; max-width: 486px;">
+                          <tr>
+                            <td>
+                              <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                                <tr>
+                                  <td style="font-family: courier, monospace, sans-serif; font-size: 15px; line-height: normal; padding: 20px;">npm install rltm --save</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <!--[if (gte mso 9)|(IE)]>
+                        <table align="center" width="446" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 446px;">
+                          <tr>
+                            <td style="vertical-align: top;">
+                        <![endif]-->
+                        <table class="full-width" bgcolor="#FFFFFF" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #FFFFFF; border-radius: 4px; border-collapse: collapse; margin: 0 auto; width: 100%; max-width: 486px;">
+                          <tr>
+                            <td>
+                              <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                                <tr>
+                                  <td style="font-family: courier, monospace, sans-serif; font-size: 15px; line-height: normal; padding: 20px;">
+                                    <span style="color: #a71d5d;">const</span> <span style="color: #0086b3;">rltm</span> <span style="color: #a71d5d;">=</span> <span style="color: #0086b3;">require</span>(<span style="color: #795da3;">'rltm'</span>);<br /><br />
+
+                                    <span style="color: #a71d5d;">let</span> user <span style="color: #a71d5d;">=</span> <span style="color: #795da3;">rltm</span>({<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;service<span style="color: #a71d5d;">:</span>&nbsp;<span style="color: #795da3;">'pubnub'</span>,<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;config<span style="color: #a71d5d;">:</span> {<br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #969896;">// ...</span><br />
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                                    });
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                            </td>
+                          </tr>
+                        </table>
+                        <![endif]-->
+                      </td>
+                    </tr>
+                    <!-- End Code Sample -->
+                  </table>
+                </td>
+              </tr>
+              <!-- End Easy Setup Section -->
+              
+              <!-- Spacer -->
+              <tr>
+                <td align="left" valign="top" width="100%" height="10" style="border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 10px;"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+              </tr>
+              <!-- End Spacer -->
+
+              <!-- Get Started Section -->
+              <tr>
+                <td bgcolor="#FFFFFF" style="background-color: #FFFFFF; border-top: 4px solid #2C3E50; border-bottom: 4px solid #DDDDDD; padding: 10px 30px 40px 30px;">
+                  <table align="center" width="80%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                    <tr>
+                      <td style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; padding: 25px 0 20px 0; text-align: center;"><a href="https://github.com/pubnub/rltm.js" style="color: #2C3E50; text-decoration: none;" target="_blank">Yup, your realtime project needs this.</a></td>
+                    </tr>
+
+                    <tr>
+                      <td align="center" style="padding-bottom: 20px;">
+                        <a href="https://github.com/pubnub/rltm.js" style="color: #2C3E50; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; text-decoration: none;" target="_blank"><img src="http://storage.pardot.com/28622/115583/github_icon_round_47x47_navy.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="GitHub" border="0" /></a>
+                      </td>
+                    </tr>
+
+                    <!-- CTA -->
+                    <tr>
+                      <td>
+                        <table class="cta-navy" bgcolor="#2C3E50" align="center" cellpadding="0" cellspacing="0" border="0" style="background-color: #2C3E50; border-radius: 4px;  border-collapse: collapse; margin: 0 auto;">
+                          <tr>
+                            <td height="37" style="height: 37px;">
+                              <a href="https://github.com/pubnub/rltm.js" style="color: #FFFFFF; display: inline-block; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; padding: 10px 30px; text-align: center; text-decoration: none;" target="_blank"><!--[if gte mso 9]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Clone the repo<!--[if gte mso 9]>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- End CTA -->
+                  </table>
+                </td>
+              </tr>
+              <!-- End Get Started Section -->
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+      <!-- End Container -->
+
+      <!-- Start Footer / Width: 600px -->
+      <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; max-width: 600px;">
+        <tr>
+          <td style="padding-top: 25px;">
+            
+            <table align="center" width="80%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+              <!-- Social Icons -->
+              <tr>
+                <td style="padding-bottom: 25px;">
+                  <table align="center" cellpadding="5" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+                    <tr>
+                      <td colspan="5" style="color:#767e85; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; padding-bottom: 10px; text-align: center; text-transform: uppercase;">Connect With Us</td>
+                    </tr>
+
+                    <tr>
+                      <!-- Twitter / ?source=emailtw -->
+                      <td style="font-size:9px; color:#767e85;">
+                        <a href="https://twitter.com/PubNub" target="_blank" style="text-decoration: none; color: #545e66;"><img src="http://storage.pardot.com/28622/106334/twitter_icon_round__47x47.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="30" height="30" alt="Tweet" border="0" /></a>
+                      </td>
+                      
+                      <!-- Facebook / ?source=emailfb -->
+                      <td style="font-size:9px; color:#767e85;">
+                        <a href="https://www.facebook.com/PubNub" target="_blank" style="text-decoration: none; color: #545e66;"><img src="http://storage.pardot.com/28622/106328/facebook_icon_round_47x47.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="30" height="30" alt="Facebook" border="0" /></a>
+                      </td>
+
+                      <!-- Google+ / ?source=emailgp -->
+                      <td style="font-size:9px; color:#767e85;">
+                        <a href="https://plus.google.com/+Pubnub" target="_blank" style="text-decoration:none; color: #545e66;"><img src="http://storage.pardot.com/28622/106330/googleplus_icon_round__47x47.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="30" height="30" alt="G+" border="0" /></a>
+                      </td>
+
+                      <!-- LinkedIn / ?source=emailln -->
+                      <td style="font-size:9px; color:#767e85;">
+                        <a href="https://www.linkedin.com/company/pubnub" target="_blank" style="text-decoration:none; color: #545e66;"><img src="http://storage.pardot.com/28622/106332/linkedin_icon_round__47x47.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="30" height="30" alt="LinkedIn" border="0" /></a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Social Icons -->
+
+              <!-- Legal -->
+              <tr>
+    <td>
+        <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+            <tr>
+                <td class="center-text" style="color: #767e85; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:11px; mso-line-height-rule: exactly; line-height: 18px; text-align: center;">&copy; 2017 PubNub. All rights reserved. <span class="block-element">725 Folsom Street, San Francisco, California, USA.</span></td>
+            </tr>
+
+            <tr>
+                <td class="center-text" style="color: #767e85; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:11px; mso-line-height-rule: exactly; line-height: 18px; text-align: center;">
+                <span class="block-element"><a href="https://admin.pubnub.com/#/update-preferences?email=%%email%%" target="_blank" style="text-decoration: underline; color: #767e85;">Manage Your Preferences</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="%%unsubscribe%%" target="_blank" style="text-decoration: underline; color: #767e85;">Opt-Out</a></span>
+                <span class="hide-on-mobile">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <span class="block-element"><a href="https://www.pubnub.com/company/contact-us/?utm_source=EmailBlasts&amp;utm_medium=Product-Promo&amp;utm_campaign=EB-CY17-Q2-rltm-js" target="_blank" style="text-decoration: underline; color: #767e85;">Contact Us</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="%%view_online%%" target="_blank" style="text-decoration: underline; color: #767e85;">View Online</a></span>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+
+
+              <!-- End Legal -->
+            </table>
+
+          </td>
+        </tr>
+      </table>
+      <!-- End Footer -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Table Background -->
+
+<div id="new-gmail-hack" style="white-space: nowrap; font: 15px courier; line-height: 0; display: none;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+</body>
+</html>
