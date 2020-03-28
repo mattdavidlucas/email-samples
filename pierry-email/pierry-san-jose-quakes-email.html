@@ -1,0 +1,292 @@
+%%[
+VAR @email,
+	@firstName,
+	@accountNumber,
+	@orderNumber,
+	@orderLineItem,
+	@preURL
+
+SET @email         = email_addr
+SET @firstName     = Trim(Lookup('17FULL_Autorenew_YES','first_name','email_addr',@email))
+SET @accountNumber = Lookup('17FULL_Autorenew_YES','acct_id','email_addr',@email)
+SET @orderNumber   = Lookup('17FULL_Autorenew_YES','order_num','email_addr',@email)
+SET @orderLineItem = Lookup('17FULL_Autorenew_YES','order_line_item','email_addr',@email)
+SET @preURL        = Concat('http://yourhomesth.com/acct-auto/',@accountNumber,'/',@orderNumber,'/',@orderLineItem,'/')
+]%%
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="telephone=no" name="format-detection" />
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--<![endif]-->
+
+<title></title>
+
+<style type="text/css">
+#outlook a {
+  padding: 0;
+}
+
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0;
+}
+
+div[style*="margin: 16px 0"] { margin:0 !important; }
+
+table td {
+  border-collapse: collapse;
+}
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.ExternalClass {
+  width: 100%;
+}
+
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+  line-height: 100%;
+}
+
+a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+@media only screen and (max-width: 600px) {
+  table[id="container"] {
+    min-width: 100% !important;
+  }
+
+  *[class="full-width"] {
+    width: 100% !important;
+  }
+
+  *[class="hide"] {
+    display: none !important;
+  }
+
+  *[class="center"] { text-align: center; }
+
+  td[class="footer-badge_container"] {
+	border: none !important;
+	padding: 0 0 30px 0 !important;
+  }
+	
+  img[class="fluid-img"] {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  /* Padding */
+  *[class="no-padding"] {
+    padding: 0 !important;
+  }
+
+  td[class="padding_content"],
+  td[class="padding_footer"] {
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+  }
+}
+</style>
+
+<!--[if gte mso 12]>
+    <style type="text/css">
+    #mso_footer-padding { padding-top: 3px !important; }
+    </style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+	<o:OfficeDocumentSettings>
+	<o:AllowPNG/>
+	<o:PixelsPerInch>96</o:PixelsPerInch>
+	</o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #d2cec5;">
+
+<!-- Table Background -->
+<table bgcolor="#d2cec5" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #d2cec5; border-collapse: collapse;">
+	<tr>
+		<td width="100%" style="vertical-align: top;">
+			<!-- Table Container -->
+			<table bgcolor="0051ba" id="container" class="full-width" width="700" border="0" cellspacing="0" cellpadding="0" align="center" style="background: #0051ba; border-collapse: collapse; margin: 0 auto; min-width: 700px; width: 700px;">
+				<!-- Full Width Hero -->
+				<tr>
+					<td><a href="%%=RedirectTo(@preURL)=%%" target="_blank"><img class="fluid-img" src="http://img.yourhomesth.com/cta/?fname=%%=v(@firstName)=%%&auto=1" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="700" alt="" border="0" /></a></td>
+				</tr>
+
+				<tr>
+					<!-- Email Container -->
+					<td background="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/renew-background-pattern.jpg" bgcolor="#0051ba" width="700" valign="top">
+					  <!--[if gte mso 9]>
+					  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:700px;">
+					    <v:fill type="tile" src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/renew-background-pattern.jpg" color="#0051ba" />
+					    <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+					  <![endif]-->
+					  <div>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+
+							<!-- Full Width Column -->
+							<tr>
+								<td class="padding_content" style="padding: 55px 0 65px 0; vertical-align: top;">
+									<table class="full-width" align="center" width="560" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 560px;">
+										<tr>
+											<td style="color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; padding-bottom: 20px;">%%=v(@firstName)=%%,<br />Thank you for your support as an Earthquakes Season Ticket Holder.  Because of you, Avaya Stadium was sold out of Season Tickets for the 2nd consecutive year which has created a great home for your Quakes!</td>
+										</tr>
+
+										<tr>
+											<td style="color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; padding-bottom: 20px;">During the renewal process last season, you opted in to the Auto Renew process. By doing so, you enrolled into the 5 Month Payment Plan; the first payment will be withdrawn from the card on file on July 15. If you would like to change your payment option, please call your Fan Relations Specialist (<a href="tel:14085567700" style="color: #FFFFFF; text-decoration: none;">408-556-7700</a>, option 2) before July 10 and we will be happy to help you.</td>
+										</tr>
+
+										<tr>
+											<td style="color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; padding-bottom: 20px;">By clicking &ldquo;REVIEW INFORMATION&rdquo; you will be directed to your renewal information through a customized website. </td>
+										</tr>
+
+										<tr>
+											<td style="color: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; padding-bottom: 20px;">GO QUAKES!</td>
+										</tr>
+
+										<tr>
+											<td style="padding-top: 20px;">
+												<table width="100%" border="0" cellspacing="0" cellpadding="0">
+												  <tr>
+												    <td align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
+												      <a href="%%=RedirectTo(@preURL)=%%" style="color: #FFFFFF; text-decoration: none; text-transform: uppercase;"><img src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/btn-review-information.gif" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="213" height="37" alt="Review Information" border="0" /></a>
+												    </td>
+												  </tr>
+												</table>
+											</td>
+										</tr><!-- End CTA -->
+									</table>
+								</td>
+							</tr>
+							<!-- End Full Width Column -->
+						</table>
+					  </div>
+					  <!--[if gte mso 9]>
+					    </v:textbox>
+					  </v:rect>
+					  <![endif]-->
+					</td>
+				</tr>
+			</table>
+			<!-- End Table Container -->
+
+			<!-- Begin Footer -->
+			<table bgcolor="#000000" width="700" class="full-width" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #000000; border-collapse: collapse; margin: 0 auto; width: 700px;">
+				<tr>
+					<td class="padding_footer" style="padding: 15px 70px 20px 70px; vertical-align: top;">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+							<tr>
+								<td>
+									<!--[if (gte mso 9)|(IE)]>
+            						<table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+										<tr>
+											<td width="133" style="vertical-align: top;">
+            						<![endif]-->
+									<!-- Badge -->
+									<table class="full-width" align="left" width="133" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 133px;">
+										<tr>
+											<td class="footer-badge_container" style="border-right: 1px solid #FFFFFF; padding-right: 20px;">
+												<table width="100" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; width: 100px">
+													<tr>
+														<td align="center" style="padding-bottom: 15px;"><a href="http://www.sjearthquakes.com/" target="_blank"><img src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-quakes-badge.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="43" height="54" alt="" border="0" /></a></td>
+													</tr>
+
+													<tr>
+														<td>
+															<table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																<tr>
+																	<td style="padding: 0 2px;"><a href="https://www.facebook.com/sanjoseearthquakes"><img border="0" width="21" height="21" style="display: block;" src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-facebook.png"></a></td>
+																	<td style="padding: 0 2px;"><a href="https://twitter.com/sjearthquakes"><img border="0" width="21" height="21" style="display: block;" src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-twitter.png"></a></td>
+																	<td style="padding: 0 2px;"><a href="https://instagram.com/sjearthquakes"><img border="0" width="21" height="21" style="display: block;" src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-instagram.png"></a></td>
+																	<td style="padding: 0 2px;"><a href="https://www.youtube.com/user/sanjoseearthquakes"><img border="0" width="21" height="21" style="display: block;" src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-youtube.png"></a></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!-- End Badge -->
+									<!--[if (gte mso 9)|(IE)]>
+											</td>
+            						<![endif]-->
+									
+									<!--[if (gte mso 9)|(IE)]>
+											<td width="100%">
+            						<![endif]-->
+									<!-- Legal -->
+									<table class="full-width" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+										<tr>
+											<td id="mso_footer-padding" class="no-padding" style="padding: 7px 0 0 30px;">
+												<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+													<tr>
+														<td class="center" style="color: #ffffff; font-size: 12px; font-family: Helvetica, Arial, san-serif; padding-bottom: 5px;"><span style="font-weight: bold;"><a href="%%profile_center_url%%" style="color: #51a0e6; text-decoration: none;">Unsubscribe</a></span></td>
+													</tr>
+
+													<tr>
+														<td class="center" style="color: #ffffff; font-size: 12px; font-family: Helvetica,Arial,san-serif; mso-line-height-rule: exactly; line-height: 16px; padding-bottom: 10px;">&copy; %%=Format(Now(), "yyyy")=%% MLS. All Major League Soccer trademarks and copyrights used by permission. All rights reserved.</td>
+													</tr>
+													<tr>
+														<td class="center" style="color: #ffffff; font-size: 12px; font-family: Helvetica,Arial,san-serif;">%%Member_Busname%%, %%Member_Addr%% %%Member_City%%, %%Member_State%% %%Member_PostalCode%%, %%Member_Country%%</td>
+													</tr>
+												</table>
+                                            </td>
+										</tr>
+									</table>
+									<!-- End Legal -->
+									<!--[if (gte mso 9)|(IE)]>
+											</td>
+										</tr>
+									</table>
+            						<![endif]-->
+
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- End Footer -->
+
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+				<tr>
+					<td align="center" style="padding: 15px 0;"><img src="http://image.info.mlssoccer.com/lib/fe6615707d660c7f7615/m/1/20150701-powered-by-pierry.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="183" height="32" alt="Pierry Software" border="0" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<!-- End Table Background -->
+
+<div style="display: none; white-space: nowrap; font: 15px courier; line-height:0;"> &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; </div>
+
+<custom name="opencounter" type="tracking">
+
+</body>
+
+</html>
