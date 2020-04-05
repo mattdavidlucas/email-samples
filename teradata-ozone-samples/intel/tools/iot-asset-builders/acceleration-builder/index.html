@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Intel Accel Links</title>
+
+
+	<style>
+		html {font-size: 100%;}
+
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 16px;
+		}
+		
+		#container {
+			margin: 30px auto;
+			width: 600px;
+		}
+
+		.row {overflow: hidden;}
+		
+		input, textarea {
+			display: block;
+			font-size: 1em;
+		}
+		
+		input[type="text"], textarea {
+			border: 1px solid #e1e1e1;
+			margin: 0 0 10px 0;
+			padding: 10px;
+			width: 600px;
+		}
+
+		textarea {
+			height: 220px;
+		}
+
+		input[type="text"] {font-family: Helvetica, Arial, sans-serif;}
+
+		textarea {font-family: Monaco, Courier}
+
+		
+
+		input[type="submit"], input[type="reset"] {
+			border: none;
+			border-radius: 5px;
+			color: #FFF;
+			cursor: pointer;
+			font-family: Helvetica, Arial, sans-serif;
+			float: left;
+			margin: 0 10px 0 0;
+			padding: 10px 30px;
+		}
+
+		input[type="submit"]:hover, input[type="reset"]:hover {opacity: 0.90;}
+		
+		input[type="submit"]:focus, input[type="reset"]:focus {outline: none;}
+
+		input[type="submit"] {background: #76b700;}
+
+		input[type="reset"] {background: #d53043;}
+
+		.notes {
+			border-top: 1px solid #e1e1e1;
+			color: #777;
+			font-family: Baskerville, Georgia, serif;
+			font-style: italic;
+			margin: 30px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="container">
+	<h1>Intel Accel Links</h1>
+
+	<form>
+		<input id="accel-stage" type="text" placeholder="Acceleration Stage" value="iot_accel_">
+		<input id="redirect-lp" type="text" placeholder="TYP URL">
+		<textarea name="accel-link" id="accel-link" cols="30" rows="3"></textarea>
+		<div class="row">
+			<input type="submit" value="Create Link">
+			<input type="reset" value="Reset">
+		</div>
+	</form>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+$(function() {
+	$('#accel-stage').focus();
+
+	$('form').submit(function(event) {
+		var accelStage = $('#accel-stage').val(),
+		redirect       = $('#redirect-lp').val(),
+		blindURL       = 'https://plan.seek.intel.com/US.EN.Embedded.registration-form-iot-acceleration/?elq=~~eloqua..type--emailfield..syntax--recipientid~~',
+		encodedURL		 = encodeURIComponent(redirect);
+
+		$('#accel-link').val(blindURL + '&accelStage=' + accelStage + '&redirectLP=' + encodedURL).focus();
+
+		var link =  '<p>' + $('#accel-link').val() + '</p>';
+
+		console.log(link);
+
+		$('.output-container').append(link);
+
+		event.preventDefault();
+	});
+});
+</script>
+
+</body>
+</html>

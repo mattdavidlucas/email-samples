@@ -1,0 +1,303 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:700);
+
+// Variables
+// Colors
+$ltGray: #d1d1d1;
+$green: #76b700;
+$intelBlue: #0071c5;
+
+// Fonts
+$defaultFont: 'Open Sans', Helvetica, Arial, sans-serif;
+$headerFont: 'Roboto', Helvetica, Arial, sans-serif;
+
+
+// Mixins
+@mixin rounded-corners($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+        -o-border-radus: $radius;
+          border-radius: $radius;
+}
+
+
+// Reset
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+*,*:before,*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+ol, ul { list-style: none; }
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+
+// Placeholders
+%button {
+  background: $green;
+  @include rounded-corners(5px);
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $defaultFont;
+  margin: 0 0 30px;
+  padding: 10px 30px;
+  text-align: center;
+  min-width: 150px;
+
+  &:hover { opacity: .90; }
+}
+
+%ltBorder { border: 1px solid #e1e1e1; }
+
+%placeholderText {
+  font-style: italic;
+  font-weight: 300;
+}
+
+
+// Begin Main CSS
+
+// General classes
+.button {
+  @extend %button;
+  text-decoration: none;
+}
+
+.number {
+  background-color: $green;
+  @include rounded-corners(90px);
+  color: white;
+  left: -53px;
+  padding: 10px 15px;
+  position: absolute;
+  top: -10px;
+}
+
+.non-form { margin-bottom: 70px; }
+
+// Typography
+body { font-family: $defaultFont; }
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  color: white;
+  font-family: $headerFont;
+  font-size: 1.6em;
+}
+
+h2 { 
+  font-size: 1.1em;
+  line-height: 1em;
+  margin-bottom: 25px; 
+}
+
+strong { font-weight: 600; }
+
+// Header
+header {
+  background-color: $intelBlue;
+  border-bottom: 5px solid darken($intelBlue, 5%);
+  padding: 50px 75px;
+  width: 100%;
+}
+
+// Content
+.container {
+  padding: 50px 75px;
+}
+
+h1, .block-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 960px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+#url-builder { background-color: white; }
+
+#form-page { 
+  background-color: darken(white, 3%);
+  border-top: 1px solid darken(white, 10%); 
+}
+
+#typ-page { 
+  background-color: darken(white, 6%);
+  border-top: 1px solid darken(white, 15%); 
+}
+
+#asset-names { 
+  background-color: darken(white, 9%); 
+  border-top: 1px solid darken(white, 20%);
+}
+
+.copy-text {
+  background-color: #333;
+  @include rounded-corners(3px);
+  color: white;
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  @extend %placeholderText;
+}
+
+fieldset {
+  background-color: white;
+  @extend %ltBorder;
+  @include rounded-corners(5px);
+  margin: 0 0 20px 0;
+  padding: 20px;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.dark-border { border: 1px solid darken(#e1e1e1, 5%); }
+
+legend { 
+  font-weight: 700; 
+}
+
+form { 
+  margin-bottom: 40px; 
+  position: relative;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea { 
+  display: block; 
+  font-size: 1em;
+}
+
+input[type="text"], textarea {
+  @extend %ltBorder;
+  @extend %placeholderText;
+  color: #777;
+  font-family: $defaultFont;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+input[type="submit"] {
+   @extend %button;
+   border: none;
+}
+
+select {
+  border: 1px solid darken($ltGray, 10%);
+  font-family: $defaultFont;
+}
+
+.row.stage-chooser {
+  float: left;
+  padding-right: 5%;
+
+  select {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+#form-submit {
+  top: 3423px;
+}
+
+#typ-submit {
+  left: 258px;
+  top: 1892px;
+}
+
+
+// Email Builder Styles
+.email-builder {
+  #email-copy {
+    background-color: #f7f7f7;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  #eloqua-details { 
+    background-color: darken(#f7f7f7,3%);
+    border-top: 1px solid #e6e6e6;
+  }
+  
+  h3 {
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 30px 0 10px;
+    padding-bottom: 10px;
+  }
+
+  small { font-size: .9em; }
+
+  small span {
+    font-style: italic;
+    line-height: 1.4em;
+  }
+  
+  .row { margin-bottom: 10px; }
+
+  .row.checkboxes { 
+    float: left;
+    height: 30px; 
+    width: 33%;
+  }
+  
+  .checkboxes label { line-height: 1.3em; }
+
+  .checkboxes input {
+    display: block;
+    float: left;
+  }
+}
+
+

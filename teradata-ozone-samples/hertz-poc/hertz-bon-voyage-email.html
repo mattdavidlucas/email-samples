@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1.0">
+
+<title>Hertz</title>
+
+<style type="text/css">
+body { 
+	width: 100% !important;
+	-webkit-text-size-adjust: none; 
+	    -ms-text-size-adjust: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+table td { border-collapse: collapse; }
+
+table { 
+	border-collapse: collapse; 
+	mso-table-lspace: 0pt; 
+	mso-table-rspace: 0pt; 
+}
+
+.ExternalClass { width:100%; }
+
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; } 
+
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" mobile="fix">
+
+<!-- Table Background -->
+<table bground="#FFFFFF" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #FFFFFF; border-collapse: collapse; table-layout: fixed;">
+	<tr>
+		<td width="100%" valign="top">
+
+			<!-- Table Container -->
+			<table align="center" width="500" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+				<tbody>
+					<tr>
+						<td style="background-color: #EDEDED; padding: 16px; font-size: 10pt;">
+							<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #FFFFFF; height: 98px; border-collapse: collapse;">
+								<tr>
+									<td style="text-align: left; vertical-align: top;">
+										<img src="http://bvhertz.com/imgproxy/img/4000032065/hertz-logo-360x98.gif" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="360" height="98" alt="Hertz" border="0" />
+									</td>
+								</tr>
+							 </table>
+
+							 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: white; border-collapse: collapse; font-size: 12pt;">
+								<tr>
+									<td style="font-family: arial, helvetica, sans-serif; font-weight: bold; padding: 16px 16px 10px 16px;"> Your Confirmation Number: <% ${ user.CustomAttribute['RESERVATION_NUMBER'] } %></td>
+								</tr>
+								
+								<%InsertIf expression="${( (not empty user['FirstName']) || ( (not empty user['FirstName']) && (not empty user['LastName']) )  )}"%>
+								<tr>
+									<td style="font-family: arial, helvetica, sans-serif; padding: 0px 16px 16px 16px ; font-size: 9pt;">Hello <% ${ user['FirstName'] } %> <% ${ user['LastName'] } %>,</td>
+								</tr>
+								<%/InsertIf%>
+
+								<tr>
+									<td style="font-family: arial, helvetica, sans-serif; padding: 0px 16px 16px 16px ; font-size: 9pt;">Here's a friendly reminder regarding your reservation details. If you need to add flight information or make any changes to your reservation, click below to modify or cancel. If not, we'll see you there!</td>
+								</tr>
+
+								<tr>
+									<td style="font-family: arial, helvetica, sans-serif; padding: 0px 16px 16px 16px ; font-size: 9pt;">If you have previously cancelled this reservation over the phone, please disregard this email.  Changes to your reservation made over the phone will not be reflected in this email.</td>
+								</tr>
+							  </table>
+
+								<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+									<tr>
+										<td>
+											<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse;">
+												<tr>
+													<!-- Left Column -->
+													<td width="272" style="padding-top: 16px; padding-bottom: 16px; vertical-align: top;">
+														<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+															<tr>
+																<td style="vertical-align: top;">
+																	
+																	<!-- Reservation Content -->
+																	<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																		<tr>
+																			<td style="background-color: #FFFFFF; padding: 16px;">
+																				<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																					<tr>
+																						<td style="font-family: arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; padding-bottom: 20px; vertical-align: top;">Your Reservation Details</td>
+																					</tr>
+
+																					<tr>
+																						<td style="font-family: arial, helvetica, sans-serif; font-size: 9pt; color: #999999; padding-bottom: 20px; vertical-align: top;">
+																							<span style="color: #000000; font-weight: bold;">Pick-up Location:</span><br />
+																							<% ${ user.CustomAttribute['PICKUP_LOCATION_NAME'] } %><br />
+																							<% ${ user.CustomAttribute['PICKUP_ADDRESS'] } %><br />
+																							<% ${ user.CustomAttribute['PICKUP_CITY'] } %>, <% ${ user.CustomAttribute['PICKUP_STATE_PROVINCE'] } %> <% ${ user.CustomAttribute['PICKUP_POSTAL_CODE'] } %>
+																						</td>
+																					</tr>
+
+																					<tr>
+																						<td style="font-family: arial, helvetica, sans-serif; font-size: 9pt; color: #999999; padding-bottom: 20px; vertical-align: top;">
+																							<span style="color: #000000; font-weight: bold;">Pick-up Date:</span><br />
+																							<%${user.CustomAttribute['PICKUP_DATE']}%> at <% ${ user.CustomAttribute['PICKUP_TIME'] } %>
+																						</td>
+																					</tr>
+
+																					<tr>
+																						<td style="text-align: left; vertical-align: top;">
+																							<table cellpadding="0" cellspacing="0" border="0" style="background-color: ##ffdd00; border-collapse: collapse;">
+																								<tr>
+																									<td>
+																										<table align="left" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffdd00;  border-collapse: collapse;">
+																											<tr>
+																												<td style="font-size: 13px; padding: 3px 10px; font-family: 'Trebuchet MS',Helvetica,sans-serif; font-style: italic; text-align: center;"><a href="https://www.hertz.com/rentacar/reservation/?confirmationNumber=<% ${ user.CustomAttribute['RESERVATION_NUMBER'] } %>" style="text-decoration: none; color: #000000;">Modify / Cancel My Reservation</a></td>
+																											</tr>
+																										</table>
+																									</td>
+																								</tr>
+																							</table>
+																						</td>
+																					</tr>
+																				</table>			
+																			</td>
+																		</tr>
+
+																		<tr>
+																			<td height="16"></td>
+																		</tr>
+																	</table>
+																	
+																	<!-- Helpful Links -->
+																	<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																		<tr>
+																			<td style="background-color: #FFFFFF; padding: 16px;">
+																				<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																					<tr>
+																						<td style="font-family: arial, helvetica, sans-serif; font-size: 12pt; font-weight: bold; padding-bottom: 20px; vertical-align: top;">Helpful Links</td>
+																					</tr>
+
+																					<tr>
+																						<td style="vertical-align: top;">
+																							<table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="border-collapse: collapse;">
+																								<tr>
+																									<td style="height: 50px; padding-right: 10px; width: 50px; ">
+																										<img height="50" width="50" border="0" alt="" src="http://bvhertz.com/imgproxy/img/4000033687/bv_icon_sun.gif" />
+																									</td>
+																									<td style="vertical-align: middle; font-family: arial, helvetica, sans-serif; font-size: 10pt;">
+																										<%InsertIf expression="${( (user.CustomAttribute['PICKUP_COUNTRY'] == 'CA') )}"%>
+																											<a target="_blank" href="https://www.google.com/search?q=weather.com+enhanced+local+search#q=<% ${ user.CustomAttribute['PICKUP_POSTAL_CODE'] } %>+weather" style="color: #000000; text-decoration: none;">Check Weather for your trip</a>
+																										<%/InsertIf%>
+																										
+																										<%InsertElse%>
+																											<a target="_blank" href="http://www.weather.com/weather/5day/l/<% ${ user.CustomAttribute['PICKUP_POSTAL_CODE'] } %>:4:US" style="color: #000000; text-decoration: none;">Check Weather for your trip</a>
+																										<%/InsertElse%>
+																									</td>
+																								</tr>
+
+																								<tr>
+																									<td style="height: 50px; padding-right: 10px; width: 50px;">
+																										<img height="50" width="50" border="0" alt="" src="http://bvhertz.com/imgproxy/img/4000033686/bv_icon_compass.gif" />
+																									</td>
+
+																									<td style="vertical-align: middle;">
+																										<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+																											<tr>
+																												<td style="font-family: arial, helvetica, sans-serif; font-size: 10pt; font-weight: bold;">Driving Directions</td>
+																											</tr>
+																											
+																											<tr>
+																												<td style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a href="http://www.aaa.com/blogmap?&poikey=17" style="color: #000000; text-decoration: none;">AAA TripTik&reg;</a></td>
+																											</tr>
+
+																											<tr>
+																												<td style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a href="https://maps.google.com/maps?saddr=<% ${ user.CustomAttribute['PICKUP_ADDRESS'] } %>,<% ${ user.CustomAttribute['PICKUP_CITY'] } %>,<% ${ user.CustomAttribute['PICKUP_STATE_PROVINCE'] } %>,<% ${ user.CustomAttribute['PICKUP_POSTAL_CODE'] } %>&daddr=<% ${ user.CustomAttribute['PICKUP_STATE_PROVINCE'] } %>" style="color: #000000; text-decoration: none;">Google Maps</a></td>
+																											</tr>
+
+																											<tr>
+																												<td style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a href="http://www.neverlost.com/" style="color: #000000; text-decoration: none;">NeverLost Online Trip Planning</a></td>
+																											</tr>				
+																										</table>
+																									</td>
+																								</tr>
+
+																								<tr>
+																									<td style="height: 50px; padding-right: 10px; width: 50px; ">
+																										<img height="50" width="50" border="0" alt="" src="http://bvhertz.com/imgproxy/img/4000033688/bv_icon_phone.gif" />
+																									</td>
+																									<td style="vertical-align: middle; font-family: arial, helvetica, sans-serif; font-size: 10pt;">
+																										<a target="_blank" href="https://www.hertz.com/rentacar/customersupport/index.jsp?targetPage=faqsRightNow.jsp" style="color: #000000; text-decoration: none;">Contact Us</a>
+																									</td>
+																								</tr>
+																							</table>																			
+																						</td>
+																					</tr>
+																				</table>			
+																			</td>
+																		</tr>
+																	</table>
+																	
+																</td>
+															</tr>															
+														</table>
+													</td>
+													
+													<!-- Gutter -->
+													<td width="16"></td>
+
+													<!-- Right Column - Banner Ads -->
+													<td width="180" style="vertical-align: top;">
+														<%InsertIf expression="${( (user.CustomAttribute['PICKUP_COUNTRY'] == 'US') )}"%>
+														<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+
+															<!-- Banner Ad Container #1 -->
+															<%InsertIf expression="${( (not empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) && ( (user.CustomAttribute['LOYALTY_TIER'] == 'PL') || (user.CustomAttribute['LOYALTY_TIER'] == 'PS') || (user.CustomAttribute['LOYALTY_TIER'] == 'VP') ) )}"%>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<!-- Platinum Pick up -->
+																	<a href="http://www.hertz.com/rentacar/misc/index.jsp?targetPage=ppi.xml&bannerPos=1" title="Platinum Pick-up Information" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031018/Platinum_pickupinstructions.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Special Platinum Member Instructions" border="0" /></a>
+																</td>
+															</tr>
+															<%/InsertIf%>
+
+															<%InsertIf expression="${( (not empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) && ( (user.CustomAttribute['LOYALTY_TIER'] == 'FG') || (user.CustomAttribute['LOYALTY_TIER'] == 'PC') || (user.CustomAttribute['LOYALTY_TIER'] == 'RG') || (user.CustomAttribute['LOYALTY_TIER'] == 'N1') ) )}"%>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<%InsertIf expression="${( (ecm:random(0,3) == 1) || (ecm:random(0,3) == 3) )}"%>
+																	<!-- Gold eReceipts -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=eReturn.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United%20States&bannerPos=1" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031025/Gold_eReceipt.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Sign Up for eReceipts" border="0" /></a>
+																	<%/InsertIf%>
+																	
+																	<%InsertElse%>
+																	<!-- Gold eReturn -->
+																	<a href="http://goldplus.hertz.com/benefits/ereturn?bannerPos=1" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031026/Gold_eReturn.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz eReturn" border="0" /></a>
+																	<%/InsertElse%>
+																</td>
+															</tr>		
+															<%/InsertIf%>
+															
+															<%InsertIf expression="${( (empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) )}"%>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<!-- Monthly Rentals -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=longtermmonthlyleasecarrental.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United_States&bannerPos=1&loyaltyMember=false" title="Monthly Car Rentals by Hertz" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031022/Monthly_rentals.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz Monthly Rentals" border="0" /></a>	
+																</td>
+															</tr>	
+															<%/InsertIf%>		
+															<!-- End Banner Ad Container #1 -->
+
+
+															<!-- Banner Ad Container #2 -->
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<%InsertIf expression="${( (ecm:random(0,3) == 1) || (ecm:random(0,3) == 3) )}"%>
+																	<!-- Rent 2 Buy -->
+																	<a href="http://hertzrent2buy.com/content/default.aspx?bannerPos=2" title="Buy Affordable Used Cars for Sale by Owner- Hertz Car Sales" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031019/Rent2Buy.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz Rent 2 Buy" border="0" /></a>
+																	<%/InsertIf%>
+
+																	<%InsertElse%>
+																	<!-- HBR (Small Business) -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=IndSmallBusinessTraveler.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United%20States&bannerPos=2" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031020/HBR_Save25.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz Business Rewards" border="0" /></a>
+																	<%/InsertElse%>
+																</td>
+															</tr>
+															<!-- End Banner Ad Container #2 -->
+
+
+															<!-- Banner Ad Container #3 -->
+															<%InsertIf expression="${( (user.CustomAttribute['RED_BLUE_IND'] == 'BLUE') )}" %>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<!-- Tampa Blue Side -->
+																	<img src="http://bvhertz.com/imgproxy/img/4000031016/BV_blue_TPA_180x150.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz" border="0" />
+																</td>
+															</tr>
+															<%/InsertIf%>
+															
+															<%InsertIf expression="${( (user.CustomAttribute['RED_BLUE_IND'] == 'RED') )}" %>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																<!-- Tampa Red Side -->
+																<img src="http://bvhertz.com/imgproxy/img/4000031017/BV_red_TPA_180x150.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz" border="0" />
+																</td>
+															</tr>
+															<%/InsertIf%>
+															
+															<%InsertIf expression="${( ( (user.CustomAttribute['LOYALTY_TIER'] == 'FG') || (user.CustomAttribute['LOYALTY_TIER'] == 'N1') || (user.CustomAttribute['LOYALTY_TIER'] == 'PC') || (user.CustomAttribute['LOYALTY_TIER'] == 'RG') || (user.CustomAttribute['LOYALTY_TIER'] == 'PL') || (user.CustomAttribute['LOYALTY_TIER'] == 'PS') || (user.CustomAttribute['LOYALTY_TIER'] == 'VP') ) && (not empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) &&  (empty user.CustomAttribute['RED_BLUE_IND']) )}"%>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																<%InsertIf expression="${( (ecm:random(0,3) == 1) || (ecm:random(0,3) == 3) )}"%>
+																	<!-- Monthly Rentals -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=longtermmonthlyleasecarrental.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United_States&bannerPos=3&loyaltyMember=true" title="Monthly Car Rentals by Hertz" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031022/Monthly_rentals.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Hertz Monthly Rentals" border="0" /></a>	
+																<%/InsertIf%>
+
+																<%InsertElse%>
+																	<!-- Mobile Upgrades -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=mobilegoldupgrades.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United_States&bannerPos=3&loyaltyMember=true" title="Mobile Gold Upgrades"><img src="http://bvhertz.com/imgproxy/img/4000031023/MobileUpgrades.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Upgrade on your Mobile" border="0" /></a>
+																<%/InsertElse%>
+																</td>
+															</tr>
+															<%/InsertIf%>
+
+															<%InsertIf expression="${( (empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) && (empty user.CustomAttribute['RED_BLUE_IND']) )}"%>
+															<tr>
+																<td style="padding-top: 16px; vertical-align: top;">
+																	<!-- Mobile Upgrades -->
+																	<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=mobilegoldupgrades.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=United_States&bannerPos=3&loyaltyMember=false" title="Mobile Gold Upgrades"><img src="http://bvhertz.com/imgproxy/img/4000031023/MobileUpgrades.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="180" height="150" alt="Upgrade on your Mobile" border="0" /></a>
+																</td>
+															</tr>
+															<%/InsertIf%>
+															<!-- End Banner Ad Container #3 -->
+														</table>
+														<%/InsertIf%>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									
+									<%InsertIf expression="${( (user.CustomAttribute['PICKUP_COUNTRY'] == 'US') )}"%>
+										<%InsertIf expression="${( ((empty user.CustomAttribute['NEVERLOST_ON_PROFILE']) || (user.CustomAttribute['NEVERLOST_ON_PROFILE'] == 'NOT_PREF')) && (not empty user.CustomAttribute['LOYALTY_MEMBER_NUMBER']) && ((user.CustomAttribute['LOYALTY_TIER'] == 'FG') || (user.CustomAttribute['LOYALTY_TIER'] == 'PC') || (user.CustomAttribute['LOYALTY_TIER'] == 'PL') || (user.CustomAttribute['LOYALTY_TIER'] == 'PS') || (user.CustomAttribute['LOYALTY_TIER'] == 'RG') || (user.CustomAttribute['LOYALTY_TIER'] == 'VP') || (user.CustomAttribute['LOYALTY_TIER'] == 'N1')) )}" %>
+									<tr>
+										<td style="vertical-align: top;">
+											<!-- GPR NeverLost -->
+											<a href="http://www.hertz.com/rentacar/productservice/index.jsp?targetPage=neverlostus.jsp&leftNavUserSelection=globNav_3_5_1&selectedRegion=UnitedStates&bannerPos=4" title="Hertz NeverLost GPS" target="_blank"><img src="http://bvhertz.com/imgproxy/img/4000031021/GPR_NeverLost.jpg" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="468" height="80" alt="Hertz NeverLost" border="0" /></a>
+										</td>
+									</tr>										
+										<%/InsertIf%>									
+									<%/InsertIf%>
+
+							</table>
+
+						</td>
+					</tr>
+						
+				</tbody>
+			</table>
+			<!-- End Table Container -->
+
+		</td>
+	</tr>
+</table>
+<!-- End Table Background -->
+
+</body>
+
+</html>
