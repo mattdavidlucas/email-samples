@@ -7,3 +7,5 @@ https://mattdavidlucas.com/work/autodesk-email-system/
 https://mattdavidlucas.com/work/hertz-poc/
 
 https://mattdavidlucas.com/work/intel-developer-campaign/
+
+https://mattdavidlucas.com/work/teradata-demo/
