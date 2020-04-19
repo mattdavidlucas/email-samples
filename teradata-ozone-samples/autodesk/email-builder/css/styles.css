@@ -1,0 +1,338 @@
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ExternalClass * {
+  line-height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .devicewidth {
+    min-width: 320px !important;
+    width: 100% !important;
+  }
+
+  .cellblocknopadding {
+    display: block !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .cellblock {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .full-width {
+    width: 100% !important;
+  }
+
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  table[class="mobile-column"],
+  td[class="mobile-column"],
+  td[class="mobile-column-last"] {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  table[class="mobile-column"] {
+    margin-bottom: 32px !important;
+  }
+
+  td[class="mobile-column"] {
+    padding-bottom: 32px !important;
+  }
+
+  img[class="fluid-img"] {
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  div[class="img-container"] {
+    height: 150px;
+    overflow: hidden;
+  }
+
+  td[class="adsk-logo_container"] {
+    padding-left: 29px !important;
+  }
+
+  img[class="adsk-logo_image"] {
+    height: auto !important;
+    width: 115px !important;
+  }
+
+  td[class="pad-032"] {
+    padding: 0 32px 32px 32px !important;
+  }
+
+  td[class="pad-320"] {
+    padding: 32px 32px 0px 32px !important;
+  }
+
+  td[class="pad-253232"] {
+    padding: 25px 32px 32px !important;
+  }
+
+  .hideblock {
+    display: none !important;
+  }
+
+  td[class="preheader-container"] {
+    padding: 0 15px 5px 15px !important;
+  }
+
+  td[class="view-web-container"] {
+    padding: 0 15px 15px 15px !important;
+  }
+
+  td[class="view-web-container_promo"] {
+    padding: 0 15px !important;
+  }
+
+  /* Background Image Header | [Banner_2A] - Banner with 3/4 image - Right  */
+  td[class="header-text-td-masthead"] {
+    background: #1858A8 url("http://placehold.it/570x200") top no-repeat;
+    background-size: 100%;
+    padding: 43% 32px 10% 32px !important;
+  }
+
+  /* Custom Examples | [Banner_2A] - Banner with 3/4 image - Right  */
+  div[class="banner-image-container"] {
+    height: 150px;
+    overflow: hidden;
+  }
+
+  td[class="banner-headlines-container"] {
+    height: auto !important;
+    padding: 7% 32px !important;
+  }
+
+  td[class="header-text-bg"] {
+    background: #1858A8 url("https://placeholdit.imgix.net/~text?txtsize=63&txt=670%C3%97250&w=670&h=250") no-repeat 48% 100% !important;
+  }
+
+  td[class="header-text-td-bg"] {
+    padding: 75px 32px 25px !important;
+    /* Uncomment to add text shadows in the mobile view */
+    /*-webkit-text-shadow: 1px 0px 1px #000000;
+       -moz-text-shadow: 1px 0px 1px #000000;
+            text-shadow: 1px 0px 1px #000000;*/
+  }
+
+  td[class="header-headline-bg"],
+  td[class="header-subhead-bg"] {
+    line-height: 24px !important;
+    padding-left: 0 !important;
+  }
+
+  td[class="header-headline-bg"] {
+    font-size: 22px !important;
+    padding-bottom: 5px !important;
+  }
+
+  td[class="header-cta-bg"] {
+    padding-left: 0 !important;
+  }
+
+  td[class="header-subhead-bg"] {
+    font-size: 18px !important;
+  }
+
+  /* End Background Image Header */
+  /* Font Sizes */
+  td[class="subhead_copy_wrapper"],
+  td[class="normal_copy_wrapper"],
+  a[class="normal_copy_wrapper"],
+  td[class="column-copy"],
+  td[class="normal_copy_wrapper 32pad-bottom"],
+  td[class="speakers-td-bottom"],
+  td[class="last normal_copy_wrapper speakers-td-bottom"] {
+    font-size: 15px !important;
+    line-height: 22px !important;
+  }
+
+  td[class="column-copy"] {
+    padding: 0 !important;
+  }
+
+  td[class="normal_copy_wrapper 32pad-bottom"] {
+    padding: 0 0 32px 0 !important;
+  }
+
+  td[class="header_headline"] {
+    font-size: 22px !important;
+    line-height: 28px !important;
+    padding-bottom: 5px !important;
+  }
+
+  td[class="header_subhead"] {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  td[class="headline_padding"],
+  td[class="headline_wrapper headline_padding"] {
+    padding-bottom: 20px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  td[class="headline_wrapper"] {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+
+  td[class="no-padding"] {
+    padding: 0 !important;
+  }
+
+  td[class="show-me"] {
+    display: block !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  td[class="content-td"] {
+    padding-bottom: 25px !important;
+  }
+
+  td[class="content-td"],
+  table[class="content-td show-me"] {
+    padding: 25px 32px !important;
+    height: 100% !important;
+  }
+
+  td[class="content-td-primary"] {
+    padding: 32px !important;
+  }
+
+  td[id="footer-container"] {
+    padding: 22px 32px 32px !important;
+  }
+
+  td[class="content-span2-right"] {
+    padding: 25px 0px !important;
+  }
+
+  table[class="medium-button"] {
+    max-width: 256px;
+    width: 100% !important;
+  }
+
+  img[class="social-icon"] {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  td[class="social-first"] {
+    padding: 20px 5px 20px 0px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  td[class="social"] {
+    padding: 20px 5px 20px 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  td[class="button-text"] a {
+    text-transform: uppercase;
+    width: 100% !important;
+  }
+
+  td[class="sidebar-td-blue"] {
+    background-color: #F7F7F7;
+    padding: 25px 32px;
+  }
+
+  td[class="message"],
+  tr[class="message"] {
+    color: #0696D7 !important;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    height: 18px !important;
+    padding-bottom: 24px !important;
+    display: block !important;
+    max-height: none !important;
+    font-weight: bold;
+  }
+
+  td[class="title-speakers-td-bottom"] {
+    padding-bottom: 20px !important;
+  }
+
+  td[class="speakers-td-bottom"],
+  td[class="last normal_copy_wrapper speakers-td-bottom"] {
+    padding-bottom: 18px !important;
+  }
+
+  img[class="location-two-column image-fix"] {
+    margin-top: 15px;
+  }
+
+  img[class="location-two-column-l image-fix"] {
+    margin-top: 0px;
+  }
+
+  td[class="image-caption-img-l"] {
+    padding-bottom: 20px;
+  }
+
+  img[class="col-image"],
+  img[class="sidebar-image"],
+  img[class="location-two-column image-fix"],
+  img[class="location-two-column-l image-fix"] {
+    height: auto !important;
+    max-width: 256px !important;
+    width: 100% !important;
+  }
+
+  tr[class="hide-element"] {
+    display: block !important;
+    width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  img[class="sidebar-image"] {
+    padding-bottom: 20px;
+  }
+
+  img[class="image-centered"] {
+    height: auto !important;
+    max-width: 270px !important;
+    width: 100% !important;
+  }
+
+  /* Text Link to Box CTA */
+  td[class="box-cta_container"] {
+    padding: 15px 0px 32px !important;
+  }
+
+  a[class="box-cta"] {
+    background: #1858A8 url("https://pages.autodesk.com/rs/918-FOD-433/images/autodesk-wireframes-button-arrow-icon-10x16.png") no-repeat 95% 50%;
+    color: #FFFFFF !important;
+    display: block;
+    font-size: 18px !important;
+    max-width: 241px !important;
+    width: 100% !important;
+    margin-top: 5px;
+    padding: 10px 0 10px 15px !important;
+    text-transform: uppercase;
+  }
+}
+/* End Media Query */
