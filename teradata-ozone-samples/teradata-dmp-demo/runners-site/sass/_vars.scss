@@ -1,0 +1,28 @@
+$colors: (
+	darkOrange: #d6562b,
+	updated: #bbcdea,
+	green: #82a53c,
+	gray: #231f20 
+);
+
+$fonts : (
+	twCenRegular: ('TwCenMTRegular', Helvetica, Arial, sans-serif),
+	twCenMedium: ('TwCenMTMedium', Helvetica, Arial, sans-serif),
+	twCenLight: ('TwCenMTLight', Helvetica, Arial, sans-serif),
+	twCenBold: ('TwCenMTBold', Helvetica, Arial, sans-serif)
+);
+
+%centered { margin: 0 auto; }
+
+%orangeHeaders {
+	color: map-get($colors, sectionHeaders);
+	text-transform: uppercase;
+}
+
+%orangeGradientHeaders {
+	font-size: 1.6em;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	padding: 10px 0;
+	text-align: center;
+}

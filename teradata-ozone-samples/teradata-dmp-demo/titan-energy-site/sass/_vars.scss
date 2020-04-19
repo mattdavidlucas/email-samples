@@ -1,0 +1,31 @@
+// content: map-get($colors, gray);
+$colors: (
+	headerBackground: #e1e1e1, /* $gray */
+	backgroundColor: #777, /* $darkGray */
+	ctaBackground: #009abc, /* $turquoise */
+	sectionHeaders: #f05423,
+	bodyCopyColor: #5c686f,
+	footerCopyColor: #b4b2b2,
+	selectBlue: #00aeef,
+	cta: #f15523
+);
+
+$fonts : (
+	defaultFont: ('Ropa Sans', Helvetica, Arial, sans-serif),
+	secondaryFont: ('Source Sans Pro', Helvetica, Arial, sans-serif)
+);
+
+%centered { margin: 0 auto; }
+
+%orangeHeaders {
+	color: map-get($colors, sectionHeaders);
+	text-transform: uppercase;
+}
+
+%orangeGradientHeaders {
+	font-size: 1.6em;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	padding: 10px 0;
+	text-align: center;
+}

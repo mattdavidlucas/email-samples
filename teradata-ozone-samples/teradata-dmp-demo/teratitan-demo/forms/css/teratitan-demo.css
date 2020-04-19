@@ -1,0 +1,208 @@
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  display: block;
+  height: auto;
+  width: 100%; }
+
+/* 685 less padding */
+body {
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif; }
+
+h1, h2, h3 {
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
+
+h1 {
+  color: #0073b9;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin: 30px 0; }
+
+p {
+  line-height: 1.1em; }
+
+small {
+  font-size: 12px; }
+
+.site-header p {
+  line-height: 1.3em; }
+
+.sidebar h3, .sidebar p {
+  color: #000; }
+.sidebar h3 {
+  font-size: 20px;
+  margin: 40px 0 5px 0; }
+
+.sidebar h3:first-child {
+  margin-top: 0; }
+
+form {
+  margin-bottom: 30px;
+  width: 100%; }
+
+label, input[type="text"], input[type="email"], input[type="tel"] {
+  display: block;
+  width: 100%; }
+
+label {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px; }
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  border: 1px solid #e1e1e1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radus: 3px;
+  border-radius: 3px;
+  color: #555555;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+  padding: 10px 15px; }
+
+input[type="submit"] {
+  background: url("http://techservices.teradatadmc.com/imgproxy/img/4000060206/callout-background.png");
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radus: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  height: 57px;
+  line-height: 2.4em;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 197px; }
+  input[type="submit"]:focus {
+    outline: 0; }
+
+.wrapper, .main-content {
+  margin: 0 auto;
+  width: 80%; }
+
+.content-wrapper {
+  background: white; }
+
+.cta {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radus: 3px;
+  border-radius: 3px;
+  color: #000;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 2%; }
+
+.sidebar {
+  background-color: #dae6ec; }
+
+/* Header */
+.site-header {
+  margin-top: 30px;
+  padding-bottom: 50px; }
+  .site-header img {
+    max-width: 472px; }
+
+.ty-page .site-header {
+  padding-bottom: 0; }
+
+.sidebar {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radus: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 30px 25px; }
+
+.site-footer {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 35px 15px; }
+
+@media (min-width: 600px) {
+  h1 {
+    padding: 0 1.42857%; }
+
+  .site-header p {
+    padding: 0 1.42857%;
+    text-align: justify; }
+
+  form {
+    margin-left: 2.14286%;
+    margin-bottom: 0; }
+
+  .wrapper, .main-content {
+    max-width: 700px; }
+
+  .content {
+    float: left;
+    width: 62.14286%; }
+
+  .sidebar {
+    background-color: #dae6ec;
+    float: right;
+    width: 31.42857%; } }
+@media (max-width: 600px) {
+  .site-header {
+    background-size: 100%; } }
+
+/*# sourceMappingURL=teratitan-demo.css.map */

@@ -1,0 +1,913 @@
+@import "reset";
+@import "font-awesome";
+@import "vars";
+@import "mixins";
+
+body {
+  color: lighten(map-get($colors, bodyCopyColor), 10%);
+  font-family: map-get($fonts, defaultFont);
+}
+
+#page {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media only screen and (min-width: 760px) {
+  #page {
+    position: relative;
+    // max-width: 1281px;
+    width: 1281px;
+  }
+
+  .col-three {
+    float: left;
+    width: fluid-div(315, 945);
+  }
+}
+
+.inline-menu {
+  li {
+    float: left;
+  }
+}
+
+/* 
+** Header
+*/
+.site-header {
+  background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083663/titan-mobile-nav-header.png') repeat-y;
+  background-size: 320px;
+  color: #5c686f;
+  padding: 20px 15px;
+  position: relative;
+
+  input[type="search"] { display: none; }
+}
+
+.search-container { display: none; }
+
+// Logo
+.logo {
+  height: auto;
+  left: 34%;
+  position: absolute;
+  top: 20%;
+  width: 90px;
+  z-index: 99;
+}
+
+// Mobile Menu
+.fa-bars {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+  width: 50%;
+}
+
+.menu {
+  background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083663/titan-mobile-nav-header.png') repeat-y;
+  background-size: 320px;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+
+  a {
+    background-color: darken( map-get($colors, bodyCopyColor), 5% );
+    color: #FFF;
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    
+    &:first-child { border-bottom: 1px solid lighten( map-get($colors, bodyCopyColor), 5% ) }
+
+    &:hover { background-color: darken( map-get($colors, bodyCopyColor), 7% ); }
+  }
+}
+
+#login {
+  color: #5c686f;
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+  padding-top: 3px;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+@media only screen and (min-width: 760px) {
+  .fa-bars { display: none; }
+
+  .site-header {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083655/titan-desktop-header-nav-background.png') no-repeat left;
+    height: 134px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: -45px;
+    width: 100%;
+
+    .logo {
+      float: left;
+      position: static;
+      text-align: center;
+      width: 100%;
+      margin: 15px 0 0 fluid-div(64, 1280);
+      max-width: 151px;
+    }
+
+    /* Header Nav */
+    .search-container {
+      border-left: 1px solid map-get($colors, bodyCopyColor);
+      border-right: 1px solid map-get($colors, bodyCopyColor);
+      display: block;
+      float: left;
+      padding: 2px 0;
+      width: fluid-div(255, 1020);
+    }
+
+    input[type="search"] {
+      background: #c6c5c3 url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083657/titan-desktop-magnifying-glass.png') no-repeat 175px 3px;
+      border: none;
+      @include rounded-corners(7px);
+      color: #FFF;
+      display: block;
+      font-family: map-get($fonts, defaultFont);
+      height: 23px;
+      margin: 0 auto;
+      padding: 5px 40px 5px 10px;
+      width: fluid-div(202, 255);
+    }
+  }
+  
+  .site-navigation {
+    float: right;
+    padding-top: 10px;
+    width: fluid-div(255 * 4, 1280);
+  }
+
+  #login {
+    float: left;
+    padding: 6px 0;
+    width: fluid-div(255, 1020);
+  }
+  
+  #login, .menu a {
+    color: map-get($colors, sectionHeaders);
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    &:hover {
+      color: darken(map-get($colors, sectionHeaders), 10%);
+    }
+  }
+
+  .menu {
+    background: none;
+    display: block !important;
+    float: left;
+    position: static;
+    width: fluid-div(255 * 2, 1020);
+    
+    li {
+      border-right: 1px solid map-get($colors, bodyCopyColor);
+      float: left;
+      padding: 6px;
+      width: fluid-div(255, 255 * 2);
+
+      &:last-child { border-right: none; }
+    }
+
+    a {
+      background-color: transparent;
+      color: map-get($colors, sectionHeaders);
+      display: block;
+      padding: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+      &:first-child { 
+        border-bottom: none;
+      }
+
+      &:hover { 
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// Safari Only
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+  .site-header {
+    input[type="search"] { color: #73828B; }
+  }
+}
+
+/* 
+** Hero
+*/
+.hero {
+  background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083662/titan-mobile-hero.png') no-repeat;
+  background-size: cover;
+  height: 265px;
+  
+  &:hover { cursor: pointer; }
+
+  .wrapper {
+    color: #FFF;
+    padding: 23px 0 23px 20px;
+    width: 190px;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 0.9em;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    font-style: italic;
+  }
+
+  a {
+    color: #FFF;
+    font-size: 1.2em;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  small {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .hero {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083656/titan-desktop-hero.png') no-repeat;
+    background-size: cover;
+    height: 505px;
+    margin-top: 45px;
+
+    .wrapper {
+      margin: 0 0 0 fluid-div(180, 1280);
+      padding: 137px 0 0 0;
+      position: relative;
+      width: fluid-div(340, 1280);
+    }
+    
+    h1 {
+      font-size: 4em;
+      margin-bottom: 0.3em;
+    }
+  
+    h2 {
+      font-size: 3em;
+    }
+
+    h3 {
+      font-size: 1.6em;
+    }
+
+    h4 {
+      color: rgba(255,255,255,0.8);
+      font-size: 2.6em;
+      left: 648px;
+      position: absolute;
+      top: 230px;
+      width: 100%;
+    }
+
+    a {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    small {
+      color: #a3aeca;
+      font-size: 1.3em;
+    }
+  }
+}
+
+
+/* 
+** Offers
+*/
+.offers {
+  .wrapper {
+    background-color: #f5f4f2;
+    padding: 30px 30px 15px;
+  }
+
+  h3 {
+    @extend %orangeHeaders;
+    font-size: 1.8em;
+    margin-bottom: 0.1em;
+  }
+
+  a {
+     @extend %orangeHeaders;
+     text-decoration: none;
+
+     &:visited { @extend %orangeHeaders; }
+  }
+
+  p {
+    font-size: 1.3em;
+    line-height: 1.1em;
+    margin-bottom: 0.6em;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .offers {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083658/titan-desktop-offers-background.png') no-repeat;
+    background-size: cover;
+
+    .wrapper {
+      background: none;
+      height: 158px;
+      margin: 0 auto;
+      padding: 20px 0 0;
+      width: fluid-div(945, 1280);
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.2em;
+      width: fluid-div(250, 315);
+    }
+  }
+
+  .offer {
+    border-right: 1px solid map-get($colors, bodyCopyColor);
+    float: left;
+    height: 120px;
+    padding: 12px fluid-div(23, 945);
+    width: fluid-div(315, 945);
+
+    &:nth-child(1) {
+      border-left: 1px solid map-get($colors, bodyCopyColor);
+    }
+  }
+}
+
+
+/* 
+** Products
+*/
+.products {
+  h3 {
+    @extend %orangeHeaders;
+    @extend %orangeGradientHeaders;
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083665/titan-mobile-products-header.png') no-repeat;
+    background-size: cover;
+  }
+
+  .wrapper {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083664/titan-mobile-products-graphic-background.png') no-repeat;
+    background-size: cover;
+    padding: 20px 0 30px;
+  }
+}
+
+.product {
+  margin: 0 auto;
+  width: 230px;
+
+  &:nth-child(1) img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 80px;
+  }
+
+  &:nth-child(2) img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 185px;
+  }
+
+  h4 {
+    font-family: map-get($fonts, secondaryFont);
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin: 0.5em 0 1.4em;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      color: map-get($colors, bodyCopyColor);
+      text-decoration: none;
+      &:visited { color: map-get($colors, bodyCopyColor); }
+    }
+  }
+
+  &:nth-child(3) h4 {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .products {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083659/titan-desktop-products-background.png') no-repeat;
+    background-size: cover;
+    height: 270px;
+    position: relative;
+
+    h3 { display: none; }
+
+    .wrapper {
+      background: none;
+      margin: 0 auto;
+      width: fluid-div(945, 1280);
+    }
+  }
+
+  .product {
+    float: left;
+    width: fluid-div(315, 945);
+
+    &:nth-child(1) img {
+      width: 78px;
+    }
+
+    &:nth-child(2) img {
+      // width: 185px;
+    }
+
+    &:nth-child(3) img {
+      display: block;
+      margin: 25px auto 0;
+      width: 210px;
+    }
+
+    h4 {
+      color: rgba(255,255,255,0.6);
+      border-right: 1px solid rgba(255,255,255,0.6);
+      font-size: 1.1em;
+      letter-spacing: 0.1em;
+      margin: 0;
+      padding: 5px 0;
+      position: absolute;
+      top: 231px;
+      width: 315px;
+
+      a {
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        &:visited { color: rgba(255,255,255,0.6); }
+      }
+    }
+
+    &:nth-child(1) h4 { border-left: 1px solid rgba(255,255,255,0.6); }
+  }
+}
+
+/* 
+** Footer Links
+*/
+.footer-links {
+  h3 {
+    @extend %orangeHeaders;
+    @extend %orangeGradientHeaders;
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083661/titan-mobile-buy-header.png') no-repeat;
+    background-size: cover;
+  }
+
+  h5 {
+    @extend %orangeHeaders;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.2em;
+  }
+  
+  ul {
+    margin-bottom: 1em;
+  }
+
+  li {
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+  }
+  
+  a {
+    color: lighten(map-get($colors, bodyCopyColor), 10%);
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  .wrapper {
+    font-family: map-get($fonts, secondaryFont);
+    padding: 30px;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  .footer-links {
+    background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083654/titan-desktop-footer-links-background.png') no-repeat;
+    background-size: cover;
+    height: 156px;
+
+    .wrapper {
+      margin: 0 auto;
+      padding: 25px 0 0;
+      width: fluid-div(945, 1280);
+    }
+
+    .col-three { padding: 0 fluid-div(23, 945); }
+
+    h3 { display: none; }
+
+    h5 {
+      font-size: 1.1em;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.7em;
+    }
+
+    li {
+      font-size: 0.9em;
+      margin-bottom: 0.4em;
+    }
+  }
+}
+
+
+/* 
+** Footer
+*/
+footer {
+  .wrapper {
+    color: map-get($colors, footerCopyColor);
+    font-family: map-get($fonts, secondaryFont);
+    text-transform: uppercase;
+    padding: 0 30px 55px;
+  }
+}
+
+.footer-logo { display: none; }
+
+.social {
+  margin-bottom: 20px;
+
+  a {
+    color: #FFF;
+    background-color: map-get($colors, footerCopyColor);
+    display: inline-block;
+    float: left;
+    height: 35px;
+    line-height: 2.2em;
+    margin-right: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 35px;
+
+    &:hover { background-color: darken(map-get($colors, footerCopyColor), 5%); }
+  }
+}
+
+.colophon {
+  line-height: 1.3em;
+  margin-bottom: 20px;
+
+  span { display: block; }
+}
+
+.legal-links {
+  li { margin-bottom: 3px; }
+
+  a {
+    color: map-get($colors, footerCopyColor);
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  footer {
+    position: relative;
+
+    .wrapper {
+      padding-top: 20px;
+    }
+  }
+  
+  .colophon, .legal-links li {
+    font-size: 0.8em;
+  }
+
+  .colophon, .legal-links {
+    position: absolute;
+    top: 80px;
+  }
+
+  .colophon {
+    span { display: inline; }
+  }
+
+  .footer-logo { 
+    display: block;
+    height: 55px;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    width: 139px;
+    position: absolute;
+    top: 27px;
+  }
+
+  .legal-links {
+    right: 30px;
+
+    li {
+      float: left;
+
+      &:first-child { 
+        border-right: 1px solid;
+        padding-right: 5px;
+      }
+
+      &:last-child { padding-left: 5px; }
+    }
+  }
+}
+
+
+/* 
+** eCommerce
+*/
+.ecommerce {
+  footer .wrapper {
+    // padding: 0 0 55px 0;
+  }
+}
+
+.order {
+  margin: 0 0 30px;
+}
+
+.product-offer-hero {
+  background: url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083711/titan-ecommerce-offer-hero.png') no-repeat;
+  background-size: cover;
+  color: #FFF;
+  height: 250px;
+  padding: 7% 5% 5% 5%;
+
+  h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  
+  h2, h3, p { 
+    font-size: 1.1em; 
+    line-height: 1.1em;
+  }
+
+  h2 {
+    margin-bottom: 0.6em;
+  }
+
+  h3 {
+    margin-bottom: 0.6em;
+  }
+
+  p {
+    font-family: map-get($fonts, secondaryFont);
+    font-size: 1em;
+    font-weight: 300;
+  }
+}
+
+.order-area { 
+  margin-top: 20px; 
+  padding: 0 30px;
+}
+
+.select_container {
+  border: 2px solid map-get($colors, footerCopyColor);
+  margin-bottom: 15px;
+}
+
+.select_identifier {
+  color: map-get($colors, selectBlue);
+  display: block;
+  float: left;
+  font-size: 1.2em;
+  line-height: 2.1em;
+  padding: 0 10px;
+  text-transform: uppercase;
+  width: 105px;
+}
+
+.select_items-container {
+  border-left: 2px solid map-get($colors, footerCopyColor);
+  float: left;
+  height: 41px;
+}
+
+.cta {
+  background-color: map-get($colors, cta);
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  display: block;
+  font-family: map-get($fonts, defaultFont);
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
+    background-color: darken( map-get($colors, cta), 5% );
+  }
+}
+
+.order_ad {
+  display: block;
+  margin: 20px auto 0;
+}
+
+// 
+// Select Menus
+// 
+// Select menu width
+.ui-selectmenu-button { width: 145px !important; }
+
+.ui-state-default {
+  background: none;
+  border: none;
+}
+
+.ui-widget {
+  color: map-get($colors, footerCopyColor);
+  font-family: map-get($fonts, defaultFont);
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.ui-widget-content {
+  border-left: 2px solid map-get($colors, footerCopyColor);
+  border-right: 2px solid map-get($colors, footerCopyColor);
+  border-bottom: 2px solid map-get($colors, footerCopyColor);
+}
+
+.ui-menu-item {
+  padding: 10px !important;
+}
+
+.ui-state-focus {
+  border: none !important;
+  background: none !important;
+  margin: 0 !important;
+}
+
+.ui-menu {
+  margin: 0 0 0 -2px !important;
+  width: 153px !important;
+}
+
+.ui-state-default .ui-icon {
+  background: map-get($colors, footerCopyColor) url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083713/titan-ecommerce-down-pointer.png') center no-repeat;
+  background-size: 60%;
+}
+
+.ui-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.ui-selectmenu-button span.ui-icon {
+  margin-top: -18px !important;
+  right: 0px;
+}
+
+@media only screen and (min-width: 760px) {
+  .ecommerce {
+    .site-header { top: 0; }
+
+    footer .wrapper { padding: 20px 30px 55px; }
+
+    .cta {
+      bottom: 0;
+      height: 48px;
+      position: absolute;
+    }
+  }
+  
+  .product-offer-hero {
+    height: 362px;
+    padding: 5%;
+
+    h1 {
+      font-size: 3.6em;
+    }
+
+    h2 {
+      font-size: 1.7em;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  .order-area { 
+    margin-top: 30px; 
+    padding: 0;
+  }
+
+  .order {
+    margin: 0 auto;
+    padding: 145px 0 40px;
+    width: 610px;
+  }
+
+  .form, .order_ad {
+    height: 175px;
+    width: 295px;
+  }
+  
+  .form { 
+    float: left;
+    position: relative;
+  }
+
+  .order_ad { 
+    float: right;
+    margin: 0;
+  }
+
+  .ui-selectmenu-button { width: 180px !important; }
+
+  .ui-menu { width: 188px !important; }
+}
+
+/* IE Styles */
+.ie9 {
+  .site-header {
+    input[type="text"] {
+      background: #c6c5c3 url('https://test01c.teradatadmc.com/techservices/imgproxy/img/4000083657/titan-desktop-magnifying-glass.png') no-repeat 175px 3px;
+      border: none;
+      @include rounded-corners(7px);
+      color: #FFF;
+      display: block;
+      font-family: map-get($fonts, defaultFont);
+      height: 23px;
+      margin: 0 auto;
+      padding: 5px 40px 5px 10px;
+      width: fluid-div(202, 255);
+    }
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
