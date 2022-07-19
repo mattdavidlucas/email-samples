@@ -1,16 +1,5 @@
 {% comment %}
 SL = {% if firstname != blank %}{{firstname | camelcase}}, a {% else %}A {% endif %}recall has been issued for your car
-
-trigger-auto-recall-alert-ctl-SB
-
-https://app.getblueshift.com/dashboard#/app/email_template_studio/1c5bf760-6bae-4ee7-96b9-d6d9f0d526b2/edit/info
-
-Campaign Details:
-trigger-auto-recall-alert-SB
-https://app.getblueshift.com/dashboard#/app/campaigns/a351545c-52c9-4bbd-9567-6defaa4c3d6a/edit_v2?editCampaign=true
-
-
-
 {% endcomment %}
 {% assign preheader  = "What steps you should take next" %}
 {% assign hash_email = email | upcase | sha1 %}
