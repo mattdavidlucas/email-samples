@@ -1,0 +1,525 @@
+{% assign preheader  = "See your score" %}
+{% assign hash_email = email | upcase | sha1 %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+<!--<![endif]-->
+
+<title>LendingTree</title>
+
+<shared_asset> bsft_HRB_Header_Matter </shared_asset>
+
+{% comment %}Assign the Campaign URL{% endcomment %}
+{% if external_fetch[0].activateUrl != blank and external_fetch[0].campaignUrl != blank %}
+  {% capture dest_url %}{{external_fetch[0].campaignUrl}}&{% endcapture %}
+{% else %}
+  {% capture dest_url %}{{target_url}}?{% endcapture %}
+{% endif %}
+
+<style type="text/css">
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+table td { border-collapse: collapse; }
+
+a { text-decoration: none; }
+
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important; }
+
+u + .body #new-gmail-hack {
+  display: block !important; }
+
+.autolink_footer a,
+.autolink_footer span {
+  color: #a3a3a3 !important;
+  text-decoration: none !important; }
+
+.img_hover:hover { opacity: 0.85; }
+
+.course_hover:hover { 
+  background-color: #eaf3f7;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) {
+  .lt-logo {
+    height: auto !important;
+    width: 120px !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    min-width: 90% !important;
+    width: 90% !important;
+  }
+  
+  .footer {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+  }
+
+  .cta {
+    border: none !important;
+    font-size: 16px !important; 
+    margin: 0 auto !important; 
+    max-width: 300px !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+  }  
+  
+  .lt-h1 {
+    font-size: 22px !important; 
+    line-height: 30px !important; 
+  }
+
+  /* Util CSS */
+  .container-inner {
+    padding: 34px 20px !important;
+  }
+
+  .lt-p {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .pb-34 {
+    padding-bottom: 34px !important;
+  }
+
+  .pr-14 {
+    padding-right: 14px !important;
+  }
+
+  .pad-0 {
+    padding: 0px !important;
+  }
+
+  .plr-20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .font-15 {
+    font-size: 15px !important;
+  }
+
+  .lh-24 {
+    line-height: 24px !important;
+  }
+
+  /* Old CSS */
+  .img_app_stores { width: 100px !important; }
+
+  .container {
+    margin: 0 auto;
+    width: 95% !important;
+    min-width: 95% !important;
+  }
+
+  .full-width {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .fluid-img {
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .spacer_mobile {
+    height: 10px !important;
+    line-height: 10px !important;
+  }
+
+  .logo_header {
+    height: auto !important;
+    max-width: 120px;
+  }
+
+  .header_pad {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .card_pad {
+    padding: 34px 20px !important;
+  }
+
+  .body_copy_mobile {
+    font-size: 16px !important;
+    line-height: 25px !important;
+  }
+
+  .checkmark_img {
+    height: auto !important;
+    width: 16px !important;
+    padding-top: 2px;
+  }
+
+  .block-elem {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .height-auto {
+    height: auto !important;
+  }
+
+  .pt_0 {
+    padding-top: 0px !important;
+  }
+
+  .pt_2 {
+    padding-top: 2px !important;
+  }
+  
+  .pt_5 { padding-top: 5px !important; }
+
+  .pt_10 { padding-top: 10px !important; }
+
+  .pt_20 {
+    padding-top: 20px !important;
+  }
+
+  .pt_34 {
+    padding-top: 34px !important;
+  }
+
+  .pt_35 {
+    padding-top: 35px !important;
+  }
+
+  .pb_5 {
+    padding-bottom: 5px !important;
+  }
+
+  .pb_15 {
+    padding-bottom: 15px !important;
+  }
+
+  .pb_20 {
+    padding-bottom: 20px !important;
+  }
+
+  .pb_25 {
+    padding-bottom: 25px !important;
+  }
+
+  .pb_34 {
+    padding-bottom: 34px !important;
+  }
+
+  .pr_0 {
+    padding-right: 0px !important;
+  }
+
+  .pr_17 {
+    padding-right: 17px !important;
+  }
+
+  .plr_0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .plr_20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .font_16 {
+    font-size: 16px !important;
+  }
+
+  .font_18 {
+    font-size: 18px !important;
+  }
+
+  .lh_24 {
+    line-height: 24px !important;
+  }
+}
+</style>
+
+<!--[if mso]>
+<style type="text/css">
+.mso_lh_26 { line-height: 26px !important; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #f2f2f2;">
+
+<shared_asset> bsft_Preheader_Text </shared_asset>
+
+<!-- Table Background -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #f2f2f2; border-collapse: collapse;">
+  <tr>
+    <td class="pad-0" width="100%" style="padding: 0 20px; vertical-align: top;">
+
+      <!-- Start Container / Width: 620px -->
+      <table role="presentation" class="container" align="center" width="620" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; min-width: 620px; width: 620px;">
+        <!-- Logo -->
+        <tr>
+          <td class="header" style="padding: 20px 0;">
+            <a style="color: #00aeef; text-decoration: underline;" href="https://www.lendingtree.com/?ccreative=logo" target="_blank"><img class="lt-logo" src="http://marketing.lendingtree.com/email/images/2018/lt-logo-es-189x57-trans-centered.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="140" height="42" alt="LendingTree" border="0"></a>
+          </td>
+        </tr>
+        <!-- End Logo -->
+        
+        <!-- Start Hero Space -->
+        <!-- Mint Green Gradient -->
+        <tr>
+          <td class="container-inner" style="background-color: #b4d5d1; background-image: radial-gradient(circle at 50% 0, #e9fcf4, #8ab5b5); padding: 50px 0;">
+            <h1 class="lt-h1" style="color: #101f30; font-family: Georgia, 'Times New Roman', serif; font-size: 30px; font-weight: normal; mso-line-height-rule: exactly; line-height: 40px; margin: 0; padding: 0; text-align: center;">The Ins and Outs of<br /> Your Credit Score.</h1>
+          </td>
+        </tr>
+        <!-- End Hero Space -->
+
+        <!-- Content - 1 -->
+        <tr> 
+          <td class="container-inner" style="background-color: #FFFFFF; border-bottom: 3px solid #e1e1e1; padding: 60px;">
+            {% comment %}Start MyLT Version{% endcomment %}
+            <p class="lt-p" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif;  font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px 0; padding: 0; text-align: left;">By now, you probably know that you can log in to your {{user_site}} account to <a href="{{dest_url}}ccreative=cta-inline&template_section=cta-inline" style="color: #00aeef; text-decoration: underline;" target="_blank">see your credit score</a> on your LendingTree Dashboard whenever you want &mdash; but do you know where your credit score comes from?</p>
+            {% comment %}End MyLT Version{% endcomment %}
+
+            <p class="lt-p" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif;  font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0; padding: 0; text-align: left;">It&rsquo;s a multi-part answer, so we made some videos to explain it. In fact, they make up the first lesson at LendingTree Academy &mdash; a free learning platform we made to help you make smart money decisions. </p>
+          </td>
+        </tr>
+        <!-- End Content -->
+
+        <!-- Spacer -->
+        <tr>
+          <td class="spacer_mobile" align="left" valign="top" width="100%" height="20" style="background-color: #f2f2f2; border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+        </tr>
+        <!-- End Spacer -->
+
+        <!-- Content - 2 -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; border-bottom: 3px solid #e1e1e1; padding: 60px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <td style="border-left: 5px solid #08c177;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td class="font-15 lh-24 pb_5" style="color: #31353b; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding: 0 0 0 15px; text-align: left;">Course 1:</td>
+                    </tr>
+
+                    <tr>
+                      <td class="font-15 lh-24" style="color: #00aeef; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; padding: 0 0 0 15px; text-align: left;"><a class="text_hover" href="https://my.lendingtree.com/academy/course-overview?courseid=1&lessonid=1&ccreative=cta-course-headline&template_section=cta-course-headline" style="color: #00aeef; text-decoration: none;" target="_blank">Understanding Your Credit</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+              <!-- Video Still -->
+              <tr>
+                <td style="padding: 30px 0 30px 0;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td style="background-color: #2187c1; color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 19px; text-align: center;"><a href="https://my.lendingtree.com/academy/course-overview?courseid=1&lessonid=1&ccreative=video&template_section=video" style="color: #FFFFFF; text-decoration: none;" target="_blank"><img class="fluid-img img_hover" src="http://marketing.lendingtree.com/email/images/2018/LT_103017_Academy_video-still-lt5-es.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; min-width: 100%; outline: none;" width="500" height="280" alt="Watch now &gt;" border="0" /></a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="font-15 lh-24" style="color: #31353b; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold; mso-line-height-rule: exactly; line-height: normal; padding-bottom: 20px; text-align: left;">Lessons Included:</td>
+              </tr>
+
+              <!-- Start Topics List -->
+              <tr>
+                <td style="padding-bottom: 0;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <td class="course_hover" style="border-top: 1px solid #e1e1e1; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; padding: 12px 0;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td class="pt_2" align="center" valign="top" style="padding: 4px 10px 0 14px; mso-line-height-rule: exactly; line-height: 30px; vertical-align: top;"><a href="https://my.lendingtree.com/academy/what-is-a-credit-score?courseid=1&lessonid=2&ccreative=cta-lesson-1&template_section=cta-lesson-1" style="color: #54585e; text-decoration: none;" target="_blank"><img class="checkmark_img" src="http://marketing.lendingtree.com/email/images/2017/lt-12222017-academy-video-play-overlay-icon.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" border="0" /></a></td>
+                        
+                            <td class="mso_lh_26 font-15 lh-24" align="left" valign="top" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 30px; padding-bottom: 0; text-align: left; vertical-align: top; width: 100%;"><a href="https://my.lendingtree.com/academy/what-is-a-credit-score?courseid=1&lessonid=2&ccreative=cta-lesson-credit-score&template_section=cta-lesson-credit-score" style="color: #454545; display: block; text-decoration: none; width: 100%;" target="_blank">What is a credit score?</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="course_hover" style="border-top: 1px solid #e1e1e1; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; padding: 12px 0;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td class="pt_2" align="center" valign="top" style="padding: 4px 10px 0 14px; mso-line-height-rule: exactly; line-height: 30px; vertical-align: top;"><a href="https://my.lendingtree.com/academy/who-comes-up-with-your-credit-score?courseid=1&lessonid=3&ccreative=cta-lesson-2&template_section=cta-lesson-2" style="color: #454545; text-decoration: none;" target="_blank"><img class="checkmark_img" src="http://marketing.lendingtree.com/email/images/2017/lt-12222017-academy-video-play-overlay-icon.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" border="0" /></a></td>
+                        
+                            <td class="mso_lh_26 font-15 lh-24 pr-14" align="left" valign="top" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 30px; padding-bottom: 0; text-align: left; vertical-align: top; width: 100%;"><a href="https://my.lendingtree.com/academy/who-comes-up-with-your-credit-score?courseid=1&lessonid=3&ccreative=cta-lesson-who-credit-score&template_section=cta-lesson-who-credit-score" style="color: #454545; display: block; text-decoration: none; width: 100%;" target="_blank">Who comes up with your credit score?</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="course_hover" style="border-top: 1px solid #e1e1e1; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; padding: 12px 0;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td class="pt_2" align="center" valign="top" style="padding: 4px 10px 0 14px; mso-line-height-rule: exactly; line-height: 30px; vertical-align: top;"><a href="https://my.lendingtree.com/academy/payment-history?courseid=1&lessonid=4&ccreative=cta-lesson-3&template_section=cta-lesson-3" style="color: #454545; text-decoration: none;" target="_blank"><img class="checkmark_img" src="http://marketing.lendingtree.com/email/images/2017/lt-12222017-academy-video-play-overlay-icon.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" border="0" /></a></td>
+                        
+                            <td class="mso_lh_26 font-15 lh-24" align="left" valign="top" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 30px; padding-bottom: 0; text-align: left; vertical-align: top; width: 100%;"><a href="https://my.lendingtree.com/academy/payment-history?courseid=1&lessonid=4&ccreative=cta-lesson-payment-history&template_section=cta-lesson-payment-history" style="color: #454545; display: block; text-decoration: none; width: 100%;" target="_blank">Payment History</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="course_hover" style="border-top: 1px solid #e1e1e1; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; padding: 12px 0;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td class="pt_2" align="center" valign="top" style="padding: 4px 10px 0 14px; mso-line-height-rule: exactly; line-height: 30px; vertical-align: top;"><a href="https://my.lendingtree.com/academy/utilization?courseid=1&lessonid=5&ccreative=cta-lesson-4&template_section=cta-lesson-4" style="color: #454545; text-decoration: none;" target="_blank"><img class="checkmark_img" src="http://marketing.lendingtree.com/email/images/2017/lt-12222017-academy-video-play-overlay-icon.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" border="0" /></a></td>
+                        
+                            <td class="mso_lh_26 font-15 lh-24" align="left" valign="top" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 30px; padding-bottom: 0; text-align: left; vertical-align: top; width: 100%;"><a href="https://my.lendingtree.com/academy/utilization?courseid=1&lessonid=5&ccreative=cta-lesson-utilization&template_section=cta-lesson-utilization" style="color: #454545; display: block; text-decoration: none; width: 100%;" target="_blank">Utilization</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="course_hover" style="border-top: 1px solid #e1e1e1; border-bottom: 3px solid #e1e1e1; border-left: 1px solid #e1e1e1; border-right: 1px solid #e1e1e1; padding: 12px 0; padding: 12px 0;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                          <tr>
+                            <td class="pt_2" align="center" valign="top" style="padding: 4px 10px 0 14px; mso-line-height-rule: exactly; line-height: 30px; vertical-align: top;"><a href="https://my.lendingtree.com/academy/credit-myths?courseid=1&lessonid=7&ccreative=cta-lesson-6&template_section=cta-lesson-6" style="color: #454545; text-decoration: none;" target="_blank"><img class="checkmark_img" src="http://marketing.lendingtree.com/email/images/2017/lt-12222017-academy-video-play-overlay-icon.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" border="0" /></a></td>
+                        
+                            <td class="mso_lh_26 font-15 lh-24" align="left" valign="top" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 30px; padding-bottom: 0; text-align: left; vertical-align: top; width: 100%;"><a href="https://my.lendingtree.com/academy/credit-myths?courseid=1&lessonid=7&ccreative=cta-lesson-creditmyths&template_section=cta-lesson-creditmyths" style="color: #454545; display: block; text-decoration: none; width: 100%;" target="_blank">Credit Myths</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- End Topics List -->
+            </table>
+          </td>
+        </tr>
+        <!-- End Content -->
+
+        <!-- Spacer -->
+        <tr>
+          <td class="spacer_mobile" align="left" valign="top" width="100%" height="20" style="background-color: #f2f2f2; border-collapse:collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; mso-line-height-rule: exactly; line-height: 20px;"><!--[if gte mso 15]>&nbsp;<![endif]--></td>
+        </tr>
+        <!-- End Spacer -->
+
+        <!-- Section -->
+        <tr>
+          <td>
+            <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #b4d5d1; background-image: radial-gradient(circle at 50% 0, #e9fcf4, #8ab5b5);  border-collapse: collapse; margin: 0 auto; width: 100%;">
+              {% comment %}Start MyLT Version{% endcomment %}
+              <tr>
+                <td class="font-15 lh-24 plr_20 pt_34 pb_25" style="color: #101f30; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; padding: 50px 42px 0 42px; text-align: center;">Go check it out. You might learn a thing or two &mdash; like how you can improve your credit score and leverage it to get lower interest rates, better credit card rewards, and much more.</td>
+              </tr>
+
+              <!-- CTA -->
+              <tr>
+                <td class="plr-20 pb-34 pt_0" style="padding: 40px 0;">
+                  <!-- Blue CTA -->
+                  <div align="center" style="margin: 0 auto;"><!--[if mso]><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"><tr><td style="background-color: #00aeef; padding: 10px 20px; text-align: center;"><![endif]--><a class="cta" style="font-family: 'Lato', Helvetica, Arial, sans-serif; background-color: #00aeef; border-bottom: 15px solid #00aeef; border-left: 20px solid #00aeef; border-right: 20px solid #00aeef; border-radius: 4px; color: #FFFFFF; display: block; border-top: 15px solid #00aeef; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; margin: 0 auto; text-decoration: none; width: 240px;" href="https://{{login_url}}/academy/course-overview?courseid=1&lessonid=1&ccreative=cta-button-bottom&template_section=cta-button-bottom" target="_blank">Get Started</a><!--[if mso]></td></tr></table><![endif]--></div>
+                  <!-- End Blue CTA -->
+                </td>
+              </tr>
+              <!-- End CTA -->
+              {% comment %}End MyLT Version{% endcomment %}
+            </table>
+          </td>
+        </tr>
+        <!-- End Section -->
+
+        <!-- Content - 3 -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; border-bottom: 3px solid #e1e1e1; padding: 60px;">
+            <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto;">
+              <tr>
+                <th class="block-elem font_16 pr_0 pb_20" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; mso-line-height-rule: exactly; line-height: 26px; padding: 0 20px 0 0; text-align: center;">Get the LendingTree&nbsp;App</th>
+
+                <th class="block-elem">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                    <tr>
+                      <!-- Apple -->
+                      <td class="pr_17" style="font-family: Helvetica, Arial, sans-serif; padding-right: 20px;"><a href="https://app.adjust.com/d1v43p?campaign=Email&creative=onboarding-3&fallback=https%3A%2F%2Fwww.lendingtree.com%2Fcredit-score%2Flendingtree-mobile-app%2F" style="color: #31353b; text-decoration: none;" target="_blank"><img class="img_app_stores height-auto" src="http://marketing.lendingtree.com/email/images/2017/LT_110217_LTApp_app-store.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="135" height="42" alt="App Store" border="0" /></a></td>
+                      
+                      <!-- Google -->
+                      <td style="font-family: Helvetica, Arial, sans-serif;"><a href="https://app.adjust.com/d1v43p?campaign=Email&creative=onboarding-3&fallback=https%3A%2F%2Fwww.lendingtree.com%2Fcredit-score%2Flendingtree-mobile-app%2F" style="color: #31353b; text-decoration: none;" target="_blank"><img class="img_app_stores height-auto" src="http://marketing.lendingtree.com/email/images/2017/LT_110217_LTApp_google-play.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="135" height="42" alt="Google Play" border="0" /></a></td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Content -->
+
+        <!-- Footer -->
+        <tr>
+          <td class="footer" style="padding: 30px 0;">
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is a Marketing Lead Generator and is a Duly Licensed Mortgage Broker, as required by law, with its main office located at <span class="autolink_footer">11115 Rushmore Dr., Charlotte, NC 28277</span>, Telephone Number <a href="tel:800-635-3023" target="_blank" style="color: #a3a3a3; text-decoration: none;">800-635-3023</a>. NMLS Unique Identifier #1136.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is known as LT Technologies in lieu of true name LendingTree, LLC in NY. For a current list of applicable state licensing &amp; disclosures, see the LendingTree website or call for details. This is a commercial email from LendingTree and may be recurring.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC: <a href="http://www.lendingtree.com/publications/?email={{hash_email}}&ccreative=footer-unsub" target="_blank" style="color: #a3a3a3; text-decoration: none;">Unsubscribe</a> | <a href="https://www.lendingtree.com/legal/privacy-policy?ccreative=footer-legal-pp" target="_blank" style="color: #a3a3a3; text-decoration: none;">Privacy Policy</a> | <a href="https://www.lendingtree.com/legal/terms-of-use?ccreative=footer-legal-tou" target="_blank" style="color: #a3a3a3; text-decoration: none;">Terms of Use</a> | <a href="https://www.lendingtree.com/legal/licenses-and-disclosures?ccreative=footer-legal-lnd" target="_blank" style="color: #a3a3a3; text-decoration: none;">Disclosures and Licenses</a></p>
+          </td>
+        </tr>
+        <!-- End Footer -->
+      </table>
+      <!-- End Container -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Table Background -->
+
+<div id="new-gmail-hack" style="white-space: nowrap; font: 15px courier; line-height: 0; display: none;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+{% comment %}Auto Login Activation Pixel{% endcomment %}
+{% if external_fetch[0].activateUrl != blank %}
+<img width="1" height="1" src="{{external_fetch[0].activateUrl}}" style="margin: 0 !important; padding: 0 !important; border: 0 !important; height: 1px !important; width: 1px !important;" />
+{% endif %}
+
+<shared_asset> bsft_Blueshift_Pixel </shared_asset>
+
+</body>
+</html>

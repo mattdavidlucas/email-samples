@@ -1,0 +1,250 @@
+{% comment %}
+SL = {% if firstname != blank %}{{firstname | camelcase}}, a {% else %}A {% endif %}recall has been issued for your car
+
+trigger-auto-recall-alert-ctl-SB
+
+https://app.getblueshift.com/dashboard#/app/email_template_studio/1c5bf760-6bae-4ee7-96b9-d6d9f0d526b2/edit/info
+
+Campaign Details:
+trigger-auto-recall-alert-SB
+https://app.getblueshift.com/dashboard#/app/campaigns/a351545c-52c9-4bbd-9567-6defaa4c3d6a/edit_v2?editCampaign=true
+
+
+
+{% endcomment %}
+{% assign preheader  = "What steps you should take next" %}
+{% assign hash_email = email | upcase | sha1 %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+<!--<![endif]-->
+
+<title>LendingTree</title>
+
+<shared_asset> bsft_HRB_Header_Matter </shared_asset>
+
+{% comment %}Assign the Campaign URL{% endcomment %}
+{% if external_fetch[0].activateUrl != blank and external_fetch[0].campaignUrl != blank %}
+  {% capture dest_url %}{{external_fetch[0].campaignUrl}}&{% endcapture %}
+{% else %}
+  {% capture dest_url %}{{target_url}}&{% endcapture %}
+{% endif %}
+
+<style type="text/css">
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+table td { border-collapse: collapse; }
+
+a { text-decoration: none; }
+
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important; }
+
+u + .body #new-gmail-hack {
+  display: block !important; }
+
+.autolink_footer a,
+.autolink_footer span {
+  color: #a3a3a3 !important;
+  text-decoration: none !important; }
+
+@media screen and (max-width: 620px) {
+  .lt-logo {
+    height: auto !important;
+    width: 120px !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    min-width: 90% !important;
+    width: 90% !important;
+  }
+  
+  .footer {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+  }
+
+  .cta {
+    border: none !important;
+    font-size: 15px !important; 
+    margin: 0 auto !important; 
+    max-width: 240px !important;
+    padding: 14px 0 !important;
+    width: 100% !important;
+  }  
+  
+  .lt-h1 {
+    font-size: 20px !important; 
+    line-height: 30px !important; 
+    margin-bottom: 0 !important;
+  }
+
+  .lt-p.last { margin-bottom: 0 !important; }
+  
+  .icon {
+    height: auto !important;
+    width: 40px !important;
+  }
+
+  .no-br { border-radius: 0 !important; }
+
+  /* Util CSS */
+  .container-inner {
+    padding: 34px 20px !important;
+  }
+
+  .font-italic {
+    font-style: italic !important;
+  }
+  
+  .mt-30 {
+    margin-top: 30px !important;
+  }
+
+  .mb-15 {
+    margin-bottom: 15px !important;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px !important;
+  }
+
+  .pad-0 {
+    padding: 0px !important;
+  }
+
+  .ptb-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .font-15 {
+    font-size: 15px !important;
+  }
+
+  .lh-24 {
+    line-height: 24px !important;
+  }
+}
+</style>
+
+<!--[if mso]>
+<style type="text/css">
+.mso-pb-15 { padding-bottom: 15px !important; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #f2f2f2;">
+
+<shared_asset> bsft_Preheader_Text </shared_asset>
+
+<!-- Table Background -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #f2f2f2; border-collapse: collapse;">
+  <tr>
+    <td class="pad-0" width="100%" style="padding: 0 20px; vertical-align: top;">
+
+      <!-- Start Container / Width: 620px -->
+      <table role="presentation" class="container" align="center" width="620" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; min-width: 620px; width: 620px;">
+        <!-- Logo -->
+        <tr>
+          <td class="header" style="padding: 20px 0;">
+            <a style="color: #00aeef; text-decoration: underline;" href="https://www.lendingtree.com/?ccreative=logo" target="_blank"><img class="lt-logo" src="http://marketing.lendingtree.com/email/images/2018/lt-logo-es-189x57-trans-centered.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="140" height="42" alt="LendingTree" border="0"></a>
+          </td>
+        </tr>
+        <!-- End Logo -->
+        
+        <!-- Start Hero Space -->
+        <!-- Deep Azul Gradient -->
+        <tr>
+          <td class="container-inner" style="background-color: #2b6386; background-image: radial-gradient(circle at 50% 0, #317298, #101f30); padding: 50px 60px;">
+            <!-- Icon -->
+            <div align="center" class="mb-15" style="margin: 0 0 28px 0;"><img class="icon" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/lt5-icon-warning-hg-no-ring.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="60" height="53" alt="" border="0" /></div>
+
+            <h1 class="lt-h1" style="color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif; font-size: 30px; font-weight: normal; mso-line-height-rule: exactly; line-height: 40px; margin: 0; padding: 0; text-align: center;">{% if firstname != blank %}{{firstname | camelcase}}, your {% else %}Your {% endif %}car has a recall.</h1>
+          </td>
+        </tr>
+        <!-- End Hero Space -->
+
+        <!-- Content -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; padding: 60px;">
+            <table class="no-br" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #D93551; border-collapse: collapse; border-radius: 5px;">
+              <tr>
+                <td class="mso-pb-15 ptb-15" style="padding: 10px 20px;"><p class="font-15 lh-24 font-italic" style="color: #FFFFFF; font-family: 'Lato', Helvetica, Arial, sans-serif;  font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0; padding: 0; text-align: center;">{{make}} has issued a recall for your {{year | round}} {{model}}.</p></td>
+              </tr>
+            </table>
+
+            <p class="font-15 lh-24 mt-30" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 38px 0 30px 0; padding: 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px;"><a style="color: #00aeef; text-decoration: underline;" href="{{dest_url}}ccreative=cta-sign-in&template_section=cta-sign-in" target="_blank">Sign in to My LendingTree</a> to see if this recall applies to your particular vehicle and what steps you can take to secure your vehicle&rsquo;s safety.</p>
+
+            <!-- Blue CTA -->
+            <div align="center" style="margin: 0 auto;"><!--[if mso]><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"><tr><td style="background-color: #00aeef; padding: 10px 20px; text-align: center;"><![endif]--><a class="cta" style="font-family: 'Lato', Helvetica, Arial, sans-serif; background-color: #00aeef; border-bottom: 15px solid #00aeef; border-left: 20px solid #00aeef; border-right: 20px solid #00aeef; border-radius: 4px; color: #FFFFFF; display: block; border-top: 15px solid #00aeef; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; margin: 0 auto; text-decoration: none; width: 200px;" href="{{dest_url}}ccreative=cta-button&template_section=cta-button" target="_blank">View Recall Notice</a><!--[if mso]></td></tr></table><![endif]--></div>
+            <!-- End Blue CTA -->
+          </td>
+        </tr>
+        <!-- End Content -->
+
+        <!-- Footer -->
+        <tr>
+          <td class="footer" style="padding: 30px 0;">
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is a Marketing Lead Generator and is a Duly Licensed Mortgage Broker, as required by law, with its main office located at <span class="autolink_footer">11115 Rushmore Dr., Charlotte, NC 28277</span>, Telephone Number <a href="tel:800-635-3023" target="_blank" style="color: #a3a3a3; text-decoration: none;">800-635-3023</a>. NMLS Unique Identifier #1136.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is known as LT Technologies in lieu of true name LendingTree, LLC in NY. For a current list of applicable state licensing &amp; disclosures, see the LendingTree website or call for details. This is a commercial email from LendingTree and may be recurring.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC: <a href="http://www.lendingtree.com/publications/?email={{hash_email}}&ccreative=footer-unsub" target="_blank" style="color: #a3a3a3; text-decoration: none;">Unsubscribe</a> | <a href="https://www.lendingtree.com/legal/privacy-policy?ccreative=footer-legal-pp" target="_blank" style="color: #a3a3a3; text-decoration: none;">Privacy Policy</a> | <a href="https://www.lendingtree.com/legal/terms-of-use?ccreative=footer-legal-tou" target="_blank" style="color: #a3a3a3; text-decoration: none;">Terms of Use</a> | <a href="https://www.lendingtree.com/legal/licenses-and-disclosures?ccreative=footer-legal-lnd" target="_blank" style="color: #a3a3a3; text-decoration: none;">Disclosures and Licenses</a></p>
+          </td>
+        </tr>
+        <!-- End Footer -->
+      </table>
+      <!-- End Container -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Table Background -->
+
+<div id="new-gmail-hack" style="white-space: nowrap; font: 15px courier; line-height: 0; display: none;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+{% comment %}Auto Login Activation Pixel{% endcomment %}
+{% if external_fetch[0].activateUrl != blank %}
+<img width="1" height="1" src="{{external_fetch[0].activateUrl}}" style="margin: 0 !important; padding: 0 !important; border: 0 !important; height: 1px !important; width: 1px !important;" />
+{% endif %}
+
+<shared_asset> bsft_Blueshift_Pixel </shared_asset>
+
+</body>
+</html>

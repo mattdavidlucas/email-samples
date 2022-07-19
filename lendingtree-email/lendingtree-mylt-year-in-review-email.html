@@ -1,0 +1,442 @@
+{% comment %}
+SL = 5 ways My LendingTree got better for you in 2018
+{% endcomment %}
+
+{% assign preheader  = "Better service means better savings" %}
+{% assign hash_email = email | upcase | sha1 %}
+
+{% comment %}Does the user have the LT app{% endcomment %}
+{% if user.extended_attributes.app_name == blank and user.extended_attributes.app_version == blank %}
+  {% assign has_app = 'no' %}
+{% else %}
+  {% assign has_app = 'yes' %}
+{% endif %}
+
+{% comment %}Is the user a FCS user{% endcomment %}
+{% if user.extended_attributes.free_credit_score == false %}
+  {% assign fcs_user = 'no' %}
+  {% assign cta_text = 'Get Your Free Credit Score' %}
+  {% assign user_url = 'https://my.lendingtree.com/signupsmart?' %}
+{% else %}
+  {% assign fcs_user = 'yes' %}
+  {% assign cta_text = 'Check Your Dashboard' %}
+  {% assign user_url = 'https://my.lendingtree.com/dashboard?' %}
+{% endif %}
+
+{% comment %}Remove bottom margin is no buttons{% endcomment %}
+{% if fcs_user == 'no' and has_app == 'yes' %}
+  {% assign margin_bottom = '0' %}
+{% else %}
+  {% assign margin_bottom = '30' %}
+{% endif %}
+
+{% comment %}Campaign and Adgroup Variables for App Download Links{% endcomment %}
+{% assign adjust_campaign_name = "mylt-2018-year-review-email" %}
+{% assign adjust_template_name = "promo-mylt-2018-year-review-ctl" %}
+
+<shared_asset> bsft_LT_App_Link__AdHoc_Use </shared_asset>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<!--[if !mso]><!-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+<!--<![endif]-->
+
+<title>LendingTree</title>
+
+{% comment %}Assign the Campaign URL{% endcomment %}
+{% if external_fetch[0].activateUrl != blank and external_fetch[0].campaignUrl != blank %}
+  {% capture dest_url %}{{external_fetch[0].campaignUrl}}&{% endcapture %}
+{% else %}
+  {% capture dest_url %}{{user_url}}{% endcapture %}
+{% endif %}
+
+<style type="text/css">
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0 !important;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+table td { border-collapse: collapse; }
+
+a { text-decoration: none; }
+
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important; }
+
+u + .body #new-gmail-hack {
+  display: block !important; }
+
+.autolink_footer a,
+.autolink_footer span {
+  color: #a3a3a3 !important;
+  text-decoration: none !important; }
+
+.cta-ghost:hover { color: #ffffff !important; }
+
+.blue:hover { background-color: #00aeef !important; }
+
+.green:hover { background-color: #08C177 !important; }
+
+@media screen and (max-width: 620px) {
+  .lt-logo {
+    height: auto !important;
+    width: 120px !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    min-width: 90% !important;
+    width: 90% !important;
+  }
+  
+  .footer {
+    margin: 0 !important;
+    padding: 15px 0 !important;
+  }
+  
+  .cta, .cta-ghost {
+    font-size: 15px !important; 
+    margin: 26px auto 10px auto !important; 
+    max-width: 240px !important;
+    width: 100% !important;
+  }
+
+  .cta {
+    border: none !important;
+    padding: 14px 0 !important;
+  }
+
+  .cta-ghost {
+    line-height: 44px !important;
+  }
+  
+  .lt-h1 {
+    font-size: 22px !important; 
+    line-height: 30px !important; 
+    margin-bottom: 30px !important;
+    text-align: center !important;
+  }
+
+  .lt-p.last { margin-bottom: 0 !important; }
+  
+  .container-hero { padding: 40px !important; }
+
+  .img-rocket {
+    height: auto !important;
+    margin: 0 auto !important;
+    width: 100px !important;
+  }
+
+  .img-app-stores { width: 100px !important; }
+
+  .icon-list {
+    height: 30px !important;
+    margin-bottom: 10px !important;
+    width: 30px !important;
+  }
+
+  /* Util CSS */
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .container-inner {
+    padding: 34px 20px !important;
+  }
+
+  .lt-p {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .block-elem {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .height-auto {
+    height: auto !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px !important;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px !important;
+  }
+
+  .pb-30 {
+    padding-bottom: 30px !important;
+  }
+  
+  .pl-0 {
+    padding-left: 0 !important;
+  }
+
+  .pl-6 {
+    padding-left: 6px !important;
+  }
+
+  .pr-0 {
+    padding-right: 0px !important;
+  }
+
+  .pr-6 {
+    padding-right: 6px !important;
+  }
+
+  .pad-0 {
+    padding: 0px !important;
+  }
+
+  .font-15 {
+    font-size: 15px !important;
+  }
+
+  .font-17 {
+    font-size: 17px !important;
+  }
+
+  .lh-24 {
+    line-height: 24px !important;
+  }
+
+  .lh-27 {
+    line-height: 27px !important;
+  }
+}
+</style>
+
+<!--[if mso]>
+<style type="text/css">
+.mso_no_border { border: none !important; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG></o:AllowPNG>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+</head>
+
+<body class="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #f2f2f2;">
+
+<shared_asset> bsft_Preheader_Text </shared_asset>
+
+<!-- Table Background -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color: #f2f2f2; border-collapse: collapse;">
+  <tr>
+    <td class="pad-0" width="100%" style="padding: 0 20px; vertical-align: top;">
+
+      <!-- Start Container / Width: 620px -->
+      <table role="presentation" class="container" align="center" width="620" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: 0 auto; min-width: 620px; width: 620px;">
+        <!-- Logo -->
+        <tr>
+          <td class="header" style="padding: 20px 0;">
+            <a style="color: #00aeef; text-decoration: underline;" href="https://www.lendingtree.com/?ccreative=logo" target="_blank"><img class="lt-logo" src="http://marketing.lendingtree.com/email/images/2018/lt-logo-es-189x57-trans-centered.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="140" height="42" alt="LendingTree" border="0"></a>
+          </td>
+        </tr>
+        <!-- End Logo -->
+        
+        <!-- Start Hero Space -->
+        <tr>
+          <td class="container-hero" style="background-color: #101F30; padding: 65px 0;">
+            <table dir="rtl" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <th class="block-elem pr-0" style="padding-right: 60px;"><h1 dir="ltr" class="lt-h1" style="color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif; font-size: 32px; font-weight: normal; mso-line-height-rule: exactly; line-height: 40px; margin: 0; padding: 0; text-align: left;"><a style="color: #FFFFFF; text-decoration: none;" href="{{dest_url}}ccreative=hero-headline&template_section=hero-headline" target="_blank">Your smart<br class="hide-on-mobile" /> money sidekick<br class="hide-on-mobile" /> got even smarter this year.</a></h1></th>
+
+                <th class="block-elem pl-0 pr-0" style="padding: 0 48px 0 60px;"><a style="color: #FFFFFF; text-decoration: underline;" href="{{dest_url}}ccreative=hero-img&template_section=hero-img" target="_blank"><img class="img-rocket" src="http://marketing.lendingtree.com/email/images/2018/lt-12212018-mylt-year-review-rocket.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="183" height="186" alt="" border="0" /></a></th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- End Hero Space -->
+
+        <!-- Content - Intro -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; padding: 60px;">
+            <p class="lt-p" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px 0; padding: 0; text-align: left;">Saving you more money. Keeping tabs on your credit. Improving your credit score.</p>
+
+            <p class="lt-p" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 30px 0; padding: 0; text-align: left;">We&rsquo;ve spent 2018 working to enhance your experience with My LendingTree so it becomes your most reliable resource for financial wellness. From custom savings recommendations to instant credit alerts, My LendingTree is where all your best money decisions start.</p>
+
+            <!-- ES CTA -->
+            <div align="center" style="margin: 0 auto;"><!--[if mso]><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"><tr><td style="background-color: #FF704D; padding: 7px 20px; text-align: center; width: 320px;"><![endif]--><a class="cta" style="font-family: 'Lato', Helvetica, Arial, sans-serif; background-color: #FF704D; border-bottom: 15px solid #FF704D; border-left: 20px solid #FF704D; border-right: 20px solid #FF704D; border-radius: 4px; color: #FFFFFF; display: block; border-top: 15px solid #FF704D; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; margin: 0 auto; text-decoration: none; width: 260px;" href="{{dest_url}}ccreative=cta-button-top&template_section=cta-button-top" target="_blank">{{cta_text}}</a><!--[if mso]></td></tr></table><![endif]--></div>
+            <!-- End ES CTA -->
+          </td>
+        </tr>
+        <!-- End Content -->
+
+        <!-- Content - Features -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; border-top: 1px solid #e1e1e1; padding: 60px;">
+            <h2 class="font-17 lh-27 mb-20" style="color: #101f30; font-family: Georgia, 'Times New Roman', serif; font-size: 22px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 30px 0; padding: 0; text-align: center;">
+              {% if firstname != blank %}{{firstname | camelcase}}, here {% else %}Here {% endif %}are some ways we added<br class="hide-on-mobile" /> value to your experience this&nbsp;year.
+            </h2>
+            
+            <!-- Start Features List -->
+            <div class="mb-30" style="margin-bottom: 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                <!-- Credit Monitoring -->
+                <tr>
+                  <th class="block-elem pr-0" align="center" style="padding: 0 22px 0 0; vertical-align: top;"><img class="icon-list" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/hopper-green-icons/lt5-icon-hg-no-ring-CheckCircleOutline.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="" border="0" /></th>
+              
+                  <th class="block-elem text-center font-15 lh-24 pb-30" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 40px 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px; vertical-align: top;">
+                    <span style="color: #101F30; font-weight: bold;">Free credit monitoring</span><br />
+                    You&rsquo;re never in the dark when there&rsquo;s a change in your credit. Stay-up-to-date with credit alerts delivered straight to your inbox or mobile&nbsp;device. 
+                  </th> 
+                </tr>
+
+                <!-- New Ways to Save -->
+                <tr>
+                  <th class="block-elem pr-0" align="center" style="padding: 0 22px 0 0; vertical-align: top;"><img class="icon-list" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/hopper-green-icons/lt5-icon-hg-no-ring-PiggyBank.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="" border="0" /></th>
+              
+                  <th class="block-elem text-center font-15 lh-24 pb-30" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 40px 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px; vertical-align: top;">
+                    <span style="color: #101F30; font-weight: bold;">New ways to save</span><br />
+                    Users saved an average <span style="color: #101f30; font-weight: bold;">$325*</span> per month when our personalized savings recommendations identified savings&nbsp;opportunities.
+                  </th> 
+                </tr>
+
+                <!-- Moves on the Go -->
+                <tr>
+                  <th class="block-elem pr-0" align="center" style="padding: 0 22px 0 0; vertical-align: top;"><img class="icon-list" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/hopper-green-icons/lt5-icon-hg-no-ring-Cash.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="" border="0" /></th>
+              
+                  <th class="block-elem text-center font-15 lh-24 pb-30" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 40px 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px; vertical-align: top;">
+                    <span style="color: #101F30; font-weight: bold;">Money moves on the go</span><br />
+                    Have you downloaded the My LendingTree app yet? If not, go get it! Check your credit score, monitor your accounts and make your best money choices wherever you are, whenever you&nbsp;want.
+                  </th> 
+                </tr>
+                
+                <!-- Auto Recall Alerts -->
+                <tr>
+                  <th class="block-elem pr-0" align="center" style="padding: 0 22px 0 0; vertical-align: top;"><img class="icon-list" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/hopper-green-icons/lt5-icon-hg-no-ring-Autos.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="" border="0" /></th>
+              
+                  <th class="block-elem text-center font-15 lh-24 pb-30" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 40px 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px; vertical-align: top;">
+                    <span style="color: #101F30; font-weight: bold;">Auto recall alerts</span><br />
+                    Has your car ever been issued a recall? Could it have one now? Recall alerts keep you in the know about the car you&rsquo;re driving and offer tips on what you can do&nbsp;next.
+                  </th> 
+                </tr>
+
+                <!-- Better Credit Score -->
+                <tr>
+                  <th class="block-elem pr-0" align="center" style="padding: 0 22px 0 0; vertical-align: top;"><img class="icon-list" src="https://s3.amazonaws.com/marketing.lendingtree.com/email/icons/lt5_es/hopper-green-icons/lt5-icon-hg-no-ring-CreditScore.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="40" height="40" alt="" border="0" /></th>
+              
+                  <th class="block-elem text-center font-15 lh-24" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0; padding: 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px; vertical-align: top;">
+                    <span style="color: #101F30; font-weight: bold;">A better credit score</span><br />
+                    Maybe there&rsquo;s some room for improvement in your credit score. We&rsquo;ve got you covered with insight on what you can do to give your score a healthy lift. It might not be as difficult as you&nbsp;think!
+                  </th> 
+                </tr>
+              </table>
+            </div>
+            <!-- End Features List -->
+
+            <p class="lt-p" style="font-family: 'Lato', Helvetica, Arial, sans-serif; margin: 0 0 {{margin_bottom}}px 0; padding: 0; text-align: left; font-weight: normal; color: #454545; font-size: 17px; mso-line-height-rule: exactly; line-height: 32px;">Sound good? We&rsquo;re just getting started. Keep My LendingTree as your go-to smart money sidekick and see what useful tools we roll out next year to help you make your best financial choices.</p>
+            
+            {% if has_app == 'no' %}
+            <p class="lt-p" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px 0; padding: 0; text-align: center;"><span style="color: #101f30; font-weight: bold;">Speaking of that app&hellip;</span></p>
+            
+            <!-- App Buttons -->
+            <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+              <tr>
+                <!-- Apple -->
+                <td class="pr-6" style="font-family: 'Lato', Helvetica, Arial, sans-serif; padding-right: 15px;"><a href="{{ios_download_tracker}}" style="color: #31353b; text-decoration: none;" target="_blank"><img class="img-app-stores height-auto" src="http://marketing.lendingtree.com/email/images/2018/LT_110217_LTApp_app-store-v2.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="144" height="" alt="App Store" border="0" /></a></td>
+                
+                <!-- Google -->
+                <td class="pl-6" style="font-family: 'Lato', Helvetica, Arial, sans-serif; padding-left: 15px;"><a href="{{android_download_tracker}}" style="color: #31353b; text-decoration: none;" target="_blank"><img class="img-app-stores height-auto" src="http://marketing.lendingtree.com/email/images/2018/LT_110217_LTApp_google-play-v2.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="144" height="" alt="Google Play" border="0" /></a></td>
+              </tr>
+            </table>
+            <!-- End App Buttons -->
+            {% endif %}
+
+            {% if fcs_user == 'yes' and has_app == 'yes' %}
+            <!-- ES CTA -->
+            <div align="center" style="margin: 0 auto;"><!--[if mso]><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"><tr><td style="background-color: #FF704D; padding: 7px 20px; text-align: center; width: 320px;"><![endif]--><a class="cta" style="font-family: 'Lato', Helvetica, Arial, sans-serif; background-color: #FF704D; border-bottom: 15px solid #FF704D; border-left: 20px solid #FF704D; border-right: 20px solid #FF704D; border-radius: 4px; color: #FFFFFF; display: block; border-top: 15px solid #FF704D; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; margin: 0 auto; text-decoration: none; width: 260px;" href="{{dest_url}}ccreative=cta-button-bottom&template_section=cta-button-bottom" target="_blank">{{cta_text}}</a><!--[if mso]></td></tr></table><![endif]--></div>
+            <!-- End ES CTA -->
+            {% endif %}
+          </td>
+        </tr>
+        <!-- End Content -->
+        
+        {% if fcs_user == 'no' %}
+        <!-- Content - FCS Upsell -->
+        <tr>
+          <td class="container-inner" style="background-color: #FFFFFF; border-top: 1px solid #e1e1e1; padding: 60px;">
+            <p class="font-15 lh-24 mb-10" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 20px 0; padding: 0; text-align: center;"><span style="color: #101f30; font-weight: bold;">Don&rsquo;t forget your free credit score!</span></p>
+
+            <p class="font-15 lh-24" style="color: #454545; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 17px; font-weight: normal; mso-line-height-rule: exactly; line-height: 32px; margin: 0 0 30px 0; padding: 0; text-align: center;">My LendingTree gives you unlimited access to your credit score without ever affecting your credit. Sign up for your free credit score and access it anytime, anywhere.</p>
+
+            <!-- ES CTA -->
+            <div align="center" style="margin: 0 auto;"><!--[if mso]><table align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;"><tr><td style="background-color: #FF704D; padding: 7px 20px; text-align: center; width: 320px;"><![endif]--><a class="cta" style="font-family: 'Lato', Helvetica, Arial, sans-serif; background-color: #FF704D; border-bottom: 15px solid #FF704D; border-left: 20px solid #FF704D; border-right: 20px solid #FF704D; border-radius: 4px; color: #FFFFFF; display: block; border-top: 15px solid #FF704D; font-size: 18px; font-weight: 700; mso-line-height-rule: exactly; line-height: normal; margin: 0 auto; text-decoration: none; width: 260px;" href="{{dest_url}}ccreative=cta-fcs-upsell-module&template_section=cta-fcs-upsell-module" target="_blank">Get Your Free Credit Score</a><!--[if mso]></td></tr></table><![endif]--></div>
+            <!-- End ES CTA -->
+          </td>
+        </tr>
+        <!-- End Content - FCS Upsell -->
+        {% endif %}
+
+        <!-- Footer -->
+        <tr>
+          <td class="footer" style="padding: 30px 0;">
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">* Savings claim based on internal LendingTree data of LendingTree consumers who receive savings alerts.</p>
+
+            <p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is a Marketing Lead Generator and is a Duly Licensed Mortgage Broker, as required by law, with its main office located at <span class="autolink_footer">11115 Rushmore Dr., Charlotte, NC 28277</span>, Telephone Number <a href="tel:800-635-3023" target="_blank" style="color: #a3a3a3; text-decoration: none;">800-635-3023</a>. NMLS Unique Identifier #1136.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC is known as LT Technologies in lieu of true name LendingTree, LLC in NY. For a current list of applicable state licensing &amp; disclosures, see the LendingTree website or call for details. This is a commercial email from LendingTree and may be recurring.</p>
+
+<p class="lt-p-footer" style="font-family: 'Lato', Helvetica, Arial, sans-serif; font-weight: normal; padding: 0; text-align: left; margin: 0 0 20px 0; color: #a3a3a3; font-size: 12px; mso-line-height-rule: exactly; line-height: 22px;">LendingTree, LLC: <a href="http://www.lendingtree.com/publications/?email={{hash_email}}&ccreative=footer-unsub" target="_blank" style="color: #a3a3a3; text-decoration: none;">Unsubscribe</a> | <a href="https://www.lendingtree.com/legal/privacy-policy?ccreative=footer-legal-pp" target="_blank" style="color: #a3a3a3; text-decoration: none;">Privacy Policy</a> | <a href="https://www.lendingtree.com/legal/terms-of-use?ccreative=footer-legal-tou" target="_blank" style="color: #a3a3a3; text-decoration: none;">Terms of Use</a> | <a href="https://www.lendingtree.com/legal/licenses-and-disclosures?ccreative=footer-legal-lnd" target="_blank" style="color: #a3a3a3; text-decoration: none;">Disclosures and Licenses</a></p>
+          </td>
+        </tr>
+        <!-- End Footer -->
+      </table>
+      <!-- End Container -->
+
+    </td>
+  </tr>
+</table>
+<!-- End Table Background -->
+
+<div id="new-gmail-hack" style="white-space: nowrap; font: 15px courier; line-height: 0; display: none;">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</div>
+
+{% comment %}Auto Login Activation Pixel{% endcomment %}
+{% if external_fetch[0].activateUrl != blank %}
+<img width="1" height="1" src="{{external_fetch[0].activateUrl}}" style="margin: 0 !important; padding: 0 !important; border: 0 !important; height: 1px !important; width: 1px !important;" />
+{% endif %}
+
+<shared_asset> bsft_Blueshift_Pixel </shared_asset>
+
+</body>
+</html>
