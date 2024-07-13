@@ -1,0 +1,36 @@
+{
+	"stories": [
+		{
+			"headline": "How to Build a Collaborative Realtime Android Todo App",
+			"date": "May 27, 2017",
+			"link": "https://android.jlelse.eu/how-to-build-a-collaborative-realtime-android-todo-app-3b6c9561bb0f",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat harum, repellat cumque doloribus debitis cupiditate, doloremque nesciunt deleniti delectus animi ut, neque repellendus dolorum iure eaque minima tempora facere reiciendis.",
+			"cta": "CTA",
+			"image": "",
+			"wordCount": "221",
+			"imageCount": "2"
+		},
+
+		{
+			"headline": "Building a Home Automation Virtual Agent for Smart Home Control",
+			"date": "June 8, 2017",
+			"link": "https://hackernoon.com/building-a-home-automation-virtual-agent-for-smart-home-control-50b7acf01108",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui saepe vel quidem reiciendis distinctio dignissimos at nesciunt laborum quo dolorum nam labore perferendis esse, facere minima excepturi doloremque, facilis in.",
+			"cta": "CTA",
+			"image": "http://localhost/~mattl/pubnub/04-PubNub-Email-Template/img/content-roundup/062417/content-roundup-image-story-2-062417.jpg",
+			"wordCount": "1213",
+			"imageCount": "7"
+		},
+
+		{
+			"headline": "Working with the Key-Value Store ",
+			"date": "May 16, 2017",
+			"link": "https://www.pubnub.com/blog/key-value-store-kv-database-advanced-pubnub-blocks-techniques/",
+			"copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, expedita sunt magni voluptate nobis asperiores adipisci explicabo nesciunt, ullam natus! Velit, fugiat perferendis amet error quasi hic iure quisquam quia.",
+			"cta": "CTA",
+			"image": "http://localhost/~mattl/pubnub/04-PubNub-Email-Template/img/content-roundup/062417/content-roundup-image-story-3-062417.jpg",
+			"wordCount": "2830",
+			"imageCount": "5"
+		}
+	]
+}
