@@ -6,6 +6,13 @@ From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Softw
 **Role:**
 - Senior Email Developer
 
+**Clients:**
+- NetJets
+- San Jose Earthquakes
+- IMAX
+- Postmates
+- Uber
+
 **Languages Used:**
 - HTML
 - CSS
