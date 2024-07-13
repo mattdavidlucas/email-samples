@@ -19,16 +19,16 @@ At PubNub, I helped redesign their existing email templates by incorporating bra
 
 ## Screenshots
 
-<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-blocks.png" width="450">
+<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-blocks.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-ms-azure.png" width="450">
+<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-ms-azure.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-content-roundup.png" width="450">
+<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-content-roundup.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-rltm-js.png" width="450">
+<img src="https://mattdavidlucas.com/img/pubnub-emails/pubnub-email-rltm-js.png" width="550">
