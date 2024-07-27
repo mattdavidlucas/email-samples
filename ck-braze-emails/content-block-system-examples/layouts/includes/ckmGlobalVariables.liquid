@@ -1,0 +1,79 @@
+{% comment %}
+{{content_blocks.${ckmGlobalVariables}}}
+{% endcomment %}
+
+{% comment %}
+Campaign Variables: 
+default: '{{campaign.${api_id}}}'
+default: '{{campaign.${name}}}'
+{% endcomment %}
+{% assign campaignID = '{{canvas.${api_id}}}' %}
+{% assign campaignName = '{{canvas.${name}}}' %}
+
+{% comment %}Global Template Variables{% endcomment %}
+{% assign containerWidth = '700' %}
+{% assign emailBodyBgColor = '#f5f6f6' %}
+
+{% comment %}Global Header Variables{% endcomment %}
+{% if useDefaultCKLogo %}
+  {% assign headerLogo = 'https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/IC_left.png' %}
+  {% assign headerLogoWidth = 124 %}
+  {% assign headerLogoAltText = 'Intuit Credit Karma' %}
+{% else %}
+  {% assign headerLogo = 'https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/ckm_left.png' %}
+  {% assign headerLogoWidth = 171 %}
+  {% assign headerLogoAltText = 'Credit Karma Money' %}
+{% endif %}
+
+{% capture headerSpacer %}{% if templateType == 'promo' %}16{% else %}32{% endif %}{% endcapture %}
+{% capture headerSpacerMSO %}{% if templateType == 'promo' %}47{% else %}79{% endif %}{% endcapture %}
+{% if templateType == 'transactional' %}{% assign headerBorder = 'border-bottom: 1px solid #008600;' %}{% endif %}
+
+{% comment %}Global Footer Variables{% endcomment %}
+{% capture unsubAllURL %}https://www.****.com/notifications-preferences/unsubscribe?notificationId={{campaign.${dispatch_id}}}&brazeExternalId={{${user_id}}}{% endcapture %}
+
+{% capture prefURL %}https://www.****.com/notifications-preferences/confirm?notificationId={{campaign.${dispatch_id}}}&brazeExternalId={{${user_id}}}&preferences={{prefCategory | default: 'CHECKING'}}{% endcapture %}
+
+{% assign footerLogoIntuit = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/footers/intuit.png" %}
+{% assign footerLogoTurboTax = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/footers/turbotax.png" %}
+{% assign footerLogoCK = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/footers/****.png" %}
+{% assign footerLogoQuickBooks = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/footers/quickbooks.png" %}
+{% assign footerLogoMailChimp = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/logos/footers/mailchimp.png" %}
+
+{% assign footerIntuitLink = "https://www.intuit.com" %}
+{% assign footerTurboTaxLink = "https://turbotax.intuit.com" %}
+{% assign footerCKLink = "https://www.****.com/u/today" %}
+{% assign footerQuickBooksLink = "https://quickbooks.intuit.com" %}
+{% assign footerMailChimpLink = "https://mailchimp.com" %}
+
+{% assign footerPrivacyStatement = "https://www.intuit.com/privacy/statement" %}
+{% assign footerTOS = "https://www.****.com/about/terms202210" %}
+
+{% assign footerAppStoreLink = "https://apps.apple.com/us/app/credit-karma/id519817714" %}
+{% assign footerAppStoreIcon = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/ios_app_store.png" %}
+{% assign footerGooglePlayLink = "https://play.google.com/store/apps/details?id=com.****.mobile" %}
+{% assign footerGooglePlayIcon = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/android_app_store.png" %}
+
+{% assign footerLogoInstagram = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/instagram@2x.png" %}
+{% assign footerLogoTwitter = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/twitter@2x.png" %}
+{% assign footerLogoFacebook = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/facebook@2x.png" %}
+{% assign footerLogoLinkedIn = "https://****cdn-a.akamaihd.net/res/content/mailings/ck/footers/linkedin@2x.png" %}
+
+{% assign footerInstagramLink = "https://www.instagram.com/****/" %}
+{% assign footerTwitterLink = "https://twitter.com/****" %}
+{% assign footerFacebookLink = "https://www.facebook.com/****" %}
+{% assign footerLinkedInLink = "https://www.linkedin.com/company/credit-karma/mycompany/" %}
+
+{% capture footerLegalCopy %}
+{% if includeMVBFooter %}
+Banking services provided by MVB Bank, Inc., Member FDIC.
+<br><br>
+{% endif %}
+{% if includeCreditBuilderFooter %}
+Credit Karma Credit Builder (McBurberod Financial, Inc.) NMLS ID# 2057952 | <a href="https://www.****.com/about/credit-builder" style="color: #0077DB; text-decoration: underline;">Licenses</a> | <a href="http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2057952" style="color: #0077DB; text-decoration: underline;">NMLS Consumer Access</a>
+<br><br>
+{% endif %}
+Credit Karma, LLC, P.O. Box 30963, Oakland, CA 94604 Copyright &copy; 2008-{{ "now" | date: "%Y" }} Credit Karma, LLC. All Rights Reserved. Any third party trademarks referenced are the property of their respective owners.
+<br><br>
+Note: Never share your online banking or Credit Karma passwords with anyone, including us!
+{% endcapture %}

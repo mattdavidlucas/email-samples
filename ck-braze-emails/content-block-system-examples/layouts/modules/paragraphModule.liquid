@@ -1,0 +1,20 @@
+{% comment %}
+    P - Paragraph: {{content_blocks.${paragraphModule}}}
+
+    Add this variable to your content file, right above Content Block:
+
+    {% capture bodyParagraph %}{% endcapture %}
+{% endcomment %}
+
+{% if bodyParagraph != blank %}
+  <table class="mb-87" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 77.8%" role="presentation">
+      <tr>
+          <td>
+          {% assign bodyParagraph = bodyParagraph | split: '<br><br>' %}
+          {% for paragraph in bodyParagraph %}
+          <p dir="ltr" style="font-weight: normal; font-family:Arial,sans-serif; text-align: {{bodyCopyTextAlign | default: 'left'}}; color: {{bodyCopyColor | default: '#000000'}}; font-size: 20px; line-height: 26px; mso-line-height-rule: exactly; margin: {{bodyCopySpacerTopHt |  default: '0' }} 0 {{bodyCopySpacerBottomHt | default: '16px'}} 0; padding: 0;">{{paragraph}}</p>  
+          {% endfor %}
+          </td>
+      </tr>
+  </table>
+  {% endif %}

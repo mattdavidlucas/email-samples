@@ -1,0 +1,23 @@
+{% comment %}
+    H1 - Headline: {{content_blocks.${bodyHeadlineModule}}}
+{% endcomment %}
+
+{% unless bodyHeadline == '' %}
+<table class="mb-87" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 77.53%" role="presentation">
+    <tr>
+        <td>
+            <table class="mb-100" align="left" border="0" cellpadding="0" cellspacing="0" width="445" style="border-collapse: collapse; width: 82%;" role="presentation">
+                <tr>
+                    <td>
+                        <h1 dir="ltr" style="font-weight: 300;font-family:'National',Helvetica,Arial,sans-serif; text-align: left; color: #008600; font-size: 36px; line-height: 43.2px; mso-line-height-rule: exactly; margin: 0 0 {% if bodySubheadline != blank %}16px{% else %}32px{% endif %} 0; padding: 0;"><a href="{{offerLink | default: 'https://www.creditkarma.com/u/money' }}" style="text-decoration: none;color: #008600;" target="_blank">{{bodyHeadline}}</a></h1>
+
+                        {% if bodySubheadline != blank %}
+                        <h2 dir="ltr" style="font-weight: normal;font-family:'National',Helvetica,Arial,sans-serif; text-align: left; color: #000000; font-size: 20px; line-height: 1.2em; mso-line-height-rule: exactly; margin: 0 0 32px 0; padding: 0;"><a href="{{offerLink | default: 'https://www.creditkarma.com/u/money' }}" style="text-decoration: none;color: #000000;" target="_blank">{{bodySubheadline}}</a></h2>
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table> 
+{% endunless %}

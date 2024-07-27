@@ -1,0 +1,49 @@
+{% comment %}
+Txn Template Content File
+{% endcomment %}
+
+{% comment %} CHECKING | SAVINGS | TAXES {% endcomment %}
+{% assign prefCategory = '' %}
+
+{% assign templateType = 'transactional' %}{% comment %}Options: promo, transactional{% endcomment %}
+{% assign promoFooter = false %}
+{% capture offerLink %}{% endcapture %}
+
+{% assign useDefaultCKLogo = false %}{% comment %}Options: true, false{% endcomment %}
+{% assign headerLogoAlign = '' %}{% comment %}Options: left, center, right{% endcomment %}
+
+{% assign emailTitle = '' %}
+{% capture messagePreheader %}{% endcapture %}
+
+{% assign includeMVBFooter = true %}
+{% assign includeCreditBuilderFooter = false %}
+
+{% assign containerBgColor = '' %}
+
+{% capture bodyHeadline %}{% endcapture %}
+{% capture bodySubheadline %}{% endcapture %}
+
+{% capture bodyParagraph %}Hi {{${first_name} | default: 'there'}},{% endcapture %}
+
+{% capture bodyAddParagraph %}{% endcapture %}
+
+{% capture bodyBulletList1 %}{% endcapture %}
+{% capture bodyBulletList2 %}{% endcapture %}
+{% capture bodyBulletList3 %}{% endcapture %}
+{% capture bodyBulletList4 %}{% endcapture %}
+{% capture bodyBulletList5 %}{% endcapture %}
+{% capture bodyBulletList6 %}{% endcapture %}
+{% capture bodyBulletList7 %}{% endcapture %}
+
+{% capture bodyDisclaimerText %}{% endcapture %}
+
+{% capture bodyCTAText %}{% endcapture %}
+{% assign bodyCTAAlign = 'left' %}{% comment %}Options: left, center, right{% endcomment %}
+{% assign bodyCTAStroke = '#008600' %}
+{% assign bodyCTAFill = '#008600' %}
+{% assign bodyCTATextColor = '#FFFFFF' %}
+{% assign bodyCTAWidth = '' %}
+
+{% assign addBodyCTA = false %}
+{% capture addBodyCTAText %}{{bodyCTAText}}{% endcapture %}
+{% capture addBodyCTAOfferLink %}{{offerLink}}{% endcapture %}

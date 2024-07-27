@@ -1,0 +1,14 @@
+{% capture campaignMessageVariables %}  
+{% comment %}Insert Campaign Content Block Liquid Tag{% endcomment %}
+{{content_blocks.${ckmGlobalVariables}}}
+{% endcapture %}{{campaignMessageVariables | strip}}
+Credit Karma Money™
+---------------------------------------
+{{heroHeadline}}
+{{heroSubhead}}
+{{heroCTAText}} ( {{offerLink}} )
+{{heroDisclaimerText}}
+---------------------------------------
+{{promoBodyContent}}
+---------------------------------------
+{{content_blocks.${ckmGlobalFooter}}}

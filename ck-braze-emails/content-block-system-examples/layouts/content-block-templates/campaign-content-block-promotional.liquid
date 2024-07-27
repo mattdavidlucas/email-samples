@@ -1,0 +1,74 @@
+{% comment %}
+Promo Template Content File
+{% endcomment %}
+
+{% comment %} CHECKING | SAVINGS | TAXES {% endcomment %}
+{% assign prefCategory = '' %}
+
+{% assign templateType = 'promo' %}{% comment %}Options: promo, transactional{% endcomment %}
+{% assign promoFooter = true %}
+{% capture offerLink %}{% endcapture %}
+
+{% assign useDefaultCKLogo = false %}{% comment %}Options: true, false{% endcomment %}
+{% assign headerLogoAlign = 'center' %}{% comment %}Options: left, center, right{% endcomment %}
+{% assign centerLogoOnMobile = false %}
+
+{% assign emailTitle = '' %}{% comment %}If empty, defaults to 'Credit Karma Money'{% endcomment %}
+{% capture messagePreheader %}{% endcapture %}
+
+{% assign includeMVBFooter = false %}
+{% assign includeCreditBuilderFooter = false %}
+
+{% assign containerBgColor = '' %}{% comment %}If empty, defaults to #FFFFFF{% endcomment %}
+
+{% assign includeHero = true  %}{% comment %}Options: true, false{% endcomment %}
+{% assign heroBackgroundColor = '' %}
+
+{% capture heroHeadline %}{% endcapture %}
+{% assign heroHeadlineColor = '' %}{% comment %}If empty, defaults to #000000{% endcomment %}
+
+{% capture heroSubhead %}{% endcapture %}
+{% assign heroSubheadColor = '' %}{% comment %}If empty, defaults to 'heroHeadlineColor' value{% endcomment %}
+
+{% assign heroCTAStroke = '' %}
+{% assign heroCTAFill = '' %}
+{% capture heroCTAText %}{% endcapture %}
+{% assign heroCTATextColor = '' %}
+
+{% capture bodyCTAText %}{{heroCTAText}}{% endcapture %}
+{% assign bodyCTAAlign = 'center' %}{% comment %}Options: left, center, right{% endcomment %}
+{% assign bodyCTAAlignMobile = '' %}
+{% assign bodyCTAStroke = heroCTAStroke %}
+{% assign bodyCTAFill = heroCTAFill %}
+{% assign bodyCTATextColor = heroCTATextColor %}
+
+{% capture heroImageDesktop %}https://creditkarmacdn-a.akamaihd.net{% endcapture %}
+{% capture heroImageMobile %}https://creditkarmacdn-a.akamaihd.net{% endcapture %}
+{% comment %} {% assign heroVAlign = 'middle' %} - Use for 'Hero 5': 'top', 'middle', 'bottom' {% endcomment %}
+
+{% assign heroImgWidthResponsive = '100%' %}
+{% assign heroImgWidthSet = '700' %}
+{% comment %} {% assign heroImgHeight = '' %} - Use for 'Hero 5', if necessary {% endcomment %}
+{% assign heroMobileImgWidth = '100%' %}
+
+{% capture heroDisclaimerText %}{% endcapture %}
+
+{% capture ribbonHeroText %}{% endcapture %}
+{% assign ribbonHeroTextColor = '' %}
+{% assign ribbonHeroDesktop = '' %}
+{% assign ribbonHeroMobile = '' %}
+
+{% capture bodyParagraph %}
+Hi {{${first_name} | default: 'there'}},
+
+{% endcapture %}
+
+{% capture bodyDisclaimerText %}{% endcapture %}
+    
+{% capture promoBodyContent %}
+{{content_blocks.${paragraphModule}}}
+
+{{content_blocks.${bodyCTAButtonModule}}}
+
+{{content_blocks.${bodyDisclaimerTextModule}}}
+{% endcapture %}

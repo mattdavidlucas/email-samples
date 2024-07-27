@@ -1,0 +1,51 @@
+{% capture campaignMessageVariables %}
+  {% comment %}Insert Campaign Content Block Liquid Tag{% endcomment %}
+
+  {{content_blocks.${ckmGlobalVariables}}}
+{% endcapture %}{{campaignMessageVariables | strip}}
+
+{{content_blocks.${ckmGlobalEmailHeadTag}}}
+
+  {{content_blocks.${messagePreheaderModule}}}
+  
+  <table lang="en" dir="ltr" role="presentation" bgcolor="{{emailBodyBgColor | default: '#f5f6f6' }}" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: {{emailBodyBgColor | default: '#f5f6f6' }}; border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+    <tr>
+      <td align="center" valign="top" style="border-collapse: collapse; vertical-align: top; margin: 0; padding: 0;">
+        <!--[if mso]>
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="{{containerWidth | default: '700'}}" align="center"><tr><td>
+        <![endif]-->
+        <table role="presentation" class="bg-color-white" bgcolor="{{containerBgColor | default: '#FFFFFF' }}" width="{{containerWidth | default: '700'}}" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color: {{containerBgColor | default: '#FFFFFF' }}; border-collapse: collapse; width: 100%; max-width: {{containerWidth | default: '700'}}px;">
+          <!-- Start Header -->
+          {{content_blocks.${ckmGlobalHeader}}}
+          <!-- End Header -->    
+          
+          {% if includeHero %}
+          <!-- Start Hero -->
+          <tr>
+            <td bgcolor="{{heroBackgroundColor}}" style="background-color: {{heroBackgroundColor}};">
+              {% comment %}Insert Content Block Hero{% endcomment %}
+            </td>
+          </tr>
+          <!-- End Hero -->
+          {% endif %}
+
+          <!-- Start Body Content -->
+          <tr>
+            <td style="padding: 32px 0 16px 0;">
+              {{promoBodyContent}}
+            </td>
+          </tr>
+          <!-- End Body Content -->
+
+          <!-- Start Footer -->
+          {{content_blocks.${ckmGlobalFooter}}}
+          <!-- End Footer -->
+        </table>
+        <!--[if mso]>
+        </td></tr></table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

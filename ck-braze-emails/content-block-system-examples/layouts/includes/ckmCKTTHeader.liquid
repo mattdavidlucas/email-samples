@@ -1,0 +1,39 @@
+{% comment %}
+{{content_blocks.${ckmCKTTHeader}}}
+
+16 = promo [47 height - MSO]
+32 = trans [79 height - MSO]
+{% endcomment %}
+
+<tr>
+  <td style="{{headerBorder}}background-image: url('https://*****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/white_dot.png');">
+    <!--[if gte mso 9]>
+    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:700; height:63" color="#FFFFFF">
+    <v:fill type="frame" src="https://*****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/white_dot.png" color="#ffffff"/>
+    <v:textbox style="v-text-anchor:middle;" inset="0,0,0,0">
+    <![endif]-->
+    <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%;" role="presentation">
+      <tr>
+        <td align="left" style="direction:ltr; padding: {{headerSpacer | default: 32}}px 0; mso-padding-top-alt: {{headerSpacer | default: 32}}px; text-align:left;">
+          <table class="mb-87" width="544" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 77.8%" role="presentation">
+            <tr>
+              <td>
+                <table align="{{headerLogoAlign | default: 'center' }}" role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;">
+                  <tr>
+                    <td>
+                      <a href="{{offerLink | default: 'https://www.*****.com/u/today' }}" style="text-decoration: none; width: 100%" target="_blank"><img class="mb-left" src="https://*****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/intuCK_intuTT_v2.png" width="304" height="32" alt="Intuit Credit Karma + Intuit Turbo Tax" border="0" style="display: block; font-size: 9px; font-family: Arial, Helvetica, sans-serif; text-decoration: none; border: none; outline: none;"></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!--[if gte mso 9]>
+    </v:textbox> 
+    </v:rect>
+    <![endif]-->
+  </td>
+</tr>
