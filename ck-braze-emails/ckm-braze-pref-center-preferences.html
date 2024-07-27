@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <style>
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+    font-family: 'National';
+    font-style: normal;
+    font-weight: 100;
+    src: url('https://*****cdn-a.akamaihd.net/res/content/bundles/galaxy-css/4.0.2/fonts/National2Web-Light.woff') format('woff');
+    mso-font-alt: Arial;
+}
+@font-face {
+    font-family: 'National';
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://*****cdn-a.akamaihd.net/res/content/bundles/galaxy-css/4.0.2/fonts/National2Web-Regular.woff') format('woff');
+    mso-font-alt: Arial;
+}
+@font-face {
+    font-family: 'National';
+    font-style: normal;
+    font-weight: bold;
+    src: url('https://*****cdn-a.akamaihd.net/res/content/bundles/galaxy-css/4.0.2/fonts/National2Web-Medium.woff') format('woff');
+    mso-font-alt: Arial;
+}
+@font-face {
+    font-family: 'National';
+    font-style: italic;
+    font-weight: normal;
+    src: url('https://*****cdn-a.akamaihd.net/res/content/bundles/galaxy-css/4.0.2/fonts/National2Web-LightItalic.woff') format('woff');
+    mso-font-alt: Arial;
+}
+
+body {
+    font-family: 'National', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Custom */
+h1  {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.container {
+    margin: 0 auto;
+    padding: .7em 0;
+    width: 90%;
+}
+
+.container.sm { max-width: 500px; }
+
+header {
+    box-shadow: 0px 3px 3px #f1f1f1;
+}
+
+nav a {display: block;}
+
+nav img {
+    height: auto;
+    width: 90px;
+}
+
+hr {
+    background-color: #edf1f3;
+    border: 0;
+    height: 8px;
+}
+
+.button {
+    background-color: #008600;
+    border: 1px solid #008600;
+    border-radius: 6px;
+    color: #FFF;
+    cursor: pointer;
+    display: block;
+    font-family: 'National', Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 2em auto;
+    max-width: 300px;
+    outline: none;
+    height: 48px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #007808;
+    border: 1px solid #007808;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 64px;
+  height: 32px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #008600;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 32px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.row.preference {
+    display: flex;
+    align-items: center;
+}
+
+.col {
+    width: 50%;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href=""><img src="https://*****cdn-a.akamaihd.net/res/content/mailings/ck/logos/intck/IC_left.png" alt="Intuit Credit Karma"></a>
+        </nav>
+    </header>
+
+    <section class="container sm">
+        <div id="update-preferences">
+            <h1>Manage email preferences</h1>
+
+            <hr>
+
+            <p><b>Email address:</b> {{${email_address}}}</p>
+
+            <hr>
+        </div>
+
+        <form action="{{preference_center_submit_url}}" method="post" accept-charset="UTF-8">
+            <div class="row preference">
+                <div class="col"><p><b>Checking</b></p></div>
+                
+                <div class="col">
+                    <label for="checking-sub-group" class="switch">
+                    <input name="checking-sub-group" id="checking-sub-group" value="true" type="checkbox">
+                    <span class="slider round"></span>
+                    </label>    
+                </div> 
+            </div>
+
+            <input class="button" type="submit" value="Update preferences">
+
+            <input id="****" name="{% form_field_name :subscription_group **** %}" type="hidden" value="">
+        </form>
+    </section>
+
+    <footer></footer>
+
+    <script>
+    // Get user global & group subscription states
+    const userSubscriptionPrefs = {
+        globalSubStatus: '{{subscribed_state.${email_global}}}',
+        subGroupStatuses: {
+            checking: '{{subscribed_state.${****}}}'
+        }
+    };
+
+    // Form elements
+    let subGroupOnePsuedo = document.getElementById('checking-sub-group');
+    let subGroupOne = document.getElementById('****');
+
+    // Set initial checked state
+    if (userSubscriptionPrefs.subGroupStatuses.checking == 'subscribed') {
+        subGroupOnePsuedo.checked = true;
+        subGroupOne.setAttribute('value', 'subscribed');
+    } else {
+        subGroupOnePsuedo.checked = false;
+        subGroupOne.setAttribute('value', 'unsubscribed');
+    }
+
+    // Event listeners for changing global & group subscription states
+    subGroupOnePsuedo.addEventListener('change', function() {
+        if (this.checked) {
+            subGroupOne.setAttribute('value', 'subscribed');
+        } else {
+            subGroupOne.setAttribute('value', 'unsubscribed');
+        }
+    });
+    </script>
+</body>
+</html>

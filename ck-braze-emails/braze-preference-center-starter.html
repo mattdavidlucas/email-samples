@@ -1,0 +1,73 @@
+<!-- https://gist.github.com/mattdavidlucas/b237a4614fb182c873773056ea2f92f3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<style>
+    /* Your on-brand CSS */
+</style>
+</head>
+
+<body>
+<p><b>Email address:</b> {{${email_address}}}</p>
+
+<form action="{{preference_center_submit_url}}" method="post" accept-charset="UTF-8">
+    <div class="row">
+        <label for="SUBGROUPNAME-checker">Subscription Group Name</label>
+
+        <input name="SUBGROUPNAME-checker" id="SUBGROUPNAME-checker" type="checkbox">    
+    </div>
+
+    <div class="row">
+        <label for="GLOBALSUBSTATE-checker">Global Subscription State</label>
+
+        <input name="GLOBALSUBSTATE-checker" id="GLOBALSUBSTATE-checker" type="checkbox">
+    </div>
+
+    <input type="submit" value="Save">
+
+    <!-- value should be set to “subscribed” or “unsubscribed” -->
+    <input id="SUBSCRIPTION-GROUP-ID" name="{% form_field_name :subscription_group SUBSCRIPTION-GROUP-ID %}" type="hidden">
+
+    <!-- value options are “opted_in”, “subscribed”, or “unsubscribed” -->
+    <input id="global-sub-state" name="{% form_field_name :email_global_state %}" type="hidden">
+</form>
+
+<script>
+    // Get user global & group subscription states; can be used below with any custom JS you write
+    let userSubscriptionPrefs = {
+        globalSubState: '{{subscribed_state.${email_global}}}',
+        subGroupStatuses: {
+            subscription_group_name: '{{subscribed_state.${SUBSCRIPTION-GROUP-ID}}}'
+        }
+    };
+
+    // Add custom JS here to change value attributes and any other form interactions
+    
+    // Example only:
+    // Form elements
+    let subGroupOneChecker = document.getElementById('SUBGROUPNAME-checker');
+    let subGroupOne = document.getElementById('SUBSCRIPTION-GROUP-ID');
+
+    // Set initial checked state
+    if (userSubscriptionPrefs.subGroupStatuses.subscription_group_name == 'subscribed') {
+        subGroupOneChecker.checked = true;
+        subGroupOne.setAttribute('value', 'subscribed');
+    } else {
+        subGroupOneChecker.checked = false
+        subGroupOne.setAttribute('value', 'unsubscribed');
+    }
+
+    // Event listeners for changing global & group subscription states
+    subGroupOneChecker.addEventListener('change', function() {
+        if (this.checked) {
+            subGroupOne.setAttribute('value', 'subscribed');
+        } else {
+            subGroupOne.setAttribute('value', 'unsubscribed');
+        }
+    });
+</script>
+
+</body>
+</html>
