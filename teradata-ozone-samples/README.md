@@ -31,28 +31,28 @@ These are code samples of marketing emails and landing pages I created for both 
 
 ## Screenshots
 
-<img src="https://mattdavidlucas.com/img/intel-nurture/tree-of-life-email-asset.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/intel-nurture/tree-of-life-email-asset.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/intel-nurture/tree-of-life-asset.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/intel-nurture/tree-of-life-asset.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/intel-nurture/tree-of-life-asset-builder.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/intel-nurture/tree-of-life-asset-builder.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/adsk-wires/matt-david-lucas-adsk-wireframe.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/adsk-wires/matt-david-lucas-adsk-wireframe.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/adsk-wires/matt-david-lucas-adsk-wires-style-guide.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/adsk-wires/matt-david-lucas-adsk-wires-style-guide.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/adsk-wires/matt-david-lucas-adsk-wires-content-example-2.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/adsk-wires/matt-david-lucas-adsk-wires-content-example-2.png" width="860">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/adsk-wires/matt-david-lucas-adsk-wires-content-example-3.png" width="860">
+<img src="https://mattdavidlucas.github.io/img/adsk-wires/matt-david-lucas-adsk-wires-content-example-3.png" width="860">

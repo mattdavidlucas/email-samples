@@ -17,20 +17,20 @@
 
 ## Screenshots
 
-<img src="https://mattdavidlucas.com/img/ckm-braze-emails/ckm-email-sample-mw.png" width="650">
+<img src="https://mattdavidlucas.github.io/img/ckm-braze-emails/ckm-email-sample-mw.png" width="650">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/ckm-braze-emails/ckm-email-sample-dd.png" width="650">
+<img src="https://mattdavidlucas.github.io/img/ckm-braze-emails/ckm-email-sample-dd.png" width="650">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/ckm-braze-emails/ckm-email-sample-transfer.png" width="650">
+<img src="https://mattdavidlucas.github.io/img/ckm-braze-emails/ckm-email-sample-transfer.png" width="650">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/ckm-braze-emails/ckm-email-sample-cb.png" width="650">
+<img src="https://mattdavidlucas.github.io/img/ckm-braze-emails/ckm-email-sample-cb.png" width="650">
 
 ---
 
-<img src="https://mattdavidlucas.com/img/ckm-braze-emails/ckm-email-sample-overdraft.png" width="650">
+<img src="https://mattdavidlucas.github.io/img/ckm-braze-emails/ckm-email-sample-overdraft.png" width="650">
