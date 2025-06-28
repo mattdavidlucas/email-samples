@@ -1,4 +1,4 @@
-<img src="https://mattdavidlucas.github.io/img/ml-email-hero.jpg" width="100%">
+<img src="https://mattdavidlucas.github.io/img/ml-email-hero-2.jpg" width="100%">
 
 ## Hi there, my name is Matt Lucas.
 
