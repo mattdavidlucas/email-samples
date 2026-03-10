@@ -24,16 +24,16 @@ At LendingTree, I coded and designed HTML emails for the company’s CRM channel
 
 ## Screenshots
 
-<img src="https://mattdavidlucas.github.io/img/lt-emails/lt-cc-increase.png" width="550">
+<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/lt-cc-increase.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.github.io/img/lt-emails/lt-ev-app-launch.png" width="550">
+<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/lt-ev-app-launch.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.github.io/img/lt-emails/lt-page-load-email.png" width="550">
+<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/lt-page-load-email.png" width="550">
 
 ---
 
-<img src="https://mattdavidlucas.github.io/img/lt-emails/lt-email-lt-year-in-review.png" width="550">
+<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/lt-email-lt-year-in-review.png" width="550">
