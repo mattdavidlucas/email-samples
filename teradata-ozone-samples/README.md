@@ -1,8 +1,13 @@
-# Teradata and Ozone Online Code Samples
+# Teradata & Ozone Online Code Samples
 
-These are code samples of marketing emails and landing pages I created for both Teradata and Ozone Online, a San Francisco digital marketing agency that was later acquired by Teradata.
+These are code samples from my time at Ozone Online — a San Francisco digital marketing agency that was later acquired by Teradata — where I worked as a front-end developer building marketing emails and landing pages for enterprise clients.
+
+Working agency-side exposed me to a wide range of industries and use cases in a short amount of time. I was regularly context-switching between clients, platforms, and project types: one week building a lead nurturing campaign for Intel in Eloqua, the next working on a Marketo landing page for Autodesk. That kind of environment forces you to get comfortable with ambiguity and get good at reading a brief quickly. It also gave me a firm foundation in marketing automation, operations, and the mechanics of large-scale campaign execution — the sort of experience you can't really replicate anywhere else.
+
+The Autodesk wireframe samples shown below are from a particularly involved project: a fully documented email design system and content component library, including wireframes, a style guide, and annotated content examples.
 
 ## Details
+
 **Role:**
 - Front-end Developer
 
@@ -27,7 +32,7 @@ These are code samples of marketing emails and landing pages I created for both 
 - Teradata Marketing Applications (Aprimo & Mapp)
 
 **Asset Creation Dates:**
-- 2013 - 2016
+- 2013–2016
 
 ## Screenshots
 

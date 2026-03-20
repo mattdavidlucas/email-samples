@@ -1,8 +1,11 @@
-# Pierry Software Emails
+# Pierry Software Email Samples
 
-From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Software, building out a multitude of emails and templates, as well as helping formalize their email development process. All emails and templates were built for and deployed from Salesforce Marketing Cloud.
+From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Software, a boutique Salesforce Marketing Cloud marketing agency based in Redwood City, CA. In that time, I built out a range of emails and reusable templates across multiple client accounts, and helped formalize their email development process along the way. All work was built for and deployed from Salesforce Marketing Cloud, with dynamic content and personalization handled through AMPScript.
+
+The client roster was an interesting mix — private aviation, pro sports, entertainment, food delivery, and travel — which kept things from getting too repetitive.
 
 ## Details
+
 **Role:**
 - Senior Email Developer
 
@@ -11,7 +14,7 @@ From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Softw
 - San Jose Earthquakes
 - IMAX
 - Postmates
-- Uber
+- TravelCenters of America
 
 **Languages Used:**
 - HTML

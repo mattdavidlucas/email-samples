@@ -1,15 +1,18 @@
 # LendingTree Email Samples
 
-At LendingTree, I coded and designed HTML emails for the company’s CRM channel. Emails were deployed from Blueshift and programmed using Shopify’s Liquid templating language for creating dynamic and highly personalized messages.
+At LendingTree, I was responsible for coding and designing the company's email template system. Emails were deployed from Blueshift and built using Shopify's Liquid templating language, which enabled dynamic, highly personalized messaging at scale — things like personalized loan offers, product recommendations, and account milestone triggers based on real-time member data.
+
+Beyond the day-to-day production work, a big part of my time was spent modernizing the email codebase itself: introducing version control, refactoring legacy templates, and building a more maintainable foundation for the team going forward. Some of that work was recognized externally — a handful of LendingTree emails were featured on Really Good Emails during my tenure, and my team's work with Litmus was highlighted in a customer case study.
 
 ## Details
+
 **Role:**
-- Senior Email Developer & Designer 
+- Senior Email Developer & Designer
 
 **Languages Used:**
 - HTML
 - CSS
-- Liquid 
+- Liquid
 
 **Marketing Automation Platform:**
 - Blueshift
@@ -19,8 +22,8 @@ At LendingTree, I coded and designed HTML emails for the company’s CRM channel
 
 ## Notable Links
 
-- https://reallygoodemails.com/search/emails/lendingtree
-- https://www.litmus.com/customers/lending-tree/
+- [LendingTree on Really Good Emails](https://reallygoodemails.com/search/emails/lendingtree)
+- [LendingTree × Litmus Case Study](https://www.litmus.com/customers/lending-tree/)
 
 ## Screenshots
 
