@@ -6,13 +6,15 @@ The samples here are from their yearly live event — HiWorld — and show how t
 
 ## Details
 
-**Role:**
-- Senior Program Manager, Email & Marketing Operations
+**Roles:**
+- Email Development Operations Analyst · Senior Marketing Operations Program Manager · Manager, Marketing Operations
 
 **Languages Used:**
 - HTML
 - CSS
 - JavaScript
+- Marketo Template Syntax
+- Velocity Script
 
 **Marketing Automation Platforms:**
 - Marketo
