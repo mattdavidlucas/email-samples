@@ -1,8 +1,12 @@
 # Credit Karma Money — Braze Email Samples
 
-When I joined the Credit Karma Money team, my main task was to convert their existing email template system — a GitHub repository using Handlebars.js — into a scalable, easy-to-use template system built in Liquid inside of Braze. From there, I was responsible for building and maintaining the full suite of Credit Karma Money emails, which covered products like high-yield savings, direct deposit, cash back rewards, and overdraft protection.
+When I joined the Credit Karma Money team, their email system lived in a GitHub repository built on Handlebars.js — technically sound, but developer-dependent and hard to scale.
 
-All emails were written in HTML, CSS, and Liquid, taking advantage of Braze's connected content and personalization features to deliver relevant, dynamic messaging based on member account data.
+My job was to change that. I led the full migration to Braze, rebuilding the template system from the ground up in Liquid. Over ten months, I designed and built a modular architecture spanning 160 campaign templates and 23 reusable content blocks, covering both transactional and promotional programs across Credit Karma Money's checking and savings products.
+
+The system is built around a composition model: global includes handle the foundational layer — responsive CSS, cross-client compatibility, branded headers and footers — while purpose-built content blocks handle every structural need. Campaign templates assemble these blocks using Liquid variable definitions.
+
+The result: a system marketers can use without touching code — faster deployment, richer personalization, and consistent branding at scale.
 
 ## Details
 
