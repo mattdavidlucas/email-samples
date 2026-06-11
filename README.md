@@ -1,12 +1,6 @@
-# Hi there, my name is Matthew Lucas.
+# Work Samples
 
-I'm a marketing technologist and systems engineer based in Charlotte, North Carolina, working where marketing operations meets AI enablement. I build the systems that make marketing teams faster: modular template architectures, personalization layers, build tooling, and the AI-assisted workflows that tie them together.
-
-This repository is the proof. It's about a decade of production code from agencies, SaaS companies, and fintech, and it shows how I think about scale, maintainability, and turning repetitive manual work into systems other people can actually use. A lot of it happens to be email, because that's where I spent years solving these problems; but the through-line is systems design, not any single channel.
-
-Each directory below maps to a specific role or engagement and has its own README with deeper context.
-
-## What's in this repo
+## What's in this repo:
 
 - **`ck-braze-emails`** (Credit Karma): A Liquid template system I rebuilt from scratch during a migration off Handlebars to Braze.
 
@@ -22,4 +16,4 @@ Each directory below maps to a specific role or engagement and has its own READM
 
 - **`usertesting-email`** (UserTesting): A Marketo Engage template system with a shared module and brand library that let non-technical marketers build emails by drag-and-drop, plus UX work on the email preference center.
 
-If you have questions about anything here, reach out on [LinkedIn](https://www.linkedin.com/in/mattdavidlucas/), or find me in the [Email Geeks](https://emailgeeks.slack.com/) Slack community; I'm @mattdavidlucas.
+If you have questions about anything here, reach out on [LinkedIn](https://www.linkedin.com/in/mattdavidlucas/).
