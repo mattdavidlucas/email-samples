@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+<meta name="x-apple-disable-message-reformatting">
+<!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<!--<![endif]-->
+
+<title>{% if {{${first_name}}} != blank %}{{${first_name}}}, here {% else %}Here {% endif %}are templates for you!</title>
+
+<!--[if mso]>
+<noscript>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+</noscript>
+<![endif]-->
+
+<style type="text/css">
+/* Outlook link fix */
+#outlook a { padding: 0; }
+
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove Outlook table spacing */
+table {
+  border-collapse: collapse;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+table td { border-collapse: collapse; }
+
+/* Hotmail/Outlook.com fix */
+.ExternalClass { width: 100%; }
+.ExternalClass, .ExternalClass p, .ExternalClass span,
+.ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+
+/* Prevent iOS auto-linking addresses/dates/phones */
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Gmail margin fix */
+div[style*="margin: 16px 0"] { margin: 0 !important; }
+
+/* --- Mobile overrides --- */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .block-element {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+  .col-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .card-gap {
+    padding-bottom: 30px !important;
+  }
+  .fluid-img {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .mobile-center { margin: 0 auto !important; }
+  .footer-stack {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 6px 0 !important;
+  }
+  .height-reset { height: auto !important; }
+  .font-12 { font-size: 12px !important; }
+  .font-16 { font-size: 16px !important; }
+  .pad-l-0 { padding-left: 0 !important; }
+  .pad-l-30 { padding-left: 31px !important; }
+  .pad-lr-5 { 
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .pad-lr-31 { 
+    padding-left: 31px !important;
+    padding-right: 31px !important;
+  }
+}
+</style>
+
+</head>
+<body class="body" xml:lang="en" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0; background-color:#f4f4f4;">
+
+<!-- Preheader (hidden) -->
+<div style="display:none; font-size:1px; color:#f4f4f4; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide:all;">Learn what works and what doesn't.
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+&#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+</div>
+
+<!-- Outer wrapper -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#f4f4f4; border-collapse:collapse;">
+  <tr>
+    <td align="center" valign="top">
+      <!--[if (gte mso 9)|(IE)]>
+      <table role="presentation" align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr><td>
+      <![endif]-->
+
+      <!-- Inner container -->
+      <table role="presentation" class="container" align="center" width="600" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin:0 auto; width:600px; max-width:600px; background-color:#ffffff;">
+        <tr>
+          <td>
+            <!-- Header + Module 1 - Hero -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+            <tr>
+              <td bgcolor="#11162A" background="https://mdlloops.s3.us-east-2.amazonaws.com/background-gradient-grid.png" style="background-color:#11162A; background-image: url('https://mdlloops.s3.us-east-2.amazonaws.com/background-gradient-grid.png'); background-position: top; background-repeat: no-repeat; background-size: cover; padding:53px 31px 56px 31px;">
+                <!-- Logo -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                  <tr>
+                    <td align="center" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:40px; color:#ffffff; padding-bottom:18px;"><a href="https://www.stitch.cx/" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/logo_stitch_primary_white.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="133" height="42" alt="Stitch - Modern Marketing Services Company" border="0"></a></td>
+                  </tr>
+                </table>
+
+                <!-- Nav -->
+                <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; margin:0 auto;">
+                  <tr>
+                    <td class="font-12 pad-lr-5" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; font-weight: 300; line-height:24px; color:#ffffff; padding:0 20px; text-align: center; text-transform: uppercase; width: 46px;"><a href="https://www.stitch.cx/" style="color:#ffffff; text-decoration:none;" target="_blank">Home</a></td>
+
+                    <td class="font-12 pad-lr-5" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; font-weight: 300; line-height:24px; color:#ffffff; padding:0 20px; text-align: center; text-transform: uppercase; width: 73px;"><a href="https://www.stitch.cx/about" style="color:#ffffff; text-decoration:none;" target="_blank">Services</a></td>
+
+                    <td class="font-12 pad-lr-5" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; font-weight: 300; line-height:24px; color:#ffffff; padding:0 20px; text-align: center; text-transform: uppercase; width: 75px;"><a href="https://www.stitch.cx/resources" style="color:#ffffff; text-decoration:none;" target="_blank">Features</a></td>
+
+                    <td class="font-12 pad-lr-5" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; font-weight: 300; line-height:24px; color:#ffffff; padding:0 20px; text-align: center; text-transform: uppercase; width: 73px;"><a href="https://www.stitch.cx/partner-with-us" style="color:#ffffff; text-decoration:none;" target="_blank">Contact</a></td>
+                  </tr>
+                </table>
+
+                <!-- Hero headline -->
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                  <tr>
+                    <td align="center" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:45px; line-height:38px; font-weight:700; color:#a6cff2; padding:18px 0 18px 0; text-align:center; letter-spacing: 0.4px;"><a href="https://www.stitch.cx/" style="color: #BAECFF; text-decoration: none;" target="_blank">A modern marketing<br> services company.</a></td>
+                  </tr>
+
+                  <!-- Hero Subheadline -->
+                  <tr>
+                    <td align="center" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:15px; line-height:21px; color:#d8dde8; padding:0; text-align:center; letter-spacing: 0.2px;"><a href="https://www.stitch.cx/" style="color: #d8dde8; text-decoration: none;" target="_blank">Helping marketers change the way marketing gets done.</a></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            </table>
+            <!-- End Header + Module 1 - Hero -->
+
+            <!-- Module 2: Side by Side 2 Column Blog Post -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td style="padding:38px 31px 38px 31px;">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table role="presentation" width="536" cellpadding="0" cellspacing="0" border="0" style="width:536px;"><tr><td width="256" valign="top" style="width: 256px;">
+                  <![endif]-->
+
+                  <!-- Card 1 -->
+                  <table role="presentation" class="block-element card-gap" align="left" width="256" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:256px;">
+                    <tr>
+                      <td>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:12px; color:#666666;"><a href="https://www.stitch.cx/about?1" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_01.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="256" height="180" alt="Responsive email template image" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:700; color:#11162A; padding:18px 0 10px 0; letter-spacing:-0.15px; text-transform: uppercase;">Responsive email template</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum mollis.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                  <td>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#BAECFF; text-align: center; vertical-align: middle; height: 32px; width: 106px;">
+                                    <![endif]-->
+                                    <a href="https://www.stitch.cx/about?1" style="background-color:#BAECFF; border-radius:20px; color:#11162A; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="256" valign="top" style="width: 256px;">
+                  <![endif]-->
+
+                  <!-- Card 2 -->
+                  <table role="presentation" class="block-element" align="right" width="256" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: right; width:256px;">
+                    <tr>
+                      <td>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:12px; color:#666666;"><a href="https://www.stitch.cx/about?2" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_02.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="256" height="180" alt="Fully compatible template image" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:700; color:#11162A; padding:18px 0 10px 0; letter-spacing:-0.15px; text-transform: uppercase;">Fully compatible template</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum mollis.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                  <td>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#BAECFF; text-align: center; vertical-align: middle; height: 32px; width: 106px;">
+                                    <![endif]-->
+                                    <a href="https://www.stitch.cx/about?2" style="background-color:#BAECFF; border-radius:20px; color:#11162A; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td></tr></table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 2 -->
+
+            <!-- Module 3: Gray Background Feature -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td class="pad-lr-31" bgcolor="#eeeeee" style="background-color:#eeeeee; padding:60px 40px 36px 40px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td style="padding-bottom:22px;">
+                        <table border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; margin: 0 auto;" role="presentation">
+                          <tr>
+                            <td style="vertical-align: middle; padding-right: 6px; width: 20px;"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_grid.png" style="border: none; -ms-interpolation-mode: bicubic; display: block; outline: none;" width="20" height="20" alt="Grid Icon" border="0"></td>
+                            <td class="font-16" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:20px; line-height:20px; font-weight:700; color:#11162A; letter-spacing:-0.15px; text-transform: uppercase;">Fully Supported Template</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; color:#1E2939; text-align:center; padding-bottom:22px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada sodales risus, a adipiscing lorem commodo vitae. Ut semper semper lacus. Suspendisse convallis vel tellus at consectetur. Aenean risus arcu.</td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td>
+                              <!--[if (gte mso 9)|(IE)]>
+                              <table align="center" width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#D3D5DB; text-align: center; vertical-align: middle; height: 32px; width: 106px; margin: 0 auto;">
+                              <![endif]-->
+                              <a href="https://www.stitch.cx/" style="background-color:#D3D5DB; border-radius:20px; color:#FFFFFF; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                              <!--[if (gte mso 9)|(IE)]>
+                              </td></tr></table>
+                              <![endif]-->
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 3 -->
+
+            <!-- Module 4: Side by Side 3 Column Blog Post -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td style="padding:38px 31px 72px 31px;">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table role="presentation" width="536" cellpadding="0" cellspacing="0" border="0" style="width:536px;"><tr><td width="176" valign="top" style="width: 176px;">
+                  <![endif]-->
+
+                  <!-- Col 1 -->
+                  <table role="presentation" class="block-element card-gap" align="left" width="176" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:176px;">
+                    <tr>
+                      <td class="col-pad" style="padding-right:8px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:11px; color:#666666;"><a href="https://www.stitch.cx/?1" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_03.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="168" height="120" alt="Layered PSD Image" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:16px; font-weight:700; color:#11162A; padding:16px 0 9px 0; letter-spacing:0.3px; text-transform: uppercase;">Layered PSD</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:16px;"><a href="https://www.stitch.cx/?1" style="color:#6B033D; text-decoration:none;" target="_blank">Check this out →</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="176" valign="top" style="width: 176px;">
+                  <![endif]-->
+
+                  <!-- Col 2 -->
+                  <table role="presentation" class="block-element card-gap" align="left" width="176" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:176px;">
+                    <tr>
+                      <td class="col-pad" style="padding:0 8px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:11px; color:#666666;"><a href="https://www.stitch.cx/?2" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_04.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="168" height="120" alt="Fully Compatible Image" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:16px; font-weight:700; color:#11162A; padding:16px 0 9px 0; letter-spacing:0.3px; text-transform: uppercase;">Fully Compatible</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:16px;"><a href="https://www.stitch.cx/?2" style="color:#6B033D; text-decoration:none;" target="_blank">Check this out →</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="176" valign="top" style="width: 176px;">
+                  <![endif]-->
+
+                  <!-- Col 3 -->
+                  <table role="presentation" class="block-element" align="left" width="176" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:176px;">
+                    <tr>
+                      <td class="col-pad" style="padding-left:8px;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:11px; color:#666666;"><a href="https://www.stitch.cx/?3" style="color: #11162A; text-decoration: none;" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_05.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="168" height="120" alt="Great Modules Image" border="0"></a></td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:16px; font-weight:700; color:#11162A; padding:16px 0 9px 0; letter-spacing:0.3px; text-transform: uppercase;">Great Modules</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:16px;"><a href="https://www.stitch.cx/?3" style="color:#6B033D; text-decoration:none;" target="_blank">Check this out →</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td></tr></table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 4 -->
+
+            <!-- Module 5: Side by Side 2 Column -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td style="padding:0 31px 65px 31px;">
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table role="presentation" width="540" cellpadding="0" cellspacing="0" border="0" style="width:540px;"><tr><td width="256" valign="top" style="width: 256px;">
+                  <![endif]-->
+
+                  <!-- Feature 1 -->
+                  <table role="presentation" class="block-element card-gap" align="left" width="256" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:256px;">
+                    <tr>
+                      <td>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td style="padding-bottom: 12px;">
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" role="presentation">
+                                <tr>
+                                  <td style="vertical-align: middle; padding-right: 6px; width: 20px;"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_send.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="Send Icon" border="0"></td>
+                                  <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:700; color:#11162A; letter-spacing:-0.15px; text-transform: uppercase; vertical-align: middle;">Send It Now</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada sodales risus, a adipiscing lorem.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                  <td>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#BAECFF; text-align: center; vertical-align: middle; height: 32px; width: 106px;">
+                                    <![endif]-->
+                                    <a href="https://www.stitch.cx/resources?1" style="background-color:#BAECFF; border-radius:20px; color:#11162A; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="256" valign="top" style="width: 256px;">
+                  <![endif]-->
+
+                  <!-- Feature 2 -->
+                  <table role="presentation" class="block-element" align="right" width="256" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: right; width:256px;">
+                    <tr>
+                      <td>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td style="padding-bottom: 12px;">
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;" role="presentation">
+                                <tr>
+                                  <td style="vertical-align: middle; padding-right: 6px; width: 20px;"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_pen.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="20" height="20" alt="Pen Icon" border="0"></td>
+                                  <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:700; color:#11162A; letter-spacing:-0.15px; text-transform: uppercase; vertical-align: middle;">Very Nice To See</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada sodales risus, a adipiscing lorem.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                  <td>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#BAECFF; text-align: center; vertical-align: middle; height: 32px; width: 106px;">
+                                    <![endif]-->
+                                    <a href="https://www.stitch.cx/resources?2" style="background-color:#BAECFF; border-radius:20px; color:#11162A; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td></tr></table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 5 -->
+
+            <!-- Module 6: Side by Side 2 Column - Img Left -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td class="pad-l-30" bgcolor="#eeeeee" style="background-color:#eeeeee; padding:38px 31px 38px 56px;">
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  <table role="presentation" width="510" cellpadding="0" cellspacing="0" border="0" style="width:510px;"><tr><td width="230" valign="middle" style="width: 230px;">
+                  <![endif]-->
+
+                  <!-- Image -->
+                  <table role="presentation" class="block-element card-gap" align="left" width="230" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: left; width:230px;">
+                    <tr>
+                      <td>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="fluid-img" style="background-color:#cccccc; text-align:center; vertical-align:middle; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:12px; color:#666666;"><a href="https://www.stitch.cx/partner-with-us" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/content_new_customers_welcome1_img_06.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="231" height="169" alt="Just For You Image" border="0"></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td><td width="256" valign="middle" style="width: 256px;">
+                  <![endif]-->
+
+                  <!-- Text -->
+                  <table role="presentation" class="block-element" align="right" width="256" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; float: right; width:256px;">
+                    <tr>
+                      <td class="height-reset" style="height: 169px; vertical-align:middle;">
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:16px; line-height:20px; font-weight:700; color:#11162A; padding-bottom:14px; letter-spacing:-0.15px; text-transform: uppercase;">Just for you</td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#11162A; padding-bottom:14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum mollis risus, in mattis erat convallis egestas.</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                <tr>
+                                  <td>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table width="106" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; width: 106px;"><tr><td width="106" style="background-color:#D3D5DB; text-align: center; vertical-align: middle; height: 32px; width: 106px;">
+                                    <![endif]-->
+                                    <a href="https://www.stitch.cx/partner-with-us" style="background-color:#D3D5DB; border-radius:20px; color:#FFFFFF; display:block; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:32px; text-align:center; text-decoration:none; width: 106px;" target="_blank">Read more</a>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td></tr></table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if (gte mso 9)|(IE)]>
+                  </td></tr></table>
+                  <![endif]-->
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 6 -->
+
+            <!-- Module 7: Footer - Featured On Footer Logos -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td bgcolor="#11162A" style="background-color:#11162A; padding:52px 0 52px 0;">
+
+                  <!-- Partners heading -->
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td class="pad-lr-31" align="center" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:20px; line-height:24px; font-weight:700; color:#BAECFF; text-align:center; padding-bottom:28px; letter-spacing:0.3px; text-transform: uppercase;">Braze Technology Partners</td>
+                    </tr>
+                  </table>
+
+                  <!-- Partner logos -->
+                  <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td align="center" class="footer-stack" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff; text-align:center; padding:6px 20px; width: 127px;"><a href="https://www.stitch.cx/?logo1" target="_blank"><img class="mobile-center" src="https://mdlloops.s3.us-east-2.amazonaws.com/logo_accuweather.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="127" height="18" alt="Accuweather" border="0"></a></td>
+
+                      <td align="center" class="footer-stack" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff; text-align:center; padding:6px 20px; width: 102px;"><a href="https://www.stitch.cx/?logo2" target="_blank"><img class="mobile-center" src="https://mdlloops.s3.us-east-2.amazonaws.com/logo_snowflake.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="102" height="25" alt="Snowflake" border="0"></a></td>
+
+                      <td align="center" class="footer-stack" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff; text-align:center; padding:6px 20px; width: 78px;"><a href="https://www.stitch.cx/?logo3" target="_blank"><img class="mobile-center" src="https://mdlloops.s3.us-east-2.amazonaws.com/logo_punchh.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="78" height="22" alt="Punchh" border="0"></a></td>
+
+                      <td align="center" class="footer-stack" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; color:#ffffff; text-align:center; padding:6px 20px; width: 106px;"><a href="https://www.stitch.cx/?logo4" target="_blank"><img class="mobile-center" src="https://mdlloops.s3.us-east-2.amazonaws.com/logo_atlassian.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="106" height="18" alt="Atlassian" border="0"></a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 7 -->
+
+            <!-- Module 7: Social - unsubscribe and social links -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; width: 100%" role="presentation">
+              <tr>
+                <td bgcolor="#FFFFFF" style="background-color:#FFFFFF; padding:40px 31px 40px 31px;">
+
+                  <!-- Copyright + social -->
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                    <tr>
+                      <td class="footer-stack" align="left" style="font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:14px; line-height:18px; color:#6E7075; text-align:left; vertical-align:middle; width: 100%;">Stitch &copy; copyright 2026 - <a href="https://www.stitch.cx/?unsub" style="color:#6E7075; text-decoration:none;" target="_blank">Unsubscribe here</a></td>
+                      <td class="footer-stack" align="right" style="text-align:right; vertical-align:middle;">
+                        <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                          <tr>
+                            <td class="pad-l-0" style="padding-left:16px;"><a href="https://www.stitch.cx/?social1" style="color:#000000; text-decoration:none; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:15px;" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_instagram.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="23" height="23" alt="Instagram Icon" border="0"></a></td>
+
+                            <td style="padding-left:16px;"><a href="https://www.stitch.cx/?social2" style="color:#000000; text-decoration:none; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:15px; font-weight:700;" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_facebook.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="11" height="23" alt="Facebook Icon" border="0"></a></td>
+
+                            <td style="padding-left:16px;"><a href="https://www.stitch.cx/?social3" style="color:#000000; text-decoration:none; font-family:'Host Grotesk', Arial, Helvetica, sans-serif; font-size:15px; font-weight:700;" target="_blank"><img src="https://mdlloops.s3.us-east-2.amazonaws.com/icon_linkedin.png" style="border: none; display: block; -ms-interpolation-mode: bicubic; outline: none;" width="23" height="23" alt="LinkedIn Icon" border="0"></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td>
+              </tr>
+            </table>
+            <!-- End Module 7 -->
+          </td>
+        </tr>
+      </table>
+      <!-- /Inner container -->
+
+      <!--[if (gte mso 9)|(IE)]>
+      </td></tr></table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+<!-- /Outer wrapper -->
+
+</body>
+</html>
