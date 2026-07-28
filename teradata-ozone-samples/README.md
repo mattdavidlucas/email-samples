@@ -8,6 +8,8 @@ So the two things in this directory I'd actually point at are the build tools, n
 
 ## The Autodesk email builder
 
+![](/assets/teradata-image-02.png "")
+
 `autodesk/email-builder/`
 
 Autodesk had a real design system and a legal review process, and both were being re-implemented by hand in every email. I turned the design system into code.
@@ -15,6 +17,8 @@ Autodesk had a real design system and a legal review process, and both were bein
 **`includes/config.inc.php`** holds the brand palette as four variables. Every template pulls its colors from there instead of hard-coding hex values, so a brand refresh is a four-line change rather than a find-and-replace across every file anyone has ever built.
 
 **`includes/components.php`** is the component library. `primaryCTA()` and `secondaryCTA()` are PHP functions that emit the full, Outlook-tested markup for a button given a width, a color, and a label. Before this, a button was thirty lines of nested tables that someone copied from a previous email and edited by hand, which is how buttons quietly drift out of spec. After this, a button is one function call.
+
+![](/assets/teradata-image-03.png "")
 
 **`includes/footer.inc.php`** this is the Autodesk legal footer, with the optional disclosure clauses left in place and flagged in red with the conditions under which they apply and a link to Autodesk's legal Marketing Toolkit. That's not a coding decision; it came out of working with Autodesk's legal and brand partners to get the rules written down somewhere the person building the email would actually see them. Legal changes the language once in that file and every email built afterward inherits it.
 
@@ -26,7 +30,9 @@ Autodesk had a real design system and a legal review process, and both were bein
 
 The `mktEditable` divs wrapping each module are what made this work end-to-end: they mark regions Marketo lets a marketer edit in the platform's own UI. The generated template goes into Marketo once, and the campaign team edits copy inside it without a developer touching anything.
 
-## The Intel IoT asset builders
+## The Intel Internet of Things (IoT) asset builders
+
+![](/assets/teradata-image-01.png "")
 
 `intel/tools/iot-asset-builders/`
 
@@ -46,11 +52,5 @@ The naming convention stopped being a document people were supposed to remember 
 | `intel/intel-email.html`, `intel-lp.html`, `intel-ty.html` | The Eloqua email, registration landing page, and thank-you page for one nurture asset, shown as a complete set |
 | `hertz-poc/` | A concept email built to pitch Hertz, with the rendered PNG alongside it |
 | `teradata-dmp-demo/` | Two fictional brands (Titan Energy and Runners) built as demo properties for Teradata's DMP: responsive marketing sites, Sass source, forms with a PHP processor, landing pages, and a matched set of promo, thank-you, and social-share emails. These were the sandbox the sales team used to show cross-channel personalization working end to end. |
-
-![](/assets/teradata-image-02.png "")
-
-![](/assets/teradata-image-03.png "")
-
-![](/assets/teradata-image-01.png "")
 
 ![](/assets/teradata-image-04.png "")
