@@ -1,49 +1,13 @@
 # Pierry Software Email Samples
 
-From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Software, a boutique Salesforce Marketing Cloud marketing agency based in Redwood City, CA. In that time, I built out a range of emails and reusable templates across multiple client accounts, and helped formalize their email development process along the way. All work was built for and deployed from Salesforce Marketing Cloud, with dynamic content and personalization handled through AMPScript.
+From May 2016 to July 2016, I worked as a Senior Email Developer at Pierry Software, a boutique Salesforce Marketing Cloud agency based in Redwood City, CA. Everything here was built for and deployed from Marketing Cloud, with dynamic content and personalization handled through AMPScript.
 
-The client roster was an interesting mix — private aviation, pro sports, entertainment, food delivery, and travel — which kept things from getting too repetitive.
+I also helped formalize their email development process while I was there, mostly around QA and how templates got handed off, so the next person building for an account was not rediscovering the same Outlook fixes from scratch.
 
-## Details
+![](/assets/pierry-image-01.png "")
 
-**Role:**
-- Senior Email Developer
+![](/assets/pierry-image-02.png "")
 
-**Clients:**
-- NetJets
-- San Jose Earthquakes
-- IMAX
-- Postmates
-- TravelCenters of America
+![](/assets/pierry-image-03.png "")
 
-**Languages Used:**
-- HTML
-- CSS
-- PHP
-- AMPScript
-
-**Marketing Automation Platform:**
-- Salesforce Marketing Cloud
-
-**Email Creation Dates:**
-- May 2016 – July 2016
-
-## Screenshots
-
-<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/matt-david-lucas-image-postmates-1420px.png" width="860">
-
----
-
-<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/matt-david-lucas-image-netjets-1420px.png" width="860">
-
----
-
-<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/matt-david-lucas-image-imax-1420px.png" width="860">
-
----
-
-<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/matt-david-lucas-image-sj-earthquakes-1420px.png" width="860">
-
----
-
-<img src="https://mdlloops.s3.us-east-2.amazonaws.com/screenshots/matt-david-lucas-image-travelcenters-1420px.png" width="860">
+![](/assets/pierry-image-04.png "")
