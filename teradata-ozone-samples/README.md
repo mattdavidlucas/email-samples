@@ -2,7 +2,9 @@
 
 From September 2013 to April 2016 I was a developer at Ozone Online, a San Francisco digital marketing agency later acquired by Teradata, building marketing emails and landing pages for enterprise clients.
 
-Agency work meant constant context-switching: one week a lead nurture campaign for Intel in Eloqua, the next a Marketo landing page for Autodesk. That's good for range, and it gave me a firm foundation in marketing automation and the mechanics of large-scale campaign execution. It's also where I first noticed the actual problem. The clients with the biggest programs were not asking for one email. They were asking for the same email forty times with different copy in it, and every one of those forty was a chance for someone to break the footer, misname the asset, or lose a brand color. Building them by hand did not scale, and more importantly, it made me the bottleneck for work that did not need a developer at all.
+Agency work meant constant context-switching: one week a lead nurture campaign for Intel in Eloqua, the next a Marketo landing page for Autodesk. That's good for range, and it gave me a firm foundation in marketing automation and the mechanics of large-scale campaign execution. It's also where I first noticed the actual problem. 
+
+The clients with the biggest programs were not asking for one email. They were asking for the same email forty times with different copy in it, and every one of those forty was a chance for someone to break the footer, misname the asset, or lose a brand color. Building them by hand did not scale, and more importantly, it made me the bottleneck for work that did not need a developer at all.
 
 So the two things in this directory I'd actually point at are the build tools, not the emails.
 
@@ -13,6 +15,8 @@ So the two things in this directory I'd actually point at are the build tools, n
 `autodesk/email-builder/`
 
 Autodesk had a real design system and a legal review process, and both were being re-implemented by hand in every email. I turned the design system into code.
+
+![](/assets/teradata-image-autodesk-01.png "")
 
 **`includes/config.inc.php`** holds the brand palette as four variables. Every template pulls its colors from there instead of hard-coding hex values, so a brand refresh is a four-line change rather than a find-and-replace across every file anyone has ever built.
 
@@ -36,11 +40,15 @@ The `mktEditable` divs wrapping each module are what made this work end-to-end: 
 
 `intel/tools/iot-asset-builders/`
 
-Intel's IoT nurture program ran through Eloqua and had a strict naming convention for every asset: vanity URLs like `US.EN.Embedded.registration-form-awareness-3-...` and asset names like `Embedded.US.EN.IOT eNuture.683 - Awareness 3 - LP`. Getting one character wrong meant an asset that campaign ops could not find and reporting could not roll up. People got it wrong constantly, and I don't blame them.
+Intel's IoT nurture program (internally called "The Tree of Life") ran through Eloqua and had a strict naming convention for every asset: vanity URLs like `US.EN.Embedded.registration-form-awareness-3-...` and asset names like `Embedded.US.EN.IOT eNuture.683 - Awareness 3 - LP`. Getting one character wrong meant an asset that campaign ops could not find and reporting could not roll up. People got it wrong constantly, and I don't blame them.
 
 So I built a browser tool. **`email/index.php`** and **`landing-pages/index.php`** are forms: pick the funnel stage and number from dropdowns, type in the subject line, preheader, headline, body copy, and CTA. **`js/global.js`** assembles the correct URLs and asset names from those selections and mirrors shared fields between the landing page form and the thank-you page form so they cannot disagree. The form posts to **`output/intel-IoT-email-template.php`**, which reads the values and prints the finished, Eloqua-ready HTML.
 
+![](/assets/teradata-intel-builder-01.png "")
+
 The naming convention stopped being a document people were supposed to remember and became a dropdown they could not get wrong. Non-developers on the campaign team could produce a compliant email, landing page, and thank-you page without me.
+
+![](/assets/teradata-intel-builder-02-lp.png "")
 
 **`tools/icons.html`** is the supporting piece: a rendered reference sheet of every approved icon in the program, so nobody had to go digging for a URL.
 
